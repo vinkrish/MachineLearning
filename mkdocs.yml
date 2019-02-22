@@ -1,0 +1,4 @@
+site_name: Machine Learning
+site_author: 'Vinay Krishna'
+theme:
+  name: 'material'

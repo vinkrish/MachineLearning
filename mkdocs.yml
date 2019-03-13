@@ -1,4 +1,23 @@
 site_name: Machine Learning
 site_author: 'Vinay Krishna'
+site_url: 'https://vinkrish.github.io/MachineLearning/'
 theme:
   name: 'material'
+  
+# Repository
+repo_name: 'vinkrish/MachineLearning'
+repo_url: 'https://github.com/vinkrish/MachineLearning'
+
+# Customization
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/vinkrish'
+
+extra_javascript:
+  # Add MathJax support
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+
+# Navigation
+nav:
+  - About: index.md

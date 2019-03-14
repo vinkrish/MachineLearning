@@ -330,6 +330,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#overfitting" title="Overfitting" class="md-nav__link">
+    Overfitting
+  </a>
+  
+</li>
+      
       
       
       
@@ -530,6 +537,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#overfitting" title="Overfitting" class="md-nav__link">
+    Overfitting
+  </a>
+  
+</li>
+      
       
       
       
@@ -596,23 +610,23 @@
 </ul>
 <p>More complex algoritms use these as building blocks.</p>
 <h3 id="naive-bayes-algorithm">Naive Bayes Algorithm</h3>
-<p><img alt="Naive Bayes" src="../images/naive_bayes.png" /></p>
+<p><img alt="Naive Bayes" src="../images/naive_bayes.jpg" /></p>
 <p>The Naive Bayes algorithm is based on Bayes' Theorem. This theorem calculates a probability of a diabetes by looking at the likelihood of diabetes based on previous data combined with probability of diabetes on nearby feature values. In other words, so how often does the person having high blood pressure correlate to diabetes? It makes the naive assumption that all of the features we pass in are independent of each other and equally impact the result.<br />
 This assumption that every featuer is independent to the others allows for fast conversions and therefore requires a small amount of data to train.</p>
 <h3 id="logistic-regression-algorithm">Logistic Regression Algorithm</h3>
-<p><img alt="Logistic Regression" src="../images/logistic_regression.png" /></p>
+<p><img alt="Logistic Regression" src="../images/logistic_regression.jpg" /></p>
 <p>The Logistic Regression algorithm has a somewhat confusing name. In Statistics, Regression often implies continuous values. But Logistics Regression returns a binary result. The algorithm measures the relationship of each feature and weights them based on their impact on the result. The resultant value is mapped against a curve with two values, one and zero, which is equivalent to diabetes or no diabetes.</p>
 <h3 id="decision-tree-algorithm">Decision Tree Algorithm</h3>
-<p><img alt="Decision Tree" src="../images/decision_tree.png" /></p>
+<p><img alt="Decision Tree" src="../images/decision_tree.jpg" /></p>
 <p>The Decision Tree algorithm can be nicely visualized. The algorithm uses a binary tree structure with each node making a decision based upon the values of the feature. At each node, the feature value causes us to go down one path or another. A lot of data may be required to find the value which defines taking one path or another. As we see decision trees have the advantage of having tools available to produce a picture of the tree. This makes it easy to follow along and visualize how the trained model works.</p>
 <h3 id="training-the-model">Training the Model</h3>
 <p>Letting specific data teach a machine learning algorithm to create a specific prediction model.
 <strong>Why retrain?</strong><br />
 Retraining will ensure that our model can take advantage of the new data to make better predictions. And also verify the algorithm can still create a high-performance model with the new data.</p>
 <h3 id="scikit-learn-library">Scikit-learn library</h3>
-<p>Designed to work with NumPy, SciPy and Pandas<br />
-Toolset for training and evaluation tasks:</p>
 <ul>
+<li>Designed to work with NumPy, SciPy and Pandas  </li>
+<li>Provides toolset for training and evaluation tasks:<ul>
 <li>Data splitting</li>
 <li>Pre-processing</li>
 <li>Feature selection</li>
@@ -620,6 +634,20 @@ Toolset for training and evaluation tasks:</p>
 <li>Model tuning</li>
 <li>and offers common interface across algorithms</li>
 </ul>
+</li>
+</ul>
+<p><strong>Performance Improvement Options</strong></p>
+<ul>
+<li>Adjust current algorithm</li>
+<li>Get more data or improve data</li>
+<li>Improve training</li>
+<li>Switch algorithms</li>
+</ul>
+<h3 id="overfitting">Overfitting</h3>
+<p>The algorithm analyses the data and trains itself to create a high mathematical order model based on the data.</p>
+<p><img alt="Overfitting" src="../images/overfitting.jpg" /></p>
+<p>$$y = x_1 + w_2x_2^3 + w_3x_3^8$$</p>
+<p>These high-order terms let this equation define a precise decision boundary between the positive and negative values, but as a result, the training process has created a model that works very well on training data but poorly when asked to predict values based on data it has not trained - this is the class overfit problem and is an issue that must be handled to create machine learning models that work well not only on the training data but also on real-world data.</p>
                 
                   
                 

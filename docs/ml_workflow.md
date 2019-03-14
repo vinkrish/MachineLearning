@@ -53,20 +53,20 @@ More complex algoritms use these as building blocks.
 
 ### Naive Bayes Algorithm
 
-![Naive Bayes](images/naive_bayes.png)
+![Naive Bayes](images/naive_bayes.jpg)
 
 The Naive Bayes algorithm is based on Bayes' Theorem. This theorem calculates a probability of a diabetes by looking at the likelihood of diabetes based on previous data combined with probability of diabetes on nearby feature values. In other words, so how often does the person having high blood pressure correlate to diabetes? It makes the naive assumption that all of the features we pass in are independent of each other and equally impact the result.  
 This assumption that every featuer is independent to the others allows for fast conversions and therefore requires a small amount of data to train.
 
 ### Logistic Regression Algorithm
 
-![Logistic Regression](images/logistic_regression.png)
+![Logistic Regression](images/logistic_regression.jpg)
 
 The Logistic Regression algorithm has a somewhat confusing name. In Statistics, Regression often implies continuous values. But Logistics Regression returns a binary result. The algorithm measures the relationship of each feature and weights them based on their impact on the result. The resultant value is mapped against a curve with two values, one and zero, which is equivalent to diabetes or no diabetes.
 
 ### Decision Tree Algorithm
 
-![Decision Tree](images/decision_tree.png)
+![Decision Tree](images/decision_tree.jpg)
 
 The Decision Tree algorithm can be nicely visualized. The algorithm uses a binary tree structure with each node making a decision based upon the values of the feature. At each node, the feature value causes us to go down one path or another. A lot of data may be required to find the value which defines taking one path or another. As we see decision trees have the advantage of having tools available to produce a picture of the tree. This makes it easy to follow along and visualize how the trained model works.
 
@@ -76,12 +76,27 @@ Letting specific data teach a machine learning algorithm to create a specific pr
 Retraining will ensure that our model can take advantage of the new data to make better predictions. And also verify the algorithm can still create a high-performance model with the new data.
 
 ### Scikit-learn library
-Designed to work with NumPy, SciPy and Pandas  
-Toolset for training and evaluation tasks:
+- Designed to work with NumPy, SciPy and Pandas  
+- Provides toolset for training and evaluation tasks:
+    - Data splitting
+    - Pre-processing
+    - Feature selection
+    - Model training
+    - Model tuning
+    - and offers common interface across algorithms
 
-- Data splitting
-- Pre-processing
-- Feature selection
-- Model training
-- Model tuning
-- and offers common interface across algorithms
+**Performance Improvement Options**
+
+- Adjust current algorithm
+- Get more data or improve data
+- Improve training
+- Switch algorithms
+
+### Overfitting
+The algorithm analyses the data and trains itself to create a high mathematical order model based on the data.
+
+![Overfitting](images/overfitting.jpg)
+
+$$y = x_1 + w_2x_2^3 + w_3x_3^8$$
+
+These high-order terms let this equation define a precise decision boundary between the positive and negative values, but as a result, the training process has created a model that works very well on training data but poorly when asked to predict values based on data it has not trained - this is the class overfit problem and is an issue that must be handled to create machine learning models that work well not only on the training data but also on real-world data.

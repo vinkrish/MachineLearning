@@ -2,7 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/</loc>
-     <lastmod>2019-03-13</lastmod>
+     <lastmod>2019-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://vinkrish.github.io/MachineLearning/ml_workflow/</loc>
+     <lastmod>2019-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://vinkrish.github.io/MachineLearning/week_1/model_representation/</loc>
+     <lastmod>2019-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://vinkrish.github.io/MachineLearning/week_1/cost_function/</loc>
+     <lastmod>2019-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://vinkrish.github.io/MachineLearning/week_1/cost_function_intuition_1/</loc>
+     <lastmod>2019-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://vinkrish.github.io/MachineLearning/week_1/cost_function_intuition_2/</loc>
+     <lastmod>2019-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://vinkrish.github.io/MachineLearning/week_1/gradient_descent/</loc>
+     <lastmod>2019-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://vinkrish.github.io/MachineLearning/week_1/gradient_descent_intuition/</loc>
+     <lastmod>2019-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://vinkrish.github.io/MachineLearning/week_1/gd_for_linear_regression/</loc>
+     <lastmod>2019-03-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

@@ -75,16 +75,6 @@ Letting specific data teach a machine learning algorithm to create a specific pr
 **Why retrain?**  
 Retraining will ensure that our model can take advantage of the new data to make better predictions. And also verify the algorithm can still create a high-performance model with the new data.
 
-### Scikit-learn library
-- Designed to work with NumPy, SciPy and Pandas  
-- Provides toolset for training and evaluation tasks:
-    - Data splitting
-    - Pre-processing
-    - Feature selection
-    - Model training
-    - Model tuning
-    - and offers common interface across algorithms
-
 **Performance Improvement Options**
 
 - Adjust current algorithm

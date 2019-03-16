@@ -21,6 +21,7 @@ extra_javascript:
 # Navigation
 nav:
   - About: index.md
+  - Data Analysis Process: dap.md
   - Machine Learning Workflow: ml_workflow.md
   - Week 1:
     - Model Representation: week_1/model_representation.md

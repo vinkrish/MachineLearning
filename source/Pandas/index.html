@@ -1,0 +1,2969 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://vinkrish.github.io/MachineLearning/source/Pandas/">
+      
+      
+        <meta name="author" content="Vinay Krishna">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>Pandas - Machine Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://vinkrish.github.io/MachineLearning/" title="Machine Learning" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Machine Learning
+            </span>
+            <span class="md-header-nav__topic">
+              Pandas
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/vinkrish/MachineLearning/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    vinkrish/MachineLearning
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://vinkrish.github.io/MachineLearning/" title="Machine Learning" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Machine Learning
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/vinkrish/MachineLearning/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    vinkrish/MachineLearning
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../dap/" title="Data Analysis Process" class="md-nav__link">
+      Data Analysis Process
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../ml_workflow/" title="Machine Learning Workflow" class="md-nav__link">
+      Machine Learning Workflow
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Andrew Ng's ML Course
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Andrew Ng's ML Course
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Week 1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Week 1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../week_1/model_representation/" title="Model Representation" class="md-nav__link">
+      Model Representation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../week_1/cost_function/" title="Cost Function" class="md-nav__link">
+      Cost Function
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../week_1/cost_function_intuition_1/" title="Cost Function Intuition 1" class="md-nav__link">
+      Cost Function Intuition 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../week_1/cost_function_intuition_2/" title="Cost Function Intuition 2" class="md-nav__link">
+      Cost Function Intuition 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../week_1/gradient_descent/" title="Gradient Descent" class="md-nav__link">
+      Gradient Descent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../week_1/gradient_descent_intuition/" title="Gradient Descent Intuition" class="md-nav__link">
+      Gradient Descent Intuition
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../week_1/gd_for_linear_regression/" title="Gradient Descent For Linear Regression" class="md-nav__link">
+      Gradient Descent For Linear Regression
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Code
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Code
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NumPy/" title="NumPy" class="md-nav__link">
+      NumPy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Pandas" class="md-nav__link md-nav__link--active">
+      Pandas
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DataFrame/" title="DataFrame" class="md-nav__link">
+      DataFrame
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PracticeProblem/" title="Practice Problem" class="md-nav__link">
+      Practice Problem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assessing/" title="Assessing" class="md-nav__link">
+      Assessing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cleaning/" title="Cleaning" class="md-nav__link">
+      Cleaning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plotting_with_pandas/" title="Plotting" class="md-nav__link">
+      Plotting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../conclusions/" title="Conclusion" class="md-nav__link">
+      Conclusion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../communicate/" title="Communicate" class="md-nav__link">
+      Communicate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/vinkrish/MachineLearning/edit/master/docs/source/Pandas.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Pandas</h1>
+                
+                <pre><code class="python">import pandas as pd
+</code></pre>
+
+<pre><code class="python"># We create a Pandas Series that stores a grocery list
+groceries = pd.Series(data = [30, 6, 'Yes', 'No'], index = ['eggs', 'apples', 'milk', 'bread'])
+
+# We display the Groceries Pandas Series
+print(groceries)
+print()
+
+# We print some information about Groceries
+print('Groceries has shape:', groceries.shape)
+print('Groceries has dimension:', groceries.ndim)
+print('Groceries has a total of', groceries.size, 'elements')
+print()
+
+# We print the index and data of Groceries
+print('The data in Groceries is:', groceries.values)
+print('The index of Groceries is:', groceries.index)
+print()
+
+# We check whether bananas is a food item (an index) in Groceries
+x = 'bananas' in groceries
+
+# We check whether bread is a food item (an index) in Groceries
+y = 'bread' in groceries
+
+# We print the results
+print('Is bananas an index label in Groceries:', x)
+print('Is bread an index label in Groceries:', y)
+</code></pre>
+
+<pre><code>eggs       30
+apples      6
+milk      Yes
+bread      No
+dtype: object
+
+Groceries has shape: (4,)
+Groceries has dimension: 1
+Groceries has a total of 4 elements
+
+The data in Groceries is: [30 6 'Yes' 'No']
+The index of Groceries is: Index(['eggs', 'apples', 'milk', 'bread'], dtype='object')
+
+Is bananas an index label in Groceries: False
+Is bread an index label in Groceries: True
+</code></pre>
+<pre><code class="python"># We access elements in Groceries using index labels:
+
+# We use a single index label
+print('How many eggs do we need to buy:', groceries['eggs'])
+print()
+
+# we can access multiple index labels
+print('Do we need milk and bread:\n', groceries[['milk', 'bread']]) 
+print()
+
+# we use loc to access multiple index labels
+print('How many eggs and apples do we need to buy:\n', groceries.loc[['eggs', 'apples']]) 
+print()
+
+# We access elements in Groceries using numerical indices:
+
+# we use multiple numerical indices
+print('How many eggs and apples do we need to buy:\n',  groceries[[0, 1]]) 
+print()
+
+# We use a negative numerical index
+print('Do we need bread:\n', groceries[[-1]]) 
+print()
+
+# We use a single numerical index
+print('How many eggs do we need to buy:', groceries[0]) 
+print()
+# we use iloc to access multiple numerical indices
+print('Do we need milk and bread:\n', groceries.iloc[[2, 3]])
+</code></pre>
+
+<pre><code>How many eggs do we need to buy: 30
+
+Do we need milk and bread:
+ milk     Yes
+bread     No
+dtype: object
+
+How many eggs and apples do we need to buy:
+ eggs      30
+apples     6
+dtype: object
+
+How many eggs and apples do we need to buy:
+ eggs      30
+apples     6
+dtype: object
+
+Do we need bread:
+ bread    No
+dtype: object
+
+How many eggs do we need to buy: 30
+
+Do we need milk and bread:
+ milk     Yes
+bread     No
+dtype: object
+</code></pre>
+<pre><code class="python"># We display the original grocery list
+print('Original Grocery List:\n', groceries)
+
+# We change the number of eggs to 2
+groceries['eggs'] = 2
+
+# We display the changed grocery list
+print()
+print('Modified Grocery List:\n', groceries)
+</code></pre>
+
+<pre><code>Original Grocery List:
+ eggs       30
+apples      6
+milk      Yes
+bread      No
+dtype: object
+
+Modified Grocery List:
+ eggs        2
+apples      6
+milk      Yes
+bread      No
+dtype: object
+</code></pre>
+<pre><code class="python"># We display the original grocery list
+print('Original Grocery List:\n', groceries)
+
+# We remove apples from our grocery list. The drop function removes elements out of place
+print()
+print('We remove apples (out of place):\n', groceries.drop('apples'))
+
+# When we remove elements out of place the original Series remains intact. To see this
+# we display our grocery list again
+print()
+print('Grocery List after removing apples out of place:\n', groceries)
+
+# We remove apples from our grocery list in place by setting the inplace keyword to True
+groceries.drop('apples', inplace = True)
+
+# When we remove elements in place the original Series its modified. To see this
+# we display our grocery list again
+print()
+print('Grocery List after removing apples in place:\n', groceries)
+</code></pre>
+
+<pre><code>Original Grocery List:
+ eggs        2
+apples      6
+milk      Yes
+bread      No
+dtype: object
+
+We remove apples (out of place):
+ eggs       2
+milk     Yes
+bread     No
+dtype: object
+
+Grocery List after removing apples out of place:
+ eggs        2
+apples      6
+milk      Yes
+bread      No
+dtype: object
+
+Grocery List after removing apples in place:
+ eggs       2
+milk     Yes
+bread     No
+dtype: object
+</code></pre>
+<pre><code class="python"># We create a Pandas Series that stores a grocery list of just fruits
+fruits= pd.Series(data = [10, 6, 3,], index = ['apples', 'oranges', 'bananas'])
+
+# We display the fruits Pandas Series
+fruits
+</code></pre>
+
+<pre><code>apples     10
+oranges     6
+bananas     3
+dtype: int64
+</code></pre>
+<pre><code class="python"># We perform basic element-wise operations using arithmetic symbols
+print()
+print('fruits + 2:\n', fruits + 2) # We add 2 to each item in fruits
+print()
+print('fruits - 2:\n', fruits - 2) # We subtract 2 to each item in fruits
+print()
+print('fruits * 2:\n', fruits * 2) # We multiply each item in fruits by 2 
+print()
+print('fruits / 2:\n', fruits / 2) # We divide each item in fruits by 2
+print()
+</code></pre>
+
+<pre><code>fruits + 2:
+ apples     12
+oranges     8
+bananas     5
+dtype: int64
+
+fruits - 2:
+ apples     8
+oranges    4
+bananas    1
+dtype: int64
+
+fruits * 2:
+ apples     20
+oranges    12
+bananas     6
+dtype: int64
+
+fruits / 2:
+ apples     5.0
+oranges    3.0
+bananas    1.5
+dtype: float64
+</code></pre>
+<pre><code class="python"># We import NumPy as np to be able to use the mathematical functions
+import numpy as np
+
+# We print fruits for reference
+print('Original grocery list of fruits:\n', fruits)
+
+# We apply different mathematical functions to all elements of fruits
+print()
+print('EXP(X) = \n', np.exp(fruits))
+print() 
+print('SQRT(X) =\n', np.sqrt(fruits))
+print()
+print('POW(X,2) =\n',np.power(fruits,2)) # We raise all elements of fruits to the power of 2
+</code></pre>
+
+<pre><code>Original grocery list of fruits:
+ apples     10
+oranges     6
+bananas     3
+dtype: int64
+
+EXP(X) = 
+ apples     22026.465795
+oranges      403.428793
+bananas       20.085537
+dtype: float64
+
+SQRT(X) =
+ apples     3.162278
+oranges    2.449490
+bananas    1.732051
+dtype: float64
+
+POW(X,2) =
+ apples     100
+oranges     36
+bananas      9
+dtype: int64
+</code></pre>
+<pre><code class="python"># We print fruits for reference
+print('Original grocery list of fruits:\n ', fruits)
+print()
+
+# We add 2 only to the bananas
+print('Amount of bananas + 2 = ', fruits['bananas'] + 2)
+print()
+
+# We subtract 2 from apples
+print('Amount of apples - 2 = ', fruits.iloc[0] - 2)
+print()
+
+# We multiply apples and oranges by 2
+print('We double the amount of apples and oranges:\n', fruits[['apples', 'oranges']] * 2)
+print()
+
+# We divide apples and oranges by 2
+print('We half the amount of apples and oranges:\n', fruits.loc[['apples', 'oranges']] / 2)
+</code></pre>
+
+<pre><code>Original grocery list of fruits:
+  apples     10
+oranges     6
+bananas     3
+dtype: int64
+
+Amount of bananas + 2 =  5
+
+Amount of apples - 2 =  8
+
+We double the amount of apples and oranges:
+ apples     20
+oranges    12
+dtype: int64
+
+We half the amount of apples and oranges:
+ apples     5.0
+oranges    3.0
+dtype: float64
+</code></pre>
+<pre><code class="python"># Create a Pandas Series that contains the distance of some planets from the Sun.
+# Use the name of the planets as the index to your Pandas Series, and the distance
+# from the Sun as your data. The distance from the Sun is in units of 10^6 km
+
+distance_from_sun = [149.6, 1433.5, 227.9, 108.2, 778.6]
+
+planets = ['Earth','Saturn', 'Mars','Venus', 'Jupiter']
+
+# Create a Pandas Series using the above data, with the name of the planets as
+# the index and the distance from the Sun as your data.
+dist_planets = pd.Series(distance_from_sun, planets)
+print(dist_planets)
+
+# Calculate the number of minutes it takes sunlight to reach each planet. You can
+# do this by dividing the distance from the Sun for each planet by the speed of light.
+# Since in the data above the distance from the Sun is in units of 10^6 km, you can
+# use a value for the speed of light of c = 18, since light travels 18 x 10^6 km/minute.
+time_light = dist_planets / 18
+
+# Use Boolean indexing to select only those planets for which sunlight takes less
+# than 40 minutes to reach them.
+close_planets = time_light[time_light.values &lt; 40]
+
+print()
+print('close planets\n', close_planets)
+</code></pre>
+
+<pre><code>Earth       149.6
+Saturn     1433.5
+Mars        227.9
+Venus       108.2
+Jupiter     778.6
+dtype: float64
+
+close planets
+ Earth     8.311111
+Mars     12.661111
+Venus     6.011111
+dtype: float64
+</code></pre>
+<pre><code class="python"># We create a dictionary of Pandas Series 
+items = {'Bob' : pd.Series(data = [245, 25, 55], index = ['bike', 'pants', 'watch']),
+         'Alice' : pd.Series(data = [40, 110, 500, 45], index = ['book', 'glasses', 'bike', 'pants'])}
+
+# We print the type of items to see that it is a dictionary
+print(type(items))
+</code></pre>
+
+<pre><code>&lt;class 'dict'&gt;
+</code></pre>
+<pre><code class="python"># We create a Pandas DataFrame by passing it a dictionary of Pandas Series
+shopping_carts = pd.DataFrame(items)
+
+# We display the DataFrame
+shopping_carts
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Bob</th>
+      <th>Alice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>bike</th>
+      <td>245.0</td>
+      <td>500.0</td>
+    </tr>
+    <tr>
+      <th>book</th>
+      <td>NaN</td>
+      <td>40.0</td>
+    </tr>
+    <tr>
+      <th>glasses</th>
+      <td>NaN</td>
+      <td>110.0</td>
+    </tr>
+    <tr>
+      <th>pants</th>
+      <td>25.0</td>
+      <td>45.0</td>
+    </tr>
+    <tr>
+      <th>watch</th>
+      <td>55.0</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We create a dictionary of Pandas Series without indexes
+data = {'Bob' : pd.Series([245, 25, 55]),
+        'Alice' : pd.Series([40, 110, 500, 45])}
+
+# We create a DataFrame
+df = pd.DataFrame(data)
+
+# We display the DataFrame
+df
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Bob</th>
+      <th>Alice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>245.0</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>25.0</td>
+      <td>110</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>55.0</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NaN</td>
+      <td>45</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We print some information about shopping_carts
+print('shopping_carts has shape:', shopping_carts.shape)
+print('shopping_carts has dimension:', shopping_carts.ndim)
+print('shopping_carts has a total of:', shopping_carts.size, 'elements')
+print()
+print('The data in shopping_carts is:\n', shopping_carts.values)
+print()
+print('The row index in shopping_carts is:', shopping_carts.index)
+print()
+print('The column index in shopping_carts is:', shopping_carts.columns)
+</code></pre>
+
+<pre><code>shopping_carts has shape: (5, 2)
+shopping_carts has dimension: 2
+shopping_carts has a total of: 10 elements
+
+The data in shopping_carts is:
+ [[245. 500.]
+ [ nan  40.]
+ [ nan 110.]
+ [ 25.  45.]
+ [ 55.  nan]]
+
+The row index in shopping_carts is: Index(['bike', 'book', 'glasses', 'pants', 'watch'], dtype='object')
+
+The column index in shopping_carts is: Index(['Bob', 'Alice'], dtype='object')
+</code></pre>
+<pre><code class="python"># We Create a DataFrame that only has Bob's data
+bob_shopping_cart = pd.DataFrame(items, columns=['Bob'])
+
+# We display bob_shopping_cart
+bob_shopping_cart
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Bob</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>bike</th>
+      <td>245</td>
+    </tr>
+    <tr>
+      <th>pants</th>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>watch</th>
+      <td>55</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We Create a DataFrame that only has selected items for both Alice and Bob
+sel_shopping_cart = pd.DataFrame(items, index = ['pants', 'book'])
+
+# We display sel_shopping_cart
+sel_shopping_cart
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Bob</th>
+      <th>Alice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>pants</th>
+      <td>25.0</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>book</th>
+      <td>NaN</td>
+      <td>40</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We Create a DataFrame that only has selected items for Alice
+alice_sel_shopping_cart = pd.DataFrame(items, index = ['glasses', 'bike'], columns = ['Alice'])
+
+# We display alice_sel_shopping_cart
+alice_sel_shopping_cart
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Alice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>glasses</th>
+      <td>110</td>
+    </tr>
+    <tr>
+      <th>bike</th>
+      <td>500</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We create a dictionary of lists (arrays)
+data = {'Integers' : [1,2,3],
+        'Floats' : [4.5, 8.2, 9.6]}
+
+# We create a DataFrame 
+df = pd.DataFrame(data)
+
+# We display the DataFrame
+df
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Integers</th>
+      <th>Floats</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>8.2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>9.6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We create a DataFrame and provide the row index
+df = pd.DataFrame(data, index = ['label 1', 'label 2', 'label 3'])
+
+# We display the DataFrame
+df
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Integers</th>
+      <th>Floats</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>label 1</th>
+      <td>1</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>label 2</th>
+      <td>2</td>
+      <td>8.2</td>
+    </tr>
+    <tr>
+      <th>label 3</th>
+      <td>3</td>
+      <td>9.6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We create a list of Python dictionaries
+items2 = [{'bikes': 20, 'pants': 30, 'watches': 35}, 
+          {'watches': 10, 'glasses': 50, 'bikes': 15, 'pants':5}]
+
+# We create a DataFrame 
+store_items = pd.DataFrame(items2)
+
+# We display the DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>20</td>
+      <td>NaN</td>
+      <td>30</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We create a DataFrame  and provide the row index
+store_items = pd.DataFrame(items2, index = ['store 1', 'store 2'])
+
+# We display the DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>NaN</td>
+      <td>30</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We print the store_items DataFrame
+print(store_items)
+
+# We access rows, columns and elements using labels
+print()
+print('How many bikes are in each store:\n', store_items[['bikes']])
+print()
+print('How many bikes and pants are in each store:\n', store_items[['bikes', 'pants']])
+print()
+print('What items are in Store 1:\n', store_items.loc[['store 1']])
+print()
+print('How many bikes are in Store 2:', store_items['bikes']['store 2'])
+</code></pre>
+
+<pre><code>         bikes  glasses  pants  watches
+store 1     20      NaN     30       35
+store 2     15     50.0      5       10
+
+How many bikes are in each store:
+          bikes
+store 1     20
+store 2     15
+
+How many bikes and pants are in each store:
+          bikes  pants
+store 1     20     30
+store 2     15      5
+
+What items are in Store 1:
+          bikes  glasses  pants  watches
+store 1     20      NaN     30       35
+
+How many bikes are in Store 2: 15
+</code></pre>
+<pre><code class="python"># We add a new column named shirts to our store_items DataFrame indicating the number of
+# shirts in stock at each store. We will put 15 shirts in store 1 and 2 shirts in store 2
+store_items['shirts'] = [15,2]
+
+# We display the modified DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>watches</th>
+      <th>shirts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>NaN</td>
+      <td>30</td>
+      <td>35</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>10</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We make a new column called suits by adding the number of shirts and pants
+store_items['suits'] = store_items['pants'] + store_items['shirts']
+
+# We display the modified DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>watches</th>
+      <th>shirts</th>
+      <th>suits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>NaN</td>
+      <td>30</td>
+      <td>35</td>
+      <td>15</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>10</td>
+      <td>2</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We create a dictionary from a list of Python dictionaries that will number of items at the new store
+new_items = [{'bikes': 20, 'pants': 30, 'watches': 35, 'glasses': 4}]
+
+# We create new DataFrame with the new_items and provide and index labeled store 3
+new_store = pd.DataFrame(new_items, index = ['store 3'])
+
+# We display the items at the new store
+new_store
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>4</td>
+      <td>30</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We append store 3 to our store_items DataFrame
+store_items = store_items.append(new_store, sort=False)
+
+# We display the modified DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>watches</th>
+      <th>shirts</th>
+      <th>suits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>NaN</td>
+      <td>30</td>
+      <td>35</td>
+      <td>15.0</td>
+      <td>45.0</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>10</td>
+      <td>2.0</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>35</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We add a new column using data from particular rows in the watches column
+store_items['new watches'] = store_items['watches'][1:]
+
+# We display the modified DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>watches</th>
+      <th>shirts</th>
+      <th>suits</th>
+      <th>new watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>NaN</td>
+      <td>30</td>
+      <td>35</td>
+      <td>15.0</td>
+      <td>45.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>10</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>35</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>35.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We insert a new column with label shoes right before the column with numerical index 4
+store_items.insert(4, 'shoes', [8,5,0])
+
+# we display the modified DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>watches</th>
+      <th>shoes</th>
+      <th>shirts</th>
+      <th>suits</th>
+      <th>new watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>NaN</td>
+      <td>30</td>
+      <td>35</td>
+      <td>8</td>
+      <td>15.0</td>
+      <td>45.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>10</td>
+      <td>5</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>35</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>35.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We remove the new watches column
+store_items.pop('new watches')
+
+# we display the modified DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>watches</th>
+      <th>shoes</th>
+      <th>shirts</th>
+      <th>suits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>NaN</td>
+      <td>30</td>
+      <td>35</td>
+      <td>8</td>
+      <td>15.0</td>
+      <td>45.0</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>10</td>
+      <td>5</td>
+      <td>2.0</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>35</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We remove the watches and shoes columns
+store_items = store_items.drop(['watches', 'shoes'], axis = 1)
+
+# we display the modified DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>suits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>NaN</td>
+      <td>30</td>
+      <td>15.0</td>
+      <td>45.0</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>2.0</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We remove the store 2 and store 1 rows
+store_items = store_items.drop(['store 2', 'store 1'], axis = 0)
+
+# we display the modified DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>suits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We change the column label bikes to hats
+store_items = store_items.rename(columns = {'bikes': 'hats'})
+
+# we display the modified DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>hats</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>suits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We change the row label from store 3 to last store
+store_items = store_items.rename(index = {'store 3': 'last store'})
+
+# we display the modified DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>hats</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>suits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>last store</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We change the row index to be the data in the pants column
+store_items = store_items.set_index('pants')
+
+# we display the modified DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>hats</th>
+      <th>glasses</th>
+      <th>shirts</th>
+      <th>suits</th>
+    </tr>
+    <tr>
+      <th>pants</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>30</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We create a list of Python dictionaries
+items2 = [{'bikes': 20, 'pants': 30, 'watches': 35, 'shirts': 15, 'shoes':8, 'suits':45},
+{'watches': 10, 'glasses': 50, 'bikes': 15, 'pants':5, 'shirts': 2, 'shoes':5, 'suits':7},
+{'bikes': 20, 'pants': 30, 'watches': 35, 'glasses': 4, 'shoes':10}]
+
+# We create a DataFrame  and provide the row index
+store_items = pd.DataFrame(items2, index = ['store 1', 'store 2', 'store 3'])
+
+# We display the DataFrame
+store_items
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>shoes</th>
+      <th>suits</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>NaN</td>
+      <td>30</td>
+      <td>15.0</td>
+      <td>8</td>
+      <td>45.0</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>2.0</td>
+      <td>5</td>
+      <td>7.0</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>NaN</td>
+      <td>10</td>
+      <td>NaN</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We count the number of NaN values in store_items
+x =  store_items.isnull().sum().sum()
+
+# We print x
+print('Number of NaN values in our DataFrame:', x)
+</code></pre>
+
+<pre><code>Number of NaN values in our DataFrame: 3
+</code></pre>
+<pre><code class="python">store_items.isnull()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>shoes</th>
+      <th>suits</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">store_items.isnull().sum()
+</code></pre>
+
+<pre><code>bikes      0
+glasses    1
+pants      0
+shirts     1
+shoes      0
+suits      1
+watches    0
+dtype: int64
+</code></pre>
+<pre><code class="python"># We print the number of non-NaN values in our DataFrame
+print()
+print('Number of non-NaN values in the columns of our DataFrame:\n', store_items.count())
+</code></pre>
+
+<pre><code>Number of non-NaN values in the columns of our DataFrame:
+ bikes      3
+glasses    2
+pants      3
+shirts     2
+shoes      3
+suits      2
+watches    3
+dtype: int64
+</code></pre>
+<pre><code class="python"># We drop any rows with NaN values
+store_items.dropna(axis = 0)
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>shoes</th>
+      <th>suits</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>2.0</td>
+      <td>5</td>
+      <td>7.0</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We drop any columns with NaN values
+store_items.dropna(axis = 1)
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>pants</th>
+      <th>shoes</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>30</td>
+      <td>8</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>5</td>
+      <td>5</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>30</td>
+      <td>10</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We replace all NaN values with 0
+store_items.fillna(0)
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>shoes</th>
+      <th>suits</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>0.0</td>
+      <td>30</td>
+      <td>15.0</td>
+      <td>8</td>
+      <td>45.0</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>2.0</td>
+      <td>5</td>
+      <td>7.0</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>0.0</td>
+      <td>10</td>
+      <td>0.0</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We replace NaN values with the previous value in the column
+store_items.fillna(method = 'ffill', axis = 0)
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>shoes</th>
+      <th>suits</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>NaN</td>
+      <td>30</td>
+      <td>15.0</td>
+      <td>8</td>
+      <td>45.0</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>2.0</td>
+      <td>5</td>
+      <td>7.0</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>2.0</td>
+      <td>10</td>
+      <td>7.0</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We replace NaN values with the previous value in the row
+store_items.fillna(method = 'ffill', axis = 1)
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>shoes</th>
+      <th>suits</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20.0</td>
+      <td>20.0</td>
+      <td>30.0</td>
+      <td>15.0</td>
+      <td>8.0</td>
+      <td>45.0</td>
+      <td>35.0</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15.0</td>
+      <td>50.0</td>
+      <td>5.0</td>
+      <td>2.0</td>
+      <td>5.0</td>
+      <td>7.0</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20.0</td>
+      <td>4.0</td>
+      <td>30.0</td>
+      <td>30.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>35.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We replace NaN values with the next value in the column
+store_items.fillna(method = 'backfill', axis = 0)
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>shoes</th>
+      <th>suits</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>50.0</td>
+      <td>30</td>
+      <td>15.0</td>
+      <td>8</td>
+      <td>45.0</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>2.0</td>
+      <td>5</td>
+      <td>7.0</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>NaN</td>
+      <td>10</td>
+      <td>NaN</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We replace NaN values with the next value in the row
+store_items.fillna(method = 'backfill', axis = 1)
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>shoes</th>
+      <th>suits</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20.0</td>
+      <td>30.0</td>
+      <td>30.0</td>
+      <td>15.0</td>
+      <td>8.0</td>
+      <td>45.0</td>
+      <td>35.0</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15.0</td>
+      <td>50.0</td>
+      <td>5.0</td>
+      <td>2.0</td>
+      <td>5.0</td>
+      <td>7.0</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20.0</td>
+      <td>4.0</td>
+      <td>30.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>35.0</td>
+      <td>35.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We replace NaN values by using linear interpolation using column values
+store_items.interpolate(method = 'linear', axis = 0)
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>shoes</th>
+      <th>suits</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20</td>
+      <td>NaN</td>
+      <td>30</td>
+      <td>15.0</td>
+      <td>8</td>
+      <td>45.0</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15</td>
+      <td>50.0</td>
+      <td>5</td>
+      <td>2.0</td>
+      <td>5</td>
+      <td>7.0</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>2.0</td>
+      <td>10</td>
+      <td>7.0</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># We replace NaN values by using linear interpolation using row values
+store_items.interpolate(method = 'linear', axis = 1)
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bikes</th>
+      <th>glasses</th>
+      <th>pants</th>
+      <th>shirts</th>
+      <th>shoes</th>
+      <th>suits</th>
+      <th>watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>store 1</th>
+      <td>20.0</td>
+      <td>25.0</td>
+      <td>30.0</td>
+      <td>15.0</td>
+      <td>8.0</td>
+      <td>45.0</td>
+      <td>35.0</td>
+    </tr>
+    <tr>
+      <th>store 2</th>
+      <td>15.0</td>
+      <td>50.0</td>
+      <td>5.0</td>
+      <td>2.0</td>
+      <td>5.0</td>
+      <td>7.0</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>store 3</th>
+      <td>20.0</td>
+      <td>4.0</td>
+      <td>30.0</td>
+      <td>20.0</td>
+      <td>10.0</td>
+      <td>22.5</td>
+      <td>35.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># Since we will be working with ratings, we will set the precision of our 
+# dataframes to one decimal place.
+pd.set_option('precision', 1)
+
+# Create a Pandas DataFrame that contains the ratings some users have given to a
+# series of books. The ratings given are in the range from 1 to 5, with 5 being
+# the best score. The names of the books, the authors, and the ratings of each user
+# are given below:
+
+books = pd.Series(data = ['Great Expectations', 'Of Mice and Men', 'Romeo and Juliet', 'The Time Machine', 'Alice in Wonderland' ])
+authors = pd.Series(data = ['Charles Dickens', 'John Steinbeck', 'William Shakespeare', ' H. G. Wells', 'Lewis Carroll' ])
+
+user_1 = pd.Series(data = [3.2, np.nan ,2.5])
+user_2 = pd.Series(data = [5., 1.3, 4.0, 3.8])
+user_3 = pd.Series(data = [2.0, 2.3, np.nan, 4])
+user_4 = pd.Series(data = [4, 3.5, 4, 5, 4.2])
+
+# Users that have np.nan values means that the user has not yet rated that book.
+# Use the data above to create a Pandas DataFrame that has the following column
+# labels: 'Author', 'Book Title', 'User 1', 'User 2', 'User 3', 'User 4'. Let Pandas
+# automatically assign numerical row indices to the DataFrame. 
+
+# Create a dictionary with the data given above
+dat = {'Author': authors, 'Book Title': books, 'User 1': user_1, 'User 2': user_2, 'User 3': user_3, 'User 4': user_4}
+
+# Use the dictionary to create a Pandas DataFrame
+book_ratings = pd.DataFrame(dat)
+
+# If you created the dictionary correctly you should have a Pandas DataFrame
+# that has column labels: 'Author', 'Book Title', 'User 1', 'User 2', 'User 3',
+# 'User 4' and row indices 0 through 4.
+
+# Now replace all the NaN values in your DataFrame with the average rating in
+# each column. Replace the NaN values in place. HINT: you can use the fillna()
+# function with the keyword inplace = True, to do this. Write your code below:
+book_ratings.fillna(book_ratings.mean(), inplace=True)
+print(book_ratings)
+</code></pre>
+
+<pre><code>                Author           Book Title  User 1  User 2  User 3  User 4
+0      Charles Dickens   Great Expectations     3.2     5.0     2.0     4.0
+1       John Steinbeck      Of Mice and Men     2.9     1.3     2.3     3.5
+2  William Shakespeare     Romeo and Juliet     2.5     4.0     2.8     4.0
+3          H. G. Wells     The Time Machine     2.9     3.8     4.0     5.0
+4        Lewis Carroll  Alice in Wonderland     2.9     3.5     2.8     4.2
+</code></pre>
+<pre><code class="python">
+</code></pre>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../NumPy/" title="NumPy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                NumPy
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../DataFrame/" title="DataFrame" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                DataFrame
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/vinkrish" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

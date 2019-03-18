@@ -51,52 +51,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://vinkrish.github.io/MachineLearning/source/NumPy/</loc>
-     <lastmod>2019-03-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://vinkrish.github.io/MachineLearning/source/Pandas/</loc>
-     <lastmod>2019-03-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://vinkrish.github.io/MachineLearning/source/DataFrame/</loc>
-     <lastmod>2019-03-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://vinkrish.github.io/MachineLearning/source/PracticeProblem/</loc>
-     <lastmod>2019-03-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://vinkrish.github.io/MachineLearning/source/assessing/</loc>
-     <lastmod>2019-03-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://vinkrish.github.io/MachineLearning/source/cleaning/</loc>
-     <lastmod>2019-03-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://vinkrish.github.io/MachineLearning/source/plotting_with_pandas/</loc>
-     <lastmod>2019-03-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://vinkrish.github.io/MachineLearning/source/conclusions/</loc>
-     <lastmod>2019-03-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://vinkrish.github.io/MachineLearning/source/communicate/</loc>
-     <lastmod>2019-03-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://vinkrish.github.io/MachineLearning/source/case_study/</loc>
+     <loc>https://vinkrish.github.io/MachineLearning/source/</loc>
      <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>

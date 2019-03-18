@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://vinkrish.github.io/MachineLearning/source/plotting_with_pandas/">
+        <link rel="canonical" href="https://vinkrish.github.io/MachineLearning/source/">
       
       
         <meta name="author" content="Vinay Krishna">
@@ -35,21 +35,21 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
       
-        <title>Plotting - Machine Learning</title>
+        <title>Source - Machine Learning</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
       
@@ -58,7 +58,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
     
@@ -98,10 +98,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#plotting-with-pandas" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -123,7 +119,7 @@
               Machine Learning
             </span>
             <span class="md-header-nav__topic">
-              Plotting
+              Source
             </span>
           
         </div>
@@ -233,7 +229,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="About" class="md-nav__link">
+    <a href=".." title="About" class="md-nav__link">
       About
     </a>
   </li>
@@ -245,7 +241,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dap/" title="Data Analysis Process" class="md-nav__link">
+    <a href="../dap/" title="Data Analysis Process" class="md-nav__link">
       Data Analysis Process
     </a>
   </li>
@@ -257,7 +253,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ml_workflow/" title="Machine Learning Workflow" class="md-nav__link">
+    <a href="../ml_workflow/" title="Machine Learning Workflow" class="md-nav__link">
       Machine Learning Workflow
     </a>
   </li>
@@ -307,7 +303,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../week_1/model_representation/" title="Model Representation" class="md-nav__link">
+    <a href="../week_1/model_representation/" title="Model Representation" class="md-nav__link">
       Model Representation
     </a>
   </li>
@@ -319,7 +315,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../week_1/cost_function/" title="Cost Function" class="md-nav__link">
+    <a href="../week_1/cost_function/" title="Cost Function" class="md-nav__link">
       Cost Function
     </a>
   </li>
@@ -331,7 +327,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../week_1/cost_function_intuition_1/" title="Cost Function Intuition 1" class="md-nav__link">
+    <a href="../week_1/cost_function_intuition_1/" title="Cost Function Intuition 1" class="md-nav__link">
       Cost Function Intuition 1
     </a>
   </li>
@@ -343,7 +339,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../week_1/cost_function_intuition_2/" title="Cost Function Intuition 2" class="md-nav__link">
+    <a href="../week_1/cost_function_intuition_2/" title="Cost Function Intuition 2" class="md-nav__link">
       Cost Function Intuition 2
     </a>
   </li>
@@ -355,7 +351,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../week_1/gradient_descent/" title="Gradient Descent" class="md-nav__link">
+    <a href="../week_1/gradient_descent/" title="Gradient Descent" class="md-nav__link">
       Gradient Descent
     </a>
   </li>
@@ -367,7 +363,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../week_1/gradient_descent_intuition/" title="Gradient Descent Intuition" class="md-nav__link">
+    <a href="../week_1/gradient_descent_intuition/" title="Gradient Descent Intuition" class="md-nav__link">
       Gradient Descent Intuition
     </a>
   </li>
@@ -379,7 +375,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../week_1/gd_for_linear_regression/" title="Gradient Descent For Linear Regression" class="md-nav__link">
+    <a href="../week_1/gd_for_linear_regression/" title="Gradient Descent For Linear Regression" class="md-nav__link">
       Gradient Descent For Linear Regression
     </a>
   </li>
@@ -402,151 +398,15 @@
   
 
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
-    
-    <label class="md-nav__link" for="nav-5">
-      Code
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Code
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../NumPy/" title="NumPy" class="md-nav__link">
-      NumPy
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Pandas/" title="Pandas" class="md-nav__link">
-      Pandas
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../DataFrame/" title="DataFrame" class="md-nav__link">
-      DataFrame
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../PracticeProblem/" title="Practice Problem" class="md-nav__link">
-      Practice Problem
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../assessing/" title="Assessing" class="md-nav__link">
-      Assessing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../cleaning/" title="Cleaning" class="md-nav__link">
-      Cleaning
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-      
     
-    
-    <a href="./" title="Plotting" class="md-nav__link md-nav__link--active">
-      Plotting
+    <a href="./" title="Source" class="md-nav__link md-nav__link--active">
+      Source
     </a>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../conclusions/" title="Conclusion" class="md-nav__link">
-      Conclusion
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../communicate/" title="Communicate" class="md-nav__link">
-      Communicate
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../case_study/" title="Case Study" class="md-nav__link">
-      Case Study
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
     
@@ -557,166 +417,30 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/vinkrish/MachineLearning/edit/master/docs/source/plotting_with_pandas.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/vinkrish/MachineLearning/edit/master/docs/source.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="plotting-with-pandas">Plotting with Pandas</h1>
-<p>Here are some of the most common and useful plots you can create with Pandas. Note that the plot methods on a Series or DataFrame are just simple wrappers around matplotlib functions. This is why you might see these them used interchangeably. Pandas is nice for quick insights, but you'll need to use matplotlib to really dive into details and customize your visualizations. We'll get into this more later on.</p>
-<p>Let's first use census income data to practice plotting histograms, bar charts, and pie charts.</p>
-<pre><code class="python">import pandas as pd
-
-# This allows us to view visualizations in Jupyter notebook - useful!!
-%matplotlib inline
-
-# View summary of census income data
-df_census = pd.read_csv('census_income_data.csv')
-df_census.info()
-</code></pre>
-
-<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
-RangeIndex: 32561 entries, 0 to 32560
-Data columns (total 15 columns):
-age               32561 non-null int64
-workclass         30725 non-null object
-fnlwgt            32561 non-null int64
-education         32561 non-null object
-education-num     32561 non-null int64
-marital-status    32561 non-null object
-occupation        30718 non-null object
-relationship      32561 non-null object
-race              32561 non-null object
-sex               32561 non-null object
-capital-gain      32561 non-null int64
-capital-loss      32561 non-null int64
-hours-per-week    32561 non-null int64
-native-country    31978 non-null object
-income            32561 non-null object
-dtypes: int64(6), object(9)
-memory usage: 3.7+ MB
-</code></pre>
-<pre><code class="python"># This is quick way to view histograms for all numeric columns
-df_census.hist()
-</code></pre>
-
-<pre><code>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x000001E3BC0ECB70&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000001E3BBCBC278&gt;],
-       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x000001E3BC3E35C0&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000001E3BC40AB38&gt;],
-       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x000001E3BC43C0B8&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000001E3BC464630&gt;]],
-      dtype=object)
-</code></pre>
-<p><img alt="png" src="../images/output_2_1.png" /></p>
-<pre><code class="python"># That was way too crowded, let's make our figure size bigger
-# Also, we can use a semicolon to suppress unwanted output
-df_census.hist(figsize=(8,8));
-</code></pre>
-
-<p><img alt="output_3_0" src="../images/output_3_0.png" /></p>
-<pre><code class="python"># We can also get a histogram for a single column like this
-df_census['age'].hist();
-</code></pre>
-
-<p><img alt="output_4_0" src="../images/output_4_0.png" /></p>
-<pre><code class="python"># We can also plot a histogram using this more general function
-df_census['age'].plot(kind='hist');
-</code></pre>
-
-<p><img alt="output_5_00" src="../images/output_5_00.png" /></p>
-<p>Next, let's plot a bar chart. For this, we need counts for each distinct value (or bar).</p>
-<pre><code class="python"># This function aggregates counts for each unique value in a column
-print(df_census['education'].value_counts());
-</code></pre>
-
-<pre><code> HS-grad         10501
- Some-college     7291
- Bachelors        5355
- Masters          1723
- Assoc-voc        1382
- 11th             1175
- Assoc-acdm       1067
- 10th              933
- 7th-8th           646
- Prof-school       576
- 9th               514
- 12th              433
- Doctorate         413
- 5th-6th           333
- 1st-4th           168
- Preschool          51
-Name: education, dtype: int64
-</code></pre>
-<pre><code class="python"># We can use value counts to plot our bar chart
-df_census['education'].value_counts().plot(kind='bar');
-</code></pre>
-
-<p><img alt="output_8_00" src="../images/output_8_00.png" /></p>
-<pre><code class="python"># Value counts are also required for pie charts
-df_census['workclass'].value_counts().plot(kind='pie', figsize=(8, 8));
-</code></pre>
-
-<p><img alt="output_9_00" src="../images/output_9_00.png" /></p>
-<p>Now, let's use cancer data to practice plotting scatter plots and box plots.</p>
-<pre><code class="python">df_cancer = pd.read_csv('cancer_data_edited.csv')
-df_cancer.info()
-</code></pre>
-
-<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
-RangeIndex: 564 entries, 0 to 563
-Data columns (total 12 columns):
-id                   564 non-null int64
-diagnosis            564 non-null object
-radius               564 non-null float64
-texture              564 non-null float64
-perimeter            564 non-null float64
-area                 564 non-null float64
-smoothness           564 non-null float64
-compactness          564 non-null float64
-concavity            564 non-null float64
-concave_points       564 non-null float64
-symmetry             564 non-null float64
-fractal_dimension    564 non-null float64
-dtypes: float64(10), int64(1), object(1)
-memory usage: 53.0+ KB
-</code></pre>
-<p>This next function is really cool for getting quick insight into the relationships among numeric variables with scatterplots. It also displays a histogram for each variable.</p>
-<pre><code class="python"># Create scatter matrix, make figure size big enough to display clearly
-pd.plotting.scatter_matrix(df_cancer, figsize=(15, 15));
-</code></pre>
-
-<p><img alt="png" src="../images/output_13_0.png" /></p>
-<pre><code class="python"># Create a single scatter plot like this
-df_cancer.plot(x='compactness', y='concavity', kind='scatter');
-</code></pre>
-
-<p><img alt="output_14_00" src="../images/output_14_00.png" /></p>
-<pre><code class="python"># Create a box plot like this
-df_cancer['concave_points'].plot(kind='box');
-</code></pre>
-
-<p><img alt="output_15_0" src="../images/output_15_0.png" /></p>
-<pre><code class="python">
-</code></pre>
+                  <h1>Source</h1>
+                
+                <ul>
+<li><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Playground.html">Playground</a></li>
+<li><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/NumPy.html">NumPy</a></li>
+<li><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Pandas.html">Pandas</a></li>
+<li><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/DataFrame.html">DataFrame</a></li>
+<li><a href="https://s3.us-west-2.amazonaws.com/vinkrish-notes/Stroop_Effect.html">Stroop Effect</a></li>
+<li><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/PracticeProblem.html">Practice Problem</a></li>
+<li><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/assessing.html">Assessing</a></li>
+<li><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/cleaning.html">Cleaning</a></li>
+<li><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/plotting_with_pandas.html">Plotting</a></li>
+<li><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/conclusions.html">Conclusion</a></li>
+<li><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/communicate.html">Communicate</a></li>
+<li><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/CaseStudy.html">Case Study</a></li>
+</ul>
                 
                   
                 
@@ -737,7 +461,7 @@ df_cancer['concave_points'].plot(kind='box');
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../cleaning/" title="Cleaning" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../week_1/gd_for_linear_regression/" title="Gradient Descent For Linear Regression" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -746,25 +470,11 @@ df_cancer['concave_points'].plot(kind='box');
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Cleaning
+                Gradient Descent For Linear Regression
               </span>
             </div>
           </a>
         
-        
-          <a href="../conclusions/" title="Conclusion" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Conclusion
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
@@ -781,7 +491,7 @@ df_cancer['concave_points'].plot(kind='box');
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
       <a href="https://github.com/vinkrish" class="md-footer-social__link fa fa-github"></a>
     
@@ -793,9 +503,9 @@ df_cancer['concave_points'].plot(kind='box');
       
     </div>
     
-      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="../assets/javascripts/application.d9aa80ab.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

@@ -32,13 +32,4 @@ nav:
       - Gradient Descent: week_1/gradient_descent.md
       - Gradient Descent Intuition: week_1/gradient_descent_intuition.md
       - Gradient Descent For Linear Regression: week_1/gd_for_linear_regression.md
-  - Code:
-    - NumPy: source/NumPy.md
-    - Pandas: source/Pandas.md
-    - DataFrame: source/DataFrame.md
-    - Practice Problem: source/PracticeProblem.md
-    - Assessing: source/assessing.md
-    - Cleaning: source/cleaning.md
-    - Plotting: source/plotting_with_pandas.md
-    - Conclusion: source/conclusions.md
-    - Communicate: source/communicate.md
+  - Source: source.md

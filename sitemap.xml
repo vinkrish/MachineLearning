@@ -2,97 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/dap/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/ml_workflow/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/week_1/model_representation/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/week_1/cost_function/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/week_1/cost_function_intuition_1/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/week_1/cost_function_intuition_2/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/week_1/gradient_descent/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/week_1/gradient_descent_intuition/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/week_1/gd_for_linear_regression/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/source/NumPy/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/source/Pandas/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/source/DataFrame/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/source/PracticeProblem/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/source/assessing/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/source/cleaning/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/source/plotting_with_pandas/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/source/conclusions/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://vinkrish.github.io/MachineLearning/source/communicate/</loc>
-     <lastmod>2019-03-17</lastmod>
+     <lastmod>2019-03-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://vinkrish.github.io/MachineLearning/source/case_study/</loc>
+     <lastmod>2019-03-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

@@ -9,4 +9,5 @@
 - [Plotting](https://s3-us-west-2.amazonaws.com/vinkrish-notes/plotting_with_pandas.html)
 - [Conclusion](https://s3-us-west-2.amazonaws.com/vinkrish-notes/conclusions.html)
 - [Communicate](https://s3-us-west-2.amazonaws.com/vinkrish-notes/communicate.html)
-- [Case Study](https://s3-us-west-2.amazonaws.com/vinkrish-notes/CaseStudy.html)
+- [Case Study - Wine Rating](https://s3-us-west-2.amazonaws.com/vinkrish-notes/CaseStudy.html)
+- [Case Study - Fuel Economy](https://s3-us-west-2.amazonaws.com/vinkrish-notes/FuelEconomy.html)

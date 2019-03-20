@@ -293,6 +293,18 @@
 
 
   <li class="md-nav__item">
+    <a href="math/" title="Math" class="md-nav__link">
+      Math
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="dap/" title="Data Analysis Process" class="md-nav__link">
       Data Analysis Process
     </a>
@@ -318,13 +330,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Andrew Ng's ML Course
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         Andrew Ng's ML Course
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -337,13 +349,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
     
-    <label class="md-nav__link" for="nav-4-1">
+    <label class="md-nav__link" for="nav-5-1">
       Week 1
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-1">
+      <label class="md-nav__title" for="nav-5-1">
         Week 1
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -529,24 +541,56 @@
 </ul>
 <h3 id="supervised-learning">Supervised Learning</h3>
 <p>In supervised learning, we are given a data set and already know what our correct output should look like, having the idea that there is a relationship between the input and the output.</p>
-<p>Supervised learning problems are categorized into <strong>regression</strong> and <strong>classification</strong> problems.</p>
+<p>Supervised learning problems are categorized into <strong>Regression</strong> and <strong>Classification</strong> problems.</p>
 <ul>
-<li>In a regression problem, we are trying to predict results within a continuous output, meaning that we are trying to map input variables to some continuous function.</li>
-<li>In a classification problem, we are instead trying to predict results in a discrete output. In other words, we are trying to map input variables into discrete categories.</li>
+<li>
+<p>In a regression problem, we are trying to predict results within a continuous output, meaning that we are trying to map input variables to some continuous function. Commonly used algorithms:</p>
+<ul>
+<li>Linear Regression</li>
+<li>Logistics Regression</li>
+<li>Polynomial Regression</li>
+<li>Stepwise Regression</li>
+<li>Ridge Regression</li>
+<li>Lasso Regression</li>
+<li>Support Vector Regression (SVR)</li>
+</ul>
+</li>
+<li>
+<p>In a classification problem, we are instead trying to predict results in a discrete output. In other words, we are trying to map input variables into discrete categories. Commonly used algorithms:</p>
+<ul>
+<li>Linear Classifier (Logistic Regression &amp; Naive Bayes)</li>
+<li>Support Vector Machines</li>
+<li>Decision Trees</li>
+<li>Random Forest</li>
+<li>Neural Networks</li>
+<li>Nearest Neighbor</li>
+</ul>
+</li>
 </ul>
 <p><em>Example 1</em>:</p>
-<p>Given data about the size of houses on the real estate market, try to predict their price. Price as a function of size is a continuous output, so this is a regression problem.</p>
-<p>We could turn this example into a classification problem by instead making our output about whether the house "sells for more or less than the asking price." Here we are classifying the houses based on price into two discrete categories.</p>
+<p>(a) Given data about the size of houses on the real estate market, try to predict their price. Price as a function of size is a continuous output, so this is a regression problem.</p>
+<p>(b) We could turn this example into a classification problem by instead making our output about whether the house "sells for more or less than the asking price." Here we are classifying the houses based on price into two discrete categories.</p>
 <p><em>Example 2</em>:</p>
 <p>(a) Regression - Given a picture of a person, we have to predict their age on the basis of the given picture</p>
 <p>(b) Classification - Given a patient with a tumor, we have to predict whether the tumor is malignant or benign.</p>
 <h3 id="unsupervised-learning">Unsupervised Learning</h3>
-<p>Unsupervised learning allows us to approach problems with little or no idea what our results should look like. We can derive structure from data where we don't necessarily know the effect of the variables.</p>
-<p>We can derive this structure by clustering the data based on relationships among the variables in the data.</p>
-<p>With unsupervised learning there is no feedback based on the prediction results.</p>
+<p>Unsupervised learning allows us to approach problems with little or no idea what our results should look like. With unsupervised learning there is no feedback based on the prediction results.</p>
+<p>We can derive structure:</p>
+<ul>
+<li>From data where we don't necessarily know the effect of the variables.</li>
+<li>By clustering the data based on relationships among the variables in the data.</li>
+</ul>
 <p><em>Example</em>:</p>
 <p><strong>Clustering</strong>: Take a collection of 1,000,000 different genes, and find a way to automatically group these genes into groups that are somehow similar or related by different variables, such as lifespan, location, roles, and so on.</p>
 <p><strong>Non-clustering</strong>: The "Cocktail Party Algorithm", allows you to find structure in a chaotic environment. (i.e. identifying individual voices and music from a mesh of sounds at a cocktail party).</p>
+<p>Commonly used algorithms:</p>
+<ul>
+<li>K-means Clustering</li>
+<li>Mean-Shift Clustering</li>
+<li>Density-Based Spatial Clustering of Applications(DBSCAN)</li>
+<li>Ex-Hierarchical</li>
+<li>Dimensionality Reduction (Principal Component Analysis)</li>
+</ul>
                 
                   
                 
@@ -568,13 +612,13 @@
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="dap/" title="Data Analysis Process" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="math/" title="Math" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Data Analysis Process
+                Math
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

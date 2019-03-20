@@ -11,5 +11,6 @@
 - [Communicate](https://s3-us-west-2.amazonaws.com/vinkrish-notes/communicate.html)
 - [Case Study - Wine Rating](https://s3-us-west-2.amazonaws.com/vinkrish-notes/CaseStudy.html)
 - [Case Study - Fuel Economy](https://s3-us-west-2.amazonaws.com/vinkrish-notes/FuelEconomy.html)
-- [Fuel economy - Conclusion](https://s3-us-west-2.amazonaws.com/vinkrish-notes/drawing-conclusions.html)
+- [Fuel Economy - Conclusion](https://s3-us-west-2.amazonaws.com/vinkrish-notes/drawing-conclusions.html)
+- [Fuel Economy - Visuals](https://s3-us-west-2.amazonaws.com/vinkrish-notes/exploring_visuals.html)
 - [Fuel Economy - Merging Data](https://s3-us-west-2.amazonaws.com/vinkrish-notes/merging_data.html)

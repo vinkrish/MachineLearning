@@ -19,16 +19,31 @@ In general, any machine learning problem can be assigned to one of two broad cla
 ### Supervised Learning
 In supervised learning, we are given a data set and already know what our correct output should look like, having the idea that there is a relationship between the input and the output.
 
-Supervised learning problems are categorized into **regression** and **classification** problems.
+Supervised learning problems are categorized into **Regression** and **Classification** problems.
 
-- In a regression problem, we are trying to predict results within a continuous output, meaning that we are trying to map input variables to some continuous function.
-- In a classification problem, we are instead trying to predict results in a discrete output. In other words, we are trying to map input variables into discrete categories.
+- In a regression problem, we are trying to predict results within a continuous output, meaning that we are trying to map input variables to some continuous function. Commonly used algorithms:
+    - Linear Regression
+    - Logistics Regression
+    - Polynomial Regression
+    - Stepwise Regression
+    - Ridge Regression
+    - Lasso Regression
+    - ElasticNet Regression
+    - Support Vector Regression (SVR)
+
+- In a classification problem, we are instead trying to predict results in a discrete output. In other words, we are trying to map input variables into discrete categories. Commonly used algorithms:
+    - Linear Classifier (Logistic Regression & Naive Bayes)
+    - Support Vector Machines
+    - Decision Trees
+    - Random Forest
+    - Neural Networks
+    - Nearest Neighbor
 
 _Example 1_:
 
-Given data about the size of houses on the real estate market, try to predict their price. Price as a function of size is a continuous output, so this is a regression problem.
+(a) Given data about the size of houses on the real estate market, try to predict their price. Price as a function of size is a continuous output, so this is a regression problem.
 
-We could turn this example into a classification problem by instead making our output about whether the house "sells for more or less than the asking price." Here we are classifying the houses based on price into two discrete categories.
+(b) We could turn this example into a classification problem by instead making our output about whether the house "sells for more or less than the asking price." Here we are classifying the houses based on price into two discrete categories.
 
 _Example 2_:
 
@@ -37,15 +52,24 @@ _Example 2_:
 (b) Classification - Given a patient with a tumor, we have to predict whether the tumor is malignant or benign.
 
 ### Unsupervised Learning
-Unsupervised learning allows us to approach problems with little or no idea what our results should look like. We can derive structure from data where we don't necessarily know the effect of the variables.
+Unsupervised learning allows us to approach problems with little or no idea what our results should look like. With unsupervised learning there is no feedback based on the prediction results.
 
-We can derive this structure by clustering the data based on relationships among the variables in the data.
+We can derive structure:
 
-With unsupervised learning there is no feedback based on the prediction results.
+- From data where we don't necessarily know the effect of the variables.
+- By clustering the data based on relationships among the variables in the data.
 
 _Example_:
 
 **Clustering**: Take a collection of 1,000,000 different genes, and find a way to automatically group these genes into groups that are somehow similar or related by different variables, such as lifespan, location, roles, and so on.
 
 **Non-clustering**: The "Cocktail Party Algorithm", allows you to find structure in a chaotic environment. (i.e. identifying individual voices and music from a mesh of sounds at a cocktail party).
+
+Commonly used algorithms:
+
+- K-means Clustering
+- Mean-Shift Clustering
+- Density-Based Spatial Clustering of Applications(DBSCAN)
+- Ex-Hierarchical
+- Dimensionality Reduction (Principal Component Analysis)
 

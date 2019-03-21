@@ -75,6 +75,8 @@ Letting specific data teach a machine learning algorithm to create a specific pr
 **Why retrain?**  
 Retraining will ensure that our model can take advantage of the new data to make better predictions. And also verify the algorithm can still create a high-performance model with the new data.
 
+We will compare our model prediction with actual prediction or actual labels that are associated with training data and use this as feeback to tweak our model parameters, this is the loss function or cost function and its primary purpose is to improve our model parameters and build stronger model.
+
 **Performance Improvement Options**
 
 - Adjust current algorithm

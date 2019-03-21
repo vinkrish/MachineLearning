@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://vinkrish.github.io/MachineLearning/week_1/gradient_descent/">
+        <link rel="canonical" href="https://vinkrish.github.io/MachineLearning/math/">
       
       
         <meta name="author" content="Vinay Krishna">
@@ -35,21 +35,21 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
       
-        <title>Gradient Descent - Machine Learning</title>
+        <title>Math - Machine Learning</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
       
@@ -58,7 +58,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
     
@@ -98,6 +98,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#z-score-standard-score" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -119,7 +123,7 @@
               Machine Learning
             </span>
             <span class="md-header-nav__topic">
-              Gradient Descent
+              Math
             </span>
           
         </div>
@@ -229,56 +233,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="About" class="md-nav__link">
+    <a href=".." title="About" class="md-nav__link">
       About
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../math/" title="Math" class="md-nav__link">
-      Math
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/" title="Algorithms" class="md-nav__link">
-      Algorithms
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../dap/" title="Data Analysis Process" class="md-nav__link">
-      Data Analysis Process
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../ml_workflow/" title="Machine Learning Workflow" class="md-nav__link">
-      Machine Learning Workflow
     </a>
   </li>
 
@@ -290,9 +246,124 @@
   
 
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Math
+      </label>
+    
+    <a href="./" title="Math" class="md-nav__link md-nav__link--active">
+      Math
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#z-score-standard-score" title="Z score (Standard Score)" class="md-nav__link">
+    Z score (Standard Score)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#t-distribution" title="T distribution" class="md-nav__link">
+    T distribution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cohens-d" title="Cohen's d" class="md-nav__link">
+    Cohen's d
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margin-of-error-me" title="Margin of Error (ME)" class="md-nav__link">
+    Margin of Error (ME)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confidence-interval-ci" title="Confidence Interval (CI)" class="md-nav__link">
+    Confidence Interval (CI)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packages-overview" title="Packages Overview" class="md-nav__link">
+    Packages Overview
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../algorithms/" title="Algorithms" class="md-nav__link">
+      Algorithms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../dap/" title="Data Analysis Process" class="md-nav__link">
+      Data Analysis Process
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ml_workflow/" title="Machine Learning Workflow" class="md-nav__link">
+      Machine Learning Workflow
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Andrew Ng's ML Course
@@ -308,12 +379,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
     
     <label class="md-nav__link" for="nav-6-1">
       Week 1
@@ -331,7 +400,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../model_representation/" title="Model Representation" class="md-nav__link">
+    <a href="../week_1/model_representation/" title="Model Representation" class="md-nav__link">
       Model Representation
     </a>
   </li>
@@ -343,7 +412,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cost_function/" title="Cost Function" class="md-nav__link">
+    <a href="../week_1/cost_function/" title="Cost Function" class="md-nav__link">
       Cost Function
     </a>
   </li>
@@ -355,7 +424,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cost_function_intuition_1/" title="Cost Function Intuition 1" class="md-nav__link">
+    <a href="../week_1/cost_function_intuition_1/" title="Cost Function Intuition 1" class="md-nav__link">
       Cost Function Intuition 1
     </a>
   </li>
@@ -367,7 +436,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cost_function_intuition_2/" title="Cost Function Intuition 2" class="md-nav__link">
+    <a href="../week_1/cost_function_intuition_2/" title="Cost Function Intuition 2" class="md-nav__link">
       Cost Function Intuition 2
     </a>
   </li>
@@ -377,18 +446,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Gradient Descent" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../week_1/gradient_descent/" title="Gradient Descent" class="md-nav__link">
       Gradient Descent
     </a>
-    
   </li>
 
         
@@ -398,7 +460,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../gradient_descent_intuition/" title="Gradient Descent Intuition" class="md-nav__link">
+    <a href="../week_1/gradient_descent_intuition/" title="Gradient Descent Intuition" class="md-nav__link">
       Gradient Descent Intuition
     </a>
   </li>
@@ -410,7 +472,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../gd_for_linear_regression/" title="Gradient Descent For Linear Regression" class="md-nav__link">
+    <a href="../week_1/gd_for_linear_regression/" title="Gradient Descent For Linear Regression" class="md-nav__link">
       Gradient Descent For Linear Regression
     </a>
   </li>
@@ -432,7 +494,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../source/" title="Source" class="md-nav__link">
+    <a href="../source/" title="Source" class="md-nav__link">
       Source
     </a>
   </li>
@@ -445,17 +507,125 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#z-score-standard-score" title="Z score (Standard Score)" class="md-nav__link">
+    Z score (Standard Score)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#t-distribution" title="T distribution" class="md-nav__link">
+    T distribution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cohens-d" title="Cohen's d" class="md-nav__link">
+    Cohen's d
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margin-of-error-me" title="Margin of Error (ME)" class="md-nav__link">
+    Margin of Error (ME)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confidence-interval-ci" title="Confidence Interval (CI)" class="md-nav__link">
+    Confidence Interval (CI)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packages-overview" title="Packages Overview" class="md-nav__link">
+    Packages Overview
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/vinkrish/MachineLearning/edit/master/docs/week_1/gradient_descent.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/vinkrish/MachineLearning/edit/master/docs/math.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Gradient Descent</h1>
+                  <h1>Math</h1>
                 
-                
+                <p><strong>Mean deviation</strong> refers to how far away every data point is from the average of those data points. Squared mean deviation simply squares this result. This is the square of the distance of every data point from the mean, and now we can finally calculate the variance of these data points.</p>
+<p>$$variance=\frac{\sum(x_i-\overline{x})^2}{n}$$</p>
+<p><strong>Variance</strong> is the sum of the squares of the distances of every individual data point from the mean divided by the total number of data points. The estimate of the variance can be improved by tweaking the denominator of this function. This tweak is called the <strong>Bessel's Correction</strong>. So instead of using N for all of the data points, we'll simply use N-1 as the denominator.</p>
+<p>$$variance=\frac{\sum(x_i-\overline{x})^2}{n-1}$$</p>
+<p>Mean and variance succinctly summarize a set of numbers along with <strong>Standard deviation</strong>, which once again measures how much the numbers jump around.</p>
+<p>$$SD = \sqrt{variance}$$</p>
+<p><strong>Mean Square Error (MSE)</strong> is nothing but the variance of the residual.</p>
+<p><strong>Standard Error(SE)</strong> of a statistic is the standard deviation of its sampling distribution or an estimate of that standard deviation. If the parameter or the statistic is the mean, it is called the standard error of the mean (SEM).<br />
+$\sigma$=Standard Deviation of population, n=size of sample</p>
+<p>$$SE = \frac{\sigma}{\sqrt{n}}$$</p>
+<h3 id="z-score-standard-score">Z score (Standard Score)</h3>
+<p>Given an observed value x, the Z score finds the number of Standard deviations x is away from the mean.</p>
+<p>$$Z = \frac{x-\mu}{\sigma}$$</p>
+<h3 id="t-distribution">T distribution</h3>
+<p>The t-Test is best to use when we do not know the population standard deviation. Instead we use the sample standard deviation.
+The number of degrees of freedom(df) is the number of values that are free to vary (n-1).</p>
+<p>$$S=\frac{\sum(x_i-\overline{x})^2}{n-1}$$</p>
+<p>$$t = \frac{\overline{x}-\mu}{SE}$$</p>
+<p>T-tests are also great for testing two sample means (i.e. paired t-tests), we modify the formula to become:</p>
+<p>$$SD = \sqrt{S_1^2 + S_2^2}$$</p>
+<p>$$SE = \sqrt{\frac{S_1^2}{n1} + \frac{S_2^2}{n2}}$$</p>
+<p>$$t = \frac{(\overline{x}_2-\overline{x}_1)-(\mu_2-\mu_1)}{\frac{\sqrt(s_1^2+s_2^2)}{n}}$$</p>
+<h3 id="cohens-d">Cohen's d</h3>
+<p>It measures the effect size of the strength of a phenomenon. Cohen’s d gives us the distance between means in standardized units.<br />
+$\overline{x} = \overline{x_1} - \overline{x_2}$</p>
+<p>$$d = \frac{\overline{x}-\mu}{S}$$</p>
+<h3 id="margin-of-error-me">Margin of Error (ME)</h3>
+<p>$$ME = t_{critical} * SE$$</p>
+<h3 id="confidence-interval-ci">Confidence Interval (CI)</h3>
+<p>$$CI = \overline{x} \pm ME$$</p>
+<h3 id="packages-overview">Packages Overview</h3>
+<ul>
+<li><strong>Numpy</strong> let's you perform mathematical functions on large multi dimensional arrays and matrices efficiently.</li>
+<li><strong>Pandas</strong> is like a more powerful and flexible version of Excel that can handle large amounts of data.</li>
+<li><strong>Matplotlib</strong> is a plotting library that can produce great visualizations often with very few lines of code.</li>
+<li><strong>Scikit-learn</strong> is designed to work with NumPy, SciPy and Pandas, provides toolset for training and evaluation tasks:<ul>
+<li>Data splitting</li>
+<li>Pre-processing</li>
+<li>Feature selection</li>
+<li>Model training</li>
+<li>Model tuning</li>
+<li>and offers common interface across algorithms</li>
+</ul>
+</li>
+</ul>
                 
                   
                 
@@ -476,7 +646,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../cost_function_intuition_2/" title="Cost Function Intuition 2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".." title="About" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -485,19 +655,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Cost Function Intuition 2
+                About
               </span>
             </div>
           </a>
         
         
-          <a href="../gradient_descent_intuition/" title="Gradient Descent Intuition" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../algorithms/" title="Algorithms" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Gradient Descent Intuition
+                Algorithms
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -520,7 +690,7 @@
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
       <a href="https://github.com/vinkrish" class="md-footer-social__link fa fa-github"></a>
     
@@ -532,9 +702,9 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="../assets/javascripts/application.d9aa80ab.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

@@ -21,6 +21,8 @@ extra_javascript:
 # Navigation
 nav:
   - About: index.md
+  - Math: math.md
+  - Algorithms: algorithms.md
   - Data Analysis Process: dap.md
   - Machine Learning Workflow: ml_workflow.md
   - Andrew Ng's ML Course:

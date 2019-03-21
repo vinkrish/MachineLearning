@@ -98,7 +98,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#packages-overview" tabindex="1" class="md-skip">
+      <a href="#z-score-standard-score" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -268,6 +268,41 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#z-score-standard-score" title="Z score (Standard Score)" class="md-nav__link">
+    Z score (Standard Score)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#t-distribution" title="T distribution" class="md-nav__link">
+    T distribution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cohens-d" title="Cohen's d" class="md-nav__link">
+    Cohen's d
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margin-of-error-me" title="Margin of Error (ME)" class="md-nav__link">
+    Margin of Error (ME)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confidence-interval-ci" title="Confidence Interval (CI)" class="md-nav__link">
+    Confidence Interval (CI)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#packages-overview" title="Packages Overview" class="md-nav__link">
     Packages Overview
   </a>
@@ -282,6 +317,18 @@
   
 </nav>
     
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../algorithms/" title="Algorithms" class="md-nav__link">
+      Algorithms
+    </a>
   </li>
 
     
@@ -316,13 +363,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Andrew Ng's ML Course
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         Andrew Ng's ML Course
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -335,13 +382,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
     
-    <label class="md-nav__link" for="nav-5-1">
+    <label class="md-nav__link" for="nav-6-1">
       Week 1
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-1">
+      <label class="md-nav__title" for="nav-6-1">
         Week 1
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -472,6 +519,41 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#z-score-standard-score" title="Z score (Standard Score)" class="md-nav__link">
+    Z score (Standard Score)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#t-distribution" title="T distribution" class="md-nav__link">
+    T distribution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cohens-d" title="Cohen's d" class="md-nav__link">
+    Cohen's d
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margin-of-error-me" title="Margin of Error (ME)" class="md-nav__link">
+    Margin of Error (ME)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confidence-interval-ci" title="Confidence Interval (CI)" class="md-nav__link">
+    Confidence Interval (CI)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#packages-overview" title="Packages Overview" class="md-nav__link">
     Packages Overview
   </a>
@@ -499,7 +581,37 @@
                 
                   <h1>Math</h1>
                 
-                <h3 id="packages-overview">Packages Overview</h3>
+                <p><strong>Mean deviation</strong> refers to how far away every data point is from the average of those data points. Squared mean deviation simply squares this result. This is the square of the distance of every data point from the mean, and now we can finally calculate the variance of these data points.</p>
+<p>$$variance=\frac{\sum(x_i-\overline{x})^2}{n}$$</p>
+<p><strong>Variance</strong> is the sum of the squares of the distances of every individual data point from the mean divided by the total number of data points. The estimate of the variance can be improved by tweaking the denominator of this function. This tweak is called the <strong>Bessel's Correction</strong>. So instead of using N for all of the data points, we'll simply use N-1 as the denominator.</p>
+<p>$$variance=\frac{\sum(x_i-\overline{x})^2}{n-1}$$</p>
+<p>Mean and variance succinctly summarize a set of numbers along with <strong>Standard deviation</strong>, which once again measures how much the numbers jump around.</p>
+<p>$$SD = \sqrt{variance}$$</p>
+<p><strong>Mean Square Error (MSE)</strong> is nothing but the variance of the residual.</p>
+<p><strong>Standard Error(SE)</strong> of a statistic is the standard deviation of its sampling distribution or an estimate of that standard deviation. If the parameter or the statistic is the mean, it is called the standard error of the mean (SEM).<br />
+$\sigma$=Standard Deviation of population, n=size of sample</p>
+<p>$$SE = \frac{\sigma}{\sqrt{n}}$$</p>
+<h3 id="z-score-standard-score">Z score (Standard Score)</h3>
+<p>Given an observed value x, the Z score finds the number of Standard deviations x is away from the mean.</p>
+<p>$$Z = \frac{x-\mu}{\sigma}$$</p>
+<h3 id="t-distribution">T distribution</h3>
+<p>The t-Test is best to use when we do not know the population standard deviation. Instead we use the sample standard deviation.
+The number of degrees of freedom(df) is the number of values that are free to vary (n-1).</p>
+<p>$$S=\frac{\sum(x_i-\overline{x})^2}{n-1}$$</p>
+<p>$$t = \frac{\overline{x}-\mu}{SE}$$</p>
+<p>T-tests are also great for testing two sample means (i.e. paired t-tests), we modify the formula to become:</p>
+<p>$$SD = \sqrt{S_1^2 + S_2^2}$$</p>
+<p>$$SE = \sqrt{\frac{S_1^2}{n1} + \frac{S_2^2}{n2}}$$</p>
+<p>$$t = \frac{(\overline{x}_2-\overline{x}_1)-(\mu_2-\mu_1)}{\frac{\sqrt(s_1^2+s_2^2)}{n}}$$</p>
+<h3 id="cohens-d">Cohen's d</h3>
+<p>It measures the effect size of the strength of a phenomenon. Cohen’s d gives us the distance between means in standardized units.<br />
+$\overline{x} = \overline{x_1} - \overline{x_2}$</p>
+<p>$$d = \frac{\overline{x}-\mu}{S}$$</p>
+<h3 id="margin-of-error-me">Margin of Error (ME)</h3>
+<p>$$ME = t_{critical} * SE$$</p>
+<h3 id="confidence-interval-ci">Confidence Interval (CI)</h3>
+<p>$$CI = \overline{x} \pm ME$$</p>
+<h3 id="packages-overview">Packages Overview</h3>
 <ul>
 <li><strong>Numpy</strong> let's you perform mathematical functions on large multi dimensional arrays and matrices efficiently.</li>
 <li><strong>Pandas</strong> is like a more powerful and flexible version of Excel that can handle large amounts of data.</li>
@@ -549,13 +661,13 @@
           </a>
         
         
-          <a href="../dap/" title="Data Analysis Process" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../algorithms/" title="Algorithms" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Data Analysis Process
+                Algorithms
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

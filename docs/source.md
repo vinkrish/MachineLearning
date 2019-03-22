@@ -28,3 +28,7 @@
     - [Image Classification](https://s3-us-west-2.amazonaws.com/vinkrish-notes/MNISTClassification-SVM.html)
 - Case Study
     - [Automobile Price - Gradient Boost Regression (Decision Tree)](https://s3-us-west-2.amazonaws.com/vinkrish-notes/autoPrice-GradientBoosting.html)
+- Case Study
+    - [Titanic Survivor - Mean Shift Clustering](https://s3-us-west-2.amazonaws.com/vinkrish-notes/ClusteringWithMeanShift.html)
+- Case Study
+    - [Wine Rating - PCA](https://s3-us-west-2.amazonaws.com/vinkrish-notes/PCA-DimensionalityReduction.html)

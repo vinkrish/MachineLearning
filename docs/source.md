@@ -9,8 +9,22 @@
 - [Plotting](https://s3-us-west-2.amazonaws.com/vinkrish-notes/plotting_with_pandas.html)
 - [Conclusion](https://s3-us-west-2.amazonaws.com/vinkrish-notes/conclusions.html)
 - [Communicate](https://s3-us-west-2.amazonaws.com/vinkrish-notes/communicate.html)
-- [Case Study - Wine Rating](https://s3-us-west-2.amazonaws.com/vinkrish-notes/CaseStudy.html)
-- [Case Study - Fuel Economy](https://s3-us-west-2.amazonaws.com/vinkrish-notes/FuelEconomy.html)
-- [Fuel Economy - Conclusion](https://s3-us-west-2.amazonaws.com/vinkrish-notes/drawing-conclusions.html)
-- [Fuel Economy - Visuals](https://s3-us-west-2.amazonaws.com/vinkrish-notes/exploring_visuals.html)
-- [Fuel Economy - Merging Data](https://s3-us-west-2.amazonaws.com/vinkrish-notes/merging_data.html)
+- Case Study
+    - [Wine Rating](https://s3-us-west-2.amazonaws.com/vinkrish-notes/CaseStudy.html)
+- Case Study    
+    - [Fuel Economy](https://s3-us-west-2.amazonaws.com/vinkrish-notes/FuelEconomy.html)
+    - [Fuel Economy - Conclusion](https://s3-us-west-2.amazonaws.com/vinkrish-notes/drawing-conclusions.html)
+    - [Fuel Economy - Visuals](https://s3-us-west-2.amazonaws.com/vinkrish-notes/exploring_visuals.html)
+    - [Fuel Economy - Merging Data](https://s3-us-west-2.amazonaws.com/vinkrish-notes/merging_data.html)
+- [Categorical and Numeric Data](https://s3-us-west-2.amazonaws.com/vinkrish-notes/CategoricalAndNumericData.html)
+- [Text Feature Extraction](https://s3-us-west-2.amazonaws.com/vinkrish-notes/TextFeatureExtraction.html)
+- [Image Feature Extraction](https://s3-us-west-2.amazonaws.com/vinkrish-notes/ImageFeatureExtraction.html)
+- Case Study
+    - [Vehicle Price - Lasso & Ridge Regression](https://s3-us-west-2.amazonaws.com/vinkrish-notes/vehiclePrice-LassoRidge.html)
+- Case Study
+    - [Mileage - SVR](https://s3-us-west-2.amazonaws.com/vinkrish-notes/mpg-SVR.html)
+- SVM
+    - [Document Classification](https://s3-us-west-2.amazonaws.com/vinkrish-notes/DocumentClassification-SVM.html)
+    - [Image Classification](https://s3-us-west-2.amazonaws.com/vinkrish-notes/MNISTClassification-SVM.html)
+- Case Study
+    - [Automobile Price - Gradient Boost Regression (Decision Tree)](https://s3-us-west-2.amazonaws.com/vinkrish-notes/autoPrice-GradientBoosting.html)

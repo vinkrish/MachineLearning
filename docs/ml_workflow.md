@@ -92,3 +92,5 @@ The algorithm analyses the data and trains itself to create a high mathematical 
 $$y = x_1 + w_2x_2^3 + w_3x_3^8$$
 
 These high-order terms let this equation define a precise decision boundary between the positive and negative values, but as a result, the training process has created a model that works very well on training data but poorly when asked to predict values based on data it has not trained - this is the class overfit problem and is an issue that must be handled to create machine learning models that work well not only on the training data but also on real-world data.
+
+**Regularization**, **Cross validation**, **Ensemble learning** of which dropout is a part, are all ways to mitigate overfitting. Regularization is a technique where we penalize complex models. We add an additional parameter where if the model coefficients get too complex we add a penalty to the objective function. This is the technique that we use in regression.

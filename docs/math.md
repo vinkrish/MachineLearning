@@ -10,7 +10,8 @@ Mean and variance succinctly summarize a set of numbers along with **Standard de
 
 $$SD = \sqrt{variance}$$
 
-**Mean Square Error (MSE)** is nothing but the variance of the residual.
+**Mean Square Error (MSE)** is nothing but the variance of the residual.  
+The error (or disturbance) of an observed value is the deviation of the observed value from the (unobservable) true value of a quantity of interest (for example, a population mean), and the residual of an observed value is the difference between the observed value and the estimated value of the quantity of interest (for example, a sample mean)
 
 **Standard Error(SE)** of a statistic is the standard deviation of its sampling distribution or an estimate of that standard deviation. If the parameter or the statistic is the mean, it is called the standard error of the mean (SEM).  
 $\sigma$=Standard Deviation of population, n=size of sample

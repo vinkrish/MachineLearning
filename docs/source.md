@@ -16,6 +16,8 @@
     - [Fuel Economy - Conclusion](https://s3-us-west-2.amazonaws.com/vinkrish-notes/drawing-conclusions.html)
     - [Fuel Economy - Visuals](https://s3-us-west-2.amazonaws.com/vinkrish-notes/exploring_visuals.html)
     - [Fuel Economy - Merging Data](https://s3-us-west-2.amazonaws.com/vinkrish-notes/merging_data.html)
+- Case Study
+    - [Titanic Survival Exploration-Decision Tree](https://s3-us-west-2.amazonaws.com/vinkrish-notes/titanic_survival_exploration.html)
 - [Categorical and Numeric Data](https://s3-us-west-2.amazonaws.com/vinkrish-notes/CategoricalAndNumericData.html)
 - [Text Feature Extraction](https://s3-us-west-2.amazonaws.com/vinkrish-notes/TextFeatureExtraction.html)
 - [Image Feature Extraction](https://s3-us-west-2.amazonaws.com/vinkrish-notes/ImageFeatureExtraction.html)

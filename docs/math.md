@@ -2,7 +2,9 @@
 
 $$variance=\frac{\sum(x_i-\overline{x})^2}{n}$$
 
-**Variance** is the sum of the squares of the distances of every individual data point from the mean divided by the total number of data points. The estimate of the variance can be improved by tweaking the denominator of this function. This tweak is called the **Bessel's Correction**. So instead of using N for all of the data points, we'll simply use N-1 as the denominator.
+**Variance** describe the concentration of data points around the mean, It is a measure of spread/variability of data. 
+
+It is calculated as sum of the squares of the distances of every individual data point from the mean divided by the total number of data points. The estimate of the variance can be improved by tweaking the denominator of this function. This tweak is called the **Bessel's Correction**. So instead of using N for all of the data points, we'll simply use N-1 as the denominator.
 
 $$variance=\frac{\sum(x_i-\overline{x})^2}{n-1}$$
 

@@ -245,6 +245,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../terminology/" title="Terminology" class="md-nav__link">
+      Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../math/" title="Math" class="md-nav__link">
       Math
     </a>
@@ -359,13 +371,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#overfitting" title="Overfitting" class="md-nav__link">
-    Overfitting
-  </a>
-  
-</li>
-      
       
       
       
@@ -384,13 +389,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       Andrew Ng's ML Course
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         Andrew Ng's ML Course
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -403,13 +408,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
     
-    <label class="md-nav__link" for="nav-6-1">
+    <label class="md-nav__link" for="nav-7-1">
       Week 1
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-1">
+      <label class="md-nav__title" for="nav-7-1">
         Week 1
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -595,13 +600,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#overfitting" title="Overfitting" class="md-nav__link">
-    Overfitting
-  </a>
-  
-</li>
-      
       
       
       
@@ -689,12 +687,6 @@ Retraining will ensure that our model can take advantage of the new data to make
 <li>Improve training</li>
 <li>Switch algorithms</li>
 </ul>
-<h3 id="overfitting">Overfitting</h3>
-<p>The algorithm analyses the data and trains itself to create a high mathematical order model based on the data.</p>
-<p><img alt="Overfitting" src="../images/overfitting.jpg" /></p>
-<p>$$y = x_1 + w_2x_2^3 + w_3x_3^8$$</p>
-<p>These high-order terms let this equation define a precise decision boundary between the positive and negative values, but as a result, the training process has created a model that works very well on training data but poorly when asked to predict values based on data it has not trained - this is the class overfit problem and is an issue that must be handled to create machine learning models that work well not only on the training data but also on real-world data.</p>
-<p><strong>Regularization</strong>, <strong>Cross validation</strong>, <strong>Ensemble learning</strong> of which dropout is a part, are all ways to mitigate overfitting. Regularization is a technique where we penalize complex models. We add an additional parameter where if the model coefficients get too complex we add a penalty to the objective function. This is the technique that we use in regression.</p>
                 
                   
                 

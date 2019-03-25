@@ -21,6 +21,7 @@ extra_javascript:
 # Navigation
 nav:
   - About: index.md
+  - Terminology: terminology.md
   - Math: math.md
   - Algorithms: algorithms.md
   - Data Analysis Process: dap.md

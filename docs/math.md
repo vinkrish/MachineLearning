@@ -12,8 +12,9 @@ Mean and variance succinctly summarize a set of numbers along with **Standard de
 
 $$SD = \sqrt{variance}$$
 
-**Mean Square Error (MSE)** is nothing but the variance of the residual.  
-The error (or disturbance) of an observed value is the deviation of the observed value from the (unobservable) true value of a quantity of interest (for example, a population mean), and the residual of an observed value is the difference between the observed value and the estimated value of the quantity of interest (for example, a sample mean)
+**Mean Square Error (MSE)**  
+MSE is the average squared loss per example over the whole dataset. To calculate MSE, sum up all the squared losses for individual examples and then divide by the number of examples:
+$$MSE = \frac{1}{N} \sum_{(x,y)\in D} (y - prediction(x))^2$$
 
 **Standard Error(SE)** of a statistic is the standard deviation of its sampling distribution or an estimate of that standard deviation. If the parameter or the statistic is the mean, it is called the standard error of the mean (SEM).  
 $\sigma$=Standard Deviation of population, n=size of sample
@@ -52,6 +53,58 @@ $$ME = t_{critical} * SE$$
 
 ### Confidence Interval (CI)
 $$CI = \overline{x} \pm ME$$
+
+### Evaluation Metrics
+
+**Positive Class**
+In binary classification, the two possible classes are labeled as positive and negative. The positive outcome is the thing we're testing for. (Admittedly, we're simultaneously testing for both outcomes, but play along.) For example, the positive class in a medical test might be "tumor." The positive class in an email classifier might be "spam".
+
+**Negative Class**
+In binary classification, one class is termed positive and the other is termed negative. The positive class is the thing we're looking for and the negative class is the other possibility. For example, the negative class in a medical test might be "not tumor." The negative class in an email classifier might be "not spam".
+
+**True Positive (TP)**
+An example in which the model correctly predicted the positive class. For example, the model inferred that a particular email message was spam, and that email message really was spam.
+
+**True Negative (TN)**
+An example in which the model correctly predicted the negative class. For example, the model inferred that a particular email message was not spam, and that email message really was not spam.
+
+**true positive rate (TPR)**
+Synonym for recall. That is: True positive rate is the y-axis in an ROC curve.
+
+$$\text{True Positive Rate} = \frac{\text{True Positives}} {\text{True Positives} + \text{False Negatives}}$$
+
+**False Negative (FN)**
+An example in which the model mistakenly predicted the negative class. For example, the model inferred that a particular email message was not spam (the negative class), but that email message actually was spam.
+
+**False Positive (FP)**
+An example in which the model mistakenly predicted the positive class. For example, the model inferred that a particular email message was spam (the positive class), but that email message was actually not spam.
+
+**false positive rate (FPR)**
+The x-axis in an ROC curve. The false positive rate is defined as follows:
+
+$$\text{False Positive Rate} = \frac{\text{False Positives}}{\text{False Positives} + \text{True Negatives}}$$
+
+**ROC (receiver operating characteristic) Curve: **
+A curve of true positive rate vs. false positive rate at different classification thresholds.
+
+**Accuracy**
+The fraction of predictions that a classification model got right. In multi-class classification, accuracy is defined as follows:
+
+$$\text{Accuracy} = \frac{\text{Correct Predictions}} {\text{Total Number Of Examples}}$$
+
+In binary classification, accuracy has the following definition:
+
+$$\text{Accuracy} = \frac{\text{True Positives} + \text{True Negatives}}{\text{Total Number Of Examples}}$$
+
+**Precision**
+A metric for classification models. Precision identifies the frequency with which a model was correct when predicting the positive class. That is:
+
+$$\text{Precision} = \frac{\text{True Positives}} {\text{True Positives} + \text{False Positives}}$$
+
+**Recall**
+A metric for classification models that answers the following question: Out of all the possible positive labels, how many did the model correctly identify? That is:
+
+$$\text{Recall} = \frac{\text{True Positives}} {\text{True Positives} + \text{False Negatives}}$$
 
 ### Packages Overview
 - **Numpy** let's you perform mathematical functions on large multi dimensional arrays and matrices efficiently.

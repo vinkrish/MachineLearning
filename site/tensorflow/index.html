@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://vinkrish.github.io/MachineLearning/dap/">
+        <link rel="canonical" href="https://vinkrish.github.io/MachineLearning/tensorflow/">
       
       
         <meta name="author" content="Vinay Krishna">
@@ -40,7 +40,7 @@
     
     
       
-        <title>Data Analysis Process - Machine Learning</title>
+        <title>TensorFlow - Machine Learning</title>
       
     
     
@@ -98,7 +98,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#question" tabindex="1" class="md-skip">
+      <a href="#a-quick-look-at-the-tfestimator-api" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -123,7 +123,7 @@
               Machine Learning
             </span>
             <span class="md-header-nav__topic">
-              Data Analysis Process
+              TensorFlow
             </span>
           
         </div>
@@ -279,73 +279,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Data Analysis Process
-      </label>
-    
-    <a href="./" title="Data Analysis Process" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../dap/" title="Data Analysis Process" class="md-nav__link">
       Data Analysis Process
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#question" title="Question" class="md-nav__link">
-    Question
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wrangle" title="Wrangle" class="md-nav__link">
-    Wrangle
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#explore" title="Explore" class="md-nav__link">
-    Explore
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusions" title="Conclusions" class="md-nav__link">
-    Conclusions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#communicate" title="Communicate" class="md-nav__link">
-    Communicate
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -365,11 +303,52 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../tensorflow/" title="TensorFlow" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        TensorFlow
+      </label>
+    
+    <a href="./" title="TensorFlow" class="md-nav__link md-nav__link--active">
       TensorFlow
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-quick-look-at-the-tfestimator-api" title="A Quick Look at the tf.estimator API" class="md-nav__link">
+    A Quick Look at the tf.estimator API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hyperparameters" title="Hyperparameters" class="md-nav__link">
+    Hyperparameters
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -404,36 +383,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#question" title="Question" class="md-nav__link">
-    Question
+  <a href="#a-quick-look-at-the-tfestimator-api" title="A Quick Look at the tf.estimator API" class="md-nav__link">
+    A Quick Look at the tf.estimator API
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#wrangle" title="Wrangle" class="md-nav__link">
-    Wrangle
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#explore" title="Explore" class="md-nav__link">
-    Explore
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusions" title="Conclusions" class="md-nav__link">
-    Conclusions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#communicate" title="Communicate" class="md-nav__link">
-    Communicate
+  <a href="#hyperparameters" title="Hyperparameters" class="md-nav__link">
+    Hyperparameters
   </a>
   
 </li>
@@ -454,62 +412,36 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/vinkrish/MachineLearning/edit/master/docs/dap.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/vinkrish/MachineLearning/edit/master/docs/tensorflow.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Data Analysis Process</h1>
+                  <h1>TensorFlow</h1>
                 
-                <p>This process will help you understand, explore and use your data intelligently so that you make the most of the information you're given.</p>
-<p>Five steps:</p>
+                <p>TensorFlow consists of the following two components:</p>
 <ul>
-<li>Question</li>
-<li>Wrangle</li>
-<li>Explore</li>
-<li>Draw conclusions</li>
-<li>Communicate.</li>
+<li>a graph protocol buffer</li>
+<li>a runtime that executes the (distributed) graph</li>
 </ul>
-<h3 id="question">Question</h3>
-<p>The data analysis process always starts with asking questions. Sometimes, you're already given a data set and glance over it to figure out good questions to ask. Other times, your questions come first, which will determine what kinds of data you'll gather later.</p>
-<p>In both cases, you should be thinking:</p>
+<p>These two components are analogous to Python code and the Python interpreter. Just as the Python interpreter is implemented on multiple hardware platforms to run Python code, TensorFlow can run the graph on multiple hardware platforms, including CPU, GPU, and TPU</p>
+<h3 id="a-quick-look-at-the-tfestimator-api">A Quick Look at the tf.estimator API</h3>
+<pre><code class="py">import tensorflow as tf
+
+# Set up a linear classifier.
+classifier = tf.estimator.LinearClassifier(feature_columns)
+
+# Train the model on some example data.
+classifier.train(input_fn=train_input_fn, steps=2000)
+
+# Use it to predict.
+predictions = classifier.predict(input_fn=predict_input_fn)
+</code></pre>
+
+<h3 id="hyperparameters">Hyperparameters</h3>
 <ul>
-<li>what am I trying to find out?</li>
-<li>Is there a problem I'm trying to solve?</li>
+<li><strong>Steps</strong>, which is the total number of training iterations. One step calculates the loss from one batch and uses that value to modify the model's weights once.</li>
+<li><strong>Batch Size</strong>, which is the number of examples (chosen at random) for a single step. For example, the batch size for SGD is 1.</li>
 </ul>
-<p><em>Example:</em></p>
-<ul>
-<li>What are the characteristics of students who pass their projects?</li>
-<li>How can I better stock my store with products people want to buy?</li>
-</ul>
-<p>In the real world, you often deal with multiple sets of massive amounts of data, all in different forms. The right questions can really help you focus on relevant parts of your data and direct your analysis towards meaningful insights.</p>
-<h3 id="wrangle">Wrangle</h3>
-<p>Once you have your questions, you'll need to wrangle your data to help you answer them. By that, I mean making sure you have all the data you need in great quality.</p>
-<p>There are three parts to this step:</p>
-<ol>
-<li>You gather your data. If you are already given that data, then all you need to do is open it, like importing it into a Jupyter notebook. If you weren't provided data, you need think carefully about what data would be most helpful in answering your questions and then collect them from all the sources available.</li>
-<li>You assess your data to identify any problems in your data's quality or structure.</li>
-<li>You clean your data. This often involves modifying, replacing, or moving data to ensure that your data set is as high quality and well-structured as possible.</li>
-</ol>
-<p>This wrangling step is all about getting the data you need in a form that you can work with.</p>
-<h3 id="explore">Explore</h3>
-<p>Exploring involves finding patterns in your data, visualizing relationships in your data and just building intuition about what you're working with. After exploring, you can do things like remove outliers and create new and more descriptive features from existing data,
-also known as <strong>feature engineering</strong>.</p>
-<p>Many times modifying and engineer your data properly and even creatively can significantly increase the quality of your analysis. As you become more familiar with your data in this EDA step, you'll often revisit previous steps.</p>
-<p><em>Example</em>: you might discover new problems in your data and go back to wrangle them. Or you might discover exciting, unexpected patterns and decide to refine your questions.</p>
-<p>The data analysis process isn't always linear. This exploratory step in particular is very intertwined with the rest of the process. It's usually where you discover and learn the most about your data.</p>
-<h3 id="conclusions">Conclusions</h3>
-<p>After you've done your exploratory data analysis, you want to draw conclusions or even make predictions.</p>
-<p><em>Example</em>: Predicting which students will fail a project so you can reach out to those students Or predicting which products are most likely to sell so you can start your store appropriately.</p>
-<h3 id="communicate">Communicate</h3>
-<p>Finally, you need to communicate your results to others. This is one of the most important skills you can develop. Your analysis is only as valuable as your ability to communicate it. You often need to justify and convey meaning in the insights you found  Or if your end goal is to build a system, like a movie recommender or a news feed ranking algorithm, you usually share what you've built, explain how you reach design decisions and report how well it performs.</p>
-<p>You can communicate results in many ways:</p>
-<ul>
-<li>Reports</li>
-<li>Slide</li>
-<li>Decks</li>
-<li>Blog Posts</li>
-<li>Emails</li>
-<li>Presentations</li>
-</ul>
+<p>$$total\,number\,of\,trained\,examples = batch\,size * steps$$</p>
                 
                   
                 
@@ -530,7 +462,7 @@ also known as <strong>feature engineering</strong>.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../algorithms/" title="Algorithms" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ml_workflow/" title="Machine Learning Workflow" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -539,19 +471,19 @@ also known as <strong>feature engineering</strong>.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Algorithms
+                Machine Learning Workflow
               </span>
             </div>
           </a>
         
         
-          <a href="../ml_workflow/" title="Machine Learning Workflow" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../source/" title="Source" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Machine Learning Workflow
+                Source
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

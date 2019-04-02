@@ -1,0 +1,633 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://vinkrish.github.io/MachineLearning/applications/">
+      
+      
+        <meta name="author" content="Vinay Krishna">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>Applications - Machine Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#tables" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://vinkrish.github.io/MachineLearning/" title="Machine Learning" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Machine Learning
+            </span>
+            <span class="md-header-nav__topic">
+              Applications
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/vinkrish/MachineLearning/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    vinkrish/MachineLearning
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://vinkrish.github.io/MachineLearning/" title="Machine Learning" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Machine Learning
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/vinkrish/MachineLearning/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    vinkrish/MachineLearning
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../terminology/" title="Terminology" class="md-nav__link">
+      Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../math/" title="Math" class="md-nav__link">
+      Math
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../deep_learning/" title="Deep Learning" class="md-nav__link">
+      Deep Learning
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Applications
+      </label>
+    
+    <a href="./" title="Applications" class="md-nav__link md-nav__link--active">
+      Applications
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tables" title="Tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text" title="Text" class="md-nav__link">
+    Text
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#images" title="Images" class="md-nav__link">
+    Images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio" title="Audio" class="md-nav__link">
+    Audio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video" title="Video" class="md-nav__link">
+    Video
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future" title="Future" class="md-nav__link">
+    Future
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../dap/" title="Data Analysis Process" class="md-nav__link">
+      Data Analysis Process
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ml_workflow/" title="Machine Learning Workflow" class="md-nav__link">
+      Machine Learning Workflow
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensorflow/" title="TensorFlow" class="md-nav__link">
+      TensorFlow
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="Source" class="md-nav__link">
+      Source
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tables" title="Tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text" title="Text" class="md-nav__link">
+    Text
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#images" title="Images" class="md-nav__link">
+    Images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio" title="Audio" class="md-nav__link">
+    Audio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video" title="Video" class="md-nav__link">
+    Video
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future" title="Future" class="md-nav__link">
+    Future
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/vinkrish/MachineLearning/edit/master/docs/applications.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Applications</h1>
+                
+                <p>Machine Learning creates a function that maps an input to an output. With deep learning, we can use a wide variety of data as input into this function, including tabular data, text, images, audio, and video. In addition, deep learning can map these inputs to a variety of outputs, including once again, tabular data, text, images, audio, and video. We're going to cover a few of the key deep learning applications that currently exist today, and some future applications that are just around the corner.</p>
+<h3 id="tables">Tables</h3>
+<p>Let's start simple by looking at applications that use tabular data as both input and output. Tabular data are categorical and numeric values stored in columns and rows of the table. There are roughly four general categories of tasks that we can perform on tabular data with deep learning.</p>
+<ol>
+<li><strong>Classification</strong> is where we attempt to make a decision or a prediction involving two or more categories or outcomes. For example, deciding whether to accept or reject a loan based on data from a customer's financial history. </li>
+<li><strong>Regression</strong> is where we attempt to predict a numeric outcome based on one or more input variables. For example, trying to predict the sale price of a house based on the features of the house compared to the sale price of similar houses.</li>
+<li><strong>Clustering</strong> is where we attempt to group similar objects together based on similarities in their data. For example, grouping customers into marketing segments based on their income, age, gender, number of children, etc.</li>
+<li><strong>Anomaly Detection</strong> is where we find observations in the data that are different from the normal data. For example, detecting an unusual spike in the number of negative comments about a product that we've just released.</li>
+</ol>
+<p><img alt="T" src="../images/t.jpg" /></p>
+<p>While all four of these tasks can be performed on tabular data using deep neural networks, oftentimes deep learning is overkill for these types of tasks. This is typically the case when the tabular dataset is small, or the function we are attempting to model is relatively simple. These types of problems are generally solved more effectively using traditional machine learning tools, for example,decision tree classifiers, support vector machines, k-means clustering, or shallow, rather than deep neural networks.</p>
+<p>However, there are cases where the tabular datasets are large enough, and the function that we are attempting to model is complex enough that a deep neural network makes sense. For example, Stanford University announced that it had created a deep neural network to predict whether patients admitted to a hospital will die within the next year or not. The deep neural network was able to predict patient mortality with approximately 90% accuracy. This training algorithm used over 13,000 columns and over 220,000 rows of tabular data as input in order to reach this level of prediction accuracy.</p>
+<h3 id="text">Text</h3>
+<p>Now let's learn about deep learning applications for textual data; that is, bodies of text contained in documents. With deep learning, we can map the text and the document as an input to a variety of outputs. </p>
+<p><strong>Examples</strong>:</p>
+<p>we can perform <strong>document classification</strong>. This is where we attempt to predict which category a document belongs to. i.e, predicting whether the topic of a news article is technology, sports, or entertainment.
+<img alt="DC" src="../images/dc.jpg" /></p>
+<p><strong>Natural language processing</strong> has also received tremendous benefits from deep learning as well. For example, deep neural networks can now understand the grammar, syntax, and meaning of sentences.
+<img alt="NLP" src="../images/nlp.jpg" /></p>
+<p><strong>Sentiment analysis</strong> is where we take a body of text as input, and determine the author's emotions behind the words. In the example below, we can see words and phrases that either have a positive sentiment in blue, neutral sentiment in gray, or a negative sentiment in red.
+<img alt="SA" src="../images/sa.jpg" /></p>
+<p>We can also use deep learning to generate text as an output from a variety of inputs as well. For example, in the last module, we saw how recurrent neural networks can be used to predict the next letter someone is about to type based on the previous letters that they've already typed. However, we can also use recurrent neural networks to predict which word someone is likely to type based on all of the other words that they've previously typed.
+<img alt="PW" src="../images/pw.jpg" /></p>
+<p>In addition, we can also use recurrent neural networks for <strong>language translation</strong>. This is where we translate words and phrases from one language into another language. You may have noticed how much better software based language translation has gotten in recent years. This is all thanks to advances in deep recurrent neural networks. </p>
+<p>We can train a recurrent neural network to <strong>generate headlines</strong> and summaries for bodies of text based on the content of the document. The computer generated headlines you see here are almost indistinguishable from the headlines that a human would create to summarize a story.</p>
+<p><img alt="PH" src="../images/ph.jpg" /></p>
+<h3 id="images">Images</h3>
+<p>With deep learning, we can map images as an input to a variety of outputs.
+For example:</p>
+<ul>
+<li>we can perform tasks like object recognition where we detect and provide labels for objects in an image.</li>
+<li>Gender classification, where we determine the gender of a subject in an image.</li>
+<li>Age regression, where we predict how old a person is in a photo.</li>
+<li>Emotion detection, where we predict the emotional state portrayed on a person's face.</li>
+</ul>
+<p>We can also perform more advanced image analysis tasks by combining a convolutional neural network with a deconvolutional neural network, an architecture known as a <strong>convolutional encoder decoder</strong>. This allows us to perform tasks like pixel wise image segmentation, where we extract pixels corresponding to specific objects in an image. For example, all of the pixels of the car in the center of this image have been color coded yellow.
+<img alt="CAR" src="../images/car.jpg" /></p>
+<p>We can also combine a CNN and an RNN to perform <strong>image captioning</strong>. Image captioning is where we generate a description of what is happening in an image. As you can see from these three examples, the deep learning algorithm is able to provide a caption to each image that is almost indistinguishable from the caption a human would provide.
+<img alt="IC" src="../images/ic.jpg" /></p>
+<p>However, we can also use deep learning to generate images as an output using a variety of different types of input. For example, super resolution convolutional neural networks have been applied to images to attempt to enhance their image resolution. As we can see, given an 8x8 array of pixels, the CNN is able to produce a 32x32 image that closely approximates the true image. 
+<img alt="EI" src="../images/ei.jpg" /></p>
+<p>We can also use generative adversarial networks to clean up the noise in an image as well. In fact, entire sections of this image can be missing, and the GAN will fill in the missing pixels, given the information surrounding the missing section. 
+<img alt="N" src="../images/n.jpg" /></p>
+<p>We can also use generative adversarial networks to modify existing images with new predictions. For example, we can take an image of yours truly and use a GAN to generate a prediction of what I'll look like in 20 years. In fact, this deep learning application is so good that it tricked the age detection algorithms into thinking that I was exactly 20 years older.</p>
+<p>We can also use deep learning to generate entirely new images from scratch. And how about these fake celebrities? Each of these images was created by a generative adversarial network. They may feel like real celebrities since the GAN was trained using more than 200,000 high-resolution images of real celebrities; however, not a single one of these synthetic celebrities is a real person.
+<img alt="GI" src="../images/gi.jpg" /></p>
+<p>(Working) Finally, we're rapidly nearing a point in time where we can synthesize new images based on a description of what we want the image to look like. For example, all of these images were generated by a generative adversarial network using the descriptions above. It won't be long before we can just tell a computer what kind of image we need for our document or presentation, and it will synthesize an entirely new image to match our description.
+<img alt="DI" src="../images/di.jpg" /></p>
+<h3 id="audio">Audio</h3>
+<p>With deep learning, we can map audio as an input to a wide variety of outputs. </p>
+<p>For example, we can use combinations of CNNs and RNNs to classify the source of a sound. This allows computers to recognize the song that you're listening to based on the music it's hearing. It also allows computers to recognize animals, vehicles, and environmental noises by sound alone. </p>
+<p>In addition, we can also use combinations of CNNs and RNNs to perform speech to text translation at near human level accuracy. If you've noticed how much better your smart phone has gotten at interpreting your commands in the past few years, once again, you can thank deep learning for the recent improvements.</p>
+<p>We can also use combinations of CNN and RNN encoder/decoder networks to perform real-time speech translation. For example, I can speak a sentence in one language, and in near real-time, the listener will hear what I said in their native language. </p>
+<p>But we can also use deep learning to generate audio as an output, given a variety of inputs. For example, using a type of deep neural network architecture known as a dilated causal convolutional neural network, we can have deep learning speech synthesis that sounds almost indistinguishable from actual human speech. </p>
+<p>Finally, here's an experimental application that's currently in development by Princeton University and Adobe. It allows you to feed in your audio recordings, it converts your audio into a transcript, and then it allows you to edit the text just like a text editor. Then after you've made your changes to the text, it synthesizes new audio that sounds almost identical to your own voice. While this specific application might be a few years away yet.</p>
+<h3 id="video">Video</h3>
+<p>With deep learning, we can map video as an input to a variety of types of outputs. For example, Tasks like object detection, where we classify an object as it's moving from frame to frame; facial recognition, where we recognize a person's face in a moving video; and outcome prediction, where we analyze a few frames of vide to attempt to predict what will happen next. Plus, this is also leading to entirely new applications like real-time sign language translation and computer-based lip reading. In fact, real-time sign language translation is rapidly approaching human level proficiency, and Google's LipNet is currently better than the average human lip reader.</p>
+<p>However, even more impressive is that we can now use deep learning to generate video as an output from a variety of inputs. For example, using a combination of convolutional encoder/decoder networks, we can now teach a computer to automatically colorize black and white videos. In addition, machines are also being taught to restore old or damaged films as well. And check this out. To help families refinance their homes. To invest in things like high-tech manufacturing, clean energy, and the infrastructure that creates good new jobs. You can see why it's so important that people understand the potential applications for deep learning before someone tries to use deep learning to deceive others for nefarious purposes.</p>
+<h3 id="future">Future</h3>
+<p>Finally, let's look at other future deep learning applications beyond the basic input to output mappings that we've already seen. It's important to note that what we've seen so far is just the beginning of deep learning technologies. Deep learning can be applied to a variety of other inputs, and produce a variety of other outputs. Plus, we can combine multiple types of inputs and produce multiple types of outputs as well. This leads to a whole new realm of possible applications for deep learning in the future.</p>
+<p>For example, self-driving cars connect a variety of sensor inputs with a set of vehicle control outputs to drive an automobile without any human intervention. This same deep learning technology can also be applied to other types of vehicles like semis, buses, boats, airplanes and drones as well.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../deep_learning/" title="Deep Learning" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Deep Learning
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../dap/" title="Data Analysis Process" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Data Analysis Process
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/vinkrish" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.d9aa80ab.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

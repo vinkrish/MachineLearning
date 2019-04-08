@@ -9,7 +9,7 @@
 | Data Analysis Process | [Assessing](https://s3-us-west-2.amazonaws.com/vinkrish-notes/assessing.html) <br> [Cleaning](https://s3-us-west-2.amazonaws.com/vinkrish-notes/cleaning.html) <br> [Plotting](https://s3-us-west-2.amazonaws.com/vinkrish-notes/plotting_with_pandas.html) <br> [Conclusion](https://s3-us-west-2.amazonaws.com/vinkrish-notes/conclusions.html) <br> [Communicate](https://s3-us-west-2.amazonaws.com/vinkrish-notes/communicate.html) |
 | Case Study | [Wine Rating](https://s3-us-west-2.amazonaws.com/vinkrish-notes/CaseStudy.html) |
 | Case Study | [Fuel Economy](https://s3-us-west-2.amazonaws.com/vinkrish-notes/FuelEconomy.html) <br> [Fuel Economy - Conclusion](https://s3-us-west-2.amazonaws.com/vinkrish-notes/drawing-conclusions.html) <br> [Fuel Economy - Visuals](https://s3-us-west-2.amazonaws.com/vinkrish-notes/exploring_visuals.html) <br> [Fuel Economy - Merging Data](https://s3-us-west-2.amazonaws.com/vinkrish-notes/merging_data.html) | 
-| Investigate Dataset | [Titanic](https://s3-us-west-2.amazonaws.com/vinkrish-notes/investigate-titanic-dataset.html) |
+| Investigate Dataset | [Titanic](https://s3-us-west-2.amazonaws.com/vinkrish-notes/investigate-titanic-dataset.html) <br> [Movies](https://s3-us-west-2.amazonaws.com/vinkrish-notes/investigate-movies-dataset.html) |
 | Decision Tree | [Titanic Survival Exploration](https://s3-us-west-2.amazonaws.com/vinkrish-notes/titanic_survival_exploration.html)|
 | Naive Bayes | [Email Spam or Ham](https://s3-us-west-2.amazonaws.com/vinkrish-notes/Bayesian_Inference.html) |
 | Random Forest & Logistic Regression | [Predict Diabetes](https://s3-us-west-2.amazonaws.com/vinkrish-notes/Pima-Prediction-with-reload.html) |

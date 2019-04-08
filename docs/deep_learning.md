@@ -11,8 +11,6 @@ AI is a field of computer science that attempts to create machines that act rati
 ### Machine Learning
 ML is a type of artificial intelligence where we teach machines how to solve problems without explicitly programming then to do so.
 
-- **Linear regression** is a method for finding the straight line or hyperplane that best fits a set of points.
-
 ### Artificial Neural Network
 It is a machine learning algorihtm based on a very crude approximation of biological neural network in a brain. If we connect a series of artificial neurons in a network, we get an artificial neural network or neural network.
 

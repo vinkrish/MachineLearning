@@ -10,6 +10,7 @@
 | Case Study | [Wine Rating](https://s3-us-west-2.amazonaws.com/vinkrish-notes/CaseStudy.html) |
 | Case Study | [Fuel Economy](https://s3-us-west-2.amazonaws.com/vinkrish-notes/FuelEconomy.html) <br> [Fuel Economy - Conclusion](https://s3-us-west-2.amazonaws.com/vinkrish-notes/drawing-conclusions.html) <br> [Fuel Economy - Visuals](https://s3-us-west-2.amazonaws.com/vinkrish-notes/exploring_visuals.html) <br> [Fuel Economy - Merging Data](https://s3-us-west-2.amazonaws.com/vinkrish-notes/merging_data.html) | 
 | Investigate Dataset | [Titanic](https://s3-us-west-2.amazonaws.com/vinkrish-notes/investigate-titanic-dataset.html) <br> [Movies](https://s3-us-west-2.amazonaws.com/vinkrish-notes/investigate-movies-dataset.html) |
+| ML Nanodegree | [Predict House Price](https://s3-us-west-2.amazonaws.com/vinkrish-notes/boston_housing.html) <br> [Finding Donors](https://s3-us-west-2.amazonaws.com/vinkrish-notes/finding_donors.html) <br> [Customer Segments](https://s3-us-west-2.amazonaws.com/vinkrish-notes/customer_segments.html) |
 | Decision Tree | [Titanic Survival Exploration](https://s3-us-west-2.amazonaws.com/vinkrish-notes/titanic_survival_exploration.html)|
 | Naive Bayes | [Email Spam or Ham](https://s3-us-west-2.amazonaws.com/vinkrish-notes/Bayesian_Inference.html) |
 | Random Forest & Logistic Regression | [Predict Diabetes](https://s3-us-west-2.amazonaws.com/vinkrish-notes/Pima-Prediction-with-reload.html) |

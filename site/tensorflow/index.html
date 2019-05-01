@@ -98,7 +98,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#a-quick-look-at-the-tfestimator-api" tabindex="1" class="md-skip">
+      <a href="#tensor" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -352,6 +352,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tensor" title="Tensor" class="md-nav__link">
+    Tensor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session" title="Session" class="md-nav__link">
+    Session
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#a-quick-look-at-the-tfestimator-api" title="A Quick Look at the tf.estimator API" class="md-nav__link">
     A Quick Look at the tf.estimator API
   </a>
@@ -407,6 +421,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tensor" title="Tensor" class="md-nav__link">
+    Tensor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session" title="Session" class="md-nav__link">
+    Session
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#a-quick-look-at-the-tfestimator-api" title="A Quick Look at the tf.estimator API" class="md-nav__link">
     A Quick Look at the tf.estimator API
   </a>
@@ -441,7 +469,22 @@
                 
                   <h1>TensorFlow</h1>
                 
-                <p>TensorFlow consists of the following two components:</p>
+                <h3 id="tensor">Tensor</h3>
+<p>In TensorFlow, data isn’t stored as integers, floats, or strings. These values are encapsulated in an object called a tensor.</p>
+<pre><code class="py">import tensorflow as tf
+
+# Create TensorFlow object called hello_constant
+hello_constant = tf.constant('Hello World!')
+
+with tf.Session() as sess:
+    # Run the tf.constant operation in the session
+    output = sess.run(hello_constant)
+    print(output)
+</code></pre>
+
+<h3 id="session">Session</h3>
+<p>TensorFlow’s api is built around the idea of a computational graph, a way of visualizing a mathematical process.</p>
+<p>TensorFlow consists of the following two components:</p>
 <ul>
 <li>a graph protocol buffer</li>
 <li>a runtime that executes the (distributed) graph</li>

@@ -1,6 +1,8 @@
 ### Deep Learning
 Deep Learning is a form of artificial intelligence that uses a type of machine learning called an artificial neural network with multiple hidden layers that learns hierarchical representations of the underlying data in order to make predictions given new data.
 
+Deep Learning attempts to model high-level abstractions about data using networks of graphs. It is focused on learning representations in data. Additionally, modeling high-level abstractions about data is very similar to artificial intelligence — the idea that knowledge can be represented and acted upon intelligently.
+
 ### Artificial Intelligence
 AI is a field of computer science that attempts to create machines that act rationally in response to their environment.
 

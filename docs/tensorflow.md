@@ -1,3 +1,21 @@
+### Tensor
+In TensorFlow, data isn’t stored as integers, floats, or strings. These values are encapsulated in an object called a tensor.
+
+```py
+import tensorflow as tf
+
+# Create TensorFlow object called hello_constant
+hello_constant = tf.constant('Hello World!')
+
+with tf.Session() as sess:
+    # Run the tf.constant operation in the session
+    output = sess.run(hello_constant)
+    print(output)
+```
+
+### Session
+TensorFlow’s api is built around the idea of a computational graph, a way of visualizing a mathematical process.
+
 TensorFlow consists of the following two components:
 
 - a graph protocol buffer

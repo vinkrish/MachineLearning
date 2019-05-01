@@ -21,6 +21,8 @@ In general, any machine learning problem can be assigned to one of two broad cla
 ### Supervised Learning
 In supervised learning, we are given a data set and already know what our correct output should look like, having the idea that there is a relationship between the input and the output.
 
+> We try to extrapolate labels for new data given labelled data we already have
+
 Supervised learning problems are categorized into **Regression** and **Classification** problems.
 
 - In a regression problem, we are trying to predict results within a continuous output, meaning that we are trying to map input variables to some continuous function. Commonly used algorithms:
@@ -55,6 +57,8 @@ _Example 2_:
 
 ### Unsupervised Learning
 Unsupervised learning allows us to approach problems with little or no idea what our results should look like. With unsupervised learning there is no feedback based on the prediction results.
+
+> We try to classify data into groups and extract new information hidden in the data
 
 We can derive structure:
 

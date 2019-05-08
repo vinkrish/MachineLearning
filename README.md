@@ -11,6 +11,8 @@ Please check out the courses below for better understanding and to follow with t
 
 [https://app.pluralsight.com/library/courses/python-scikit-learn-building-machine-learning-models/table-of-contents](https://app.pluralsight.com/library/courses/python-scikit-learn-building-machine-learning-models/table-of-contents)
 
+[https://app.pluralsight.com/library/courses/spark-2-getting-started/table-of-contents](https://app.pluralsight.com/library/courses/spark-2-getting-started/table-of-contents)
+
 [https://classroom.udacity.com/nanodegrees/nd009-infn/dashboard/overview](https://classroom.udacity.com/nanodegrees/nd009-infn/dashboard/overview)
 
 [https://classroom.udacity.com/nanodegrees/nd009t/dashboard/overview](https://classroom.udacity.com/nanodegrees/nd009t/dashboard/overview)

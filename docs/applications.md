@@ -8,7 +8,7 @@ Let's start simple by looking at applications that use tabular data as both inpu
 3. **Clustering** is where we attempt to group similar objects together based on similarities in their data. For example, grouping customers into marketing segments based on their income, age, gender, number of children, etc.
 4. **Anomaly Detection** is where we find observations in the data that are different from the normal data. For example, detecting an unusual spike in the number of negative comments about a product that we've just released.
 
-![T](images/t.jpg)
+![T](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/t.jpg)
 
 While all four of these tasks can be performed on tabular data using deep neural networks, oftentimes deep learning is overkill for these types of tasks. This is typically the case when the tabular dataset is small, or the function we are attempting to model is relatively simple. These types of problems are generally solved more effectively using traditional machine learning tools, for example,decision tree classifiers, support vector machines, k-means clustering, or shallow, rather than deep neural networks.
 
@@ -20,22 +20,22 @@ Now let's learn about deep learning applications for textual data; that is, bodi
 **Examples**:
 
 we can perform **document classification**. This is where we attempt to predict which category a document belongs to. i.e, predicting whether the topic of a news article is technology, sports, or entertainment.
-![DC](images/dc.jpg)
+![DC](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/dc.jpg)
 
 **Natural language processing** has also received tremendous benefits from deep learning as well. For example, deep neural networks can now understand the grammar, syntax, and meaning of sentences.
-![NLP](images/nlp.jpg)
+![NLP](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nlp.jpg)
 
 **Sentiment analysis** is where we take a body of text as input, and determine the author's emotions behind the words. In the example below, we can see words and phrases that either have a positive sentiment in blue, neutral sentiment in gray, or a negative sentiment in red.
-![SA](images/sa.jpg)
+![SA](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/sa.jpg)
 
 We can also use deep learning to generate text as an output from a variety of inputs as well. For example, in the last module, we saw how recurrent neural networks can be used to predict the next letter someone is about to type based on the previous letters that they've already typed. However, we can also use recurrent neural networks to predict which word someone is likely to type based on all of the other words that they've previously typed.
-![PW](images/pw.jpg)
+![PW](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/pw.jpg)
 
 In addition, we can also use recurrent neural networks for **language translation**. This is where we translate words and phrases from one language into another language. You may have noticed how much better software based language translation has gotten in recent years. This is all thanks to advances in deep recurrent neural networks. 
 
 We can train a recurrent neural network to **generate headlines** and summaries for bodies of text based on the content of the document. The computer generated headlines you see here are almost indistinguishable from the headlines that a human would create to summarize a story.
 
-![PH](images/ph.jpg)
+![PH](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/ph.jpg)
 
 ### Images
 With deep learning, we can map images as an input to a variety of outputs.
@@ -47,24 +47,24 @@ For example:
 - Emotion detection, where we predict the emotional state portrayed on a person's face.
 
 We can also perform more advanced image analysis tasks by combining a convolutional neural network with a deconvolutional neural network, an architecture known as a **convolutional encoder decoder**. This allows us to perform tasks like pixel wise image segmentation, where we extract pixels corresponding to specific objects in an image. For example, all of the pixels of the car in the center of this image have been color coded yellow.
-![CAR](images/car.jpg)
+![CAR](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/car.jpg)
 
 We can also combine a CNN and an RNN to perform **image captioning**. Image captioning is where we generate a description of what is happening in an image. As you can see from these three examples, the deep learning algorithm is able to provide a caption to each image that is almost indistinguishable from the caption a human would provide.
-![IC](images/ic.jpg)
+![IC](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/ic.jpg)
 
 However, we can also use deep learning to generate images as an output using a variety of different types of input. For example, super resolution convolutional neural networks have been applied to images to attempt to enhance their image resolution. As we can see, given an 8x8 array of pixels, the CNN is able to produce a 32x32 image that closely approximates the true image. 
-![EI](images/ei.jpg)
+![EI](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/ei.jpg)
 
 We can also use generative adversarial networks to clean up the noise in an image as well. In fact, entire sections of this image can be missing, and the GAN will fill in the missing pixels, given the information surrounding the missing section. 
-![N](images/n.jpg)
+![N](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/n.jpg)
 
 We can also use generative adversarial networks to modify existing images with new predictions. For example, we can take an image of yours truly and use a GAN to generate a prediction of what I'll look like in 20 years. In fact, this deep learning application is so good that it tricked the age detection algorithms into thinking that I was exactly 20 years older.
 
 We can also use deep learning to generate entirely new images from scratch. And how about these fake celebrities? Each of these images was created by a generative adversarial network. They may feel like real celebrities since the GAN was trained using more than 200,000 high-resolution images of real celebrities; however, not a single one of these synthetic celebrities is a real person.
-![GI](images/gi.jpg)
+![GI](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/gi.jpg)
 
 (Working) Finally, we're rapidly nearing a point in time where we can synthesize new images based on a description of what we want the image to look like. For example, all of these images were generated by a generative adversarial network using the descriptions above. It won't be long before we can just tell a computer what kind of image we need for our document or presentation, and it will synthesize an entirely new image to match our description.
-![DI](images/di.jpg)
+![DI](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/di.jpg)
 
 ### Audio
 With deep learning, we can map audio as an input to a wide variety of outputs. 

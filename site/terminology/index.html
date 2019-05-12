@@ -428,10 +428,46 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../algorithms/" title="Algorithms" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
       Algorithms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Algorithms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../logistic_regression/" title="Logistic Regression" class="md-nav__link">
+      Logistic Regression
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../algorithms/" title="Definition" class="md-nav__link">
+      Definition
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -772,7 +808,7 @@ A commonly used mechanism to mitigate the exploding gradient problem by artifici
 </ul>
 <h3 id="overfitting">Overfitting</h3>
 <p>The algorithm analyses the data and trains itself to create a high mathematical order model based on the data.</p>
-<p><img alt="Overfitting" src="../images/overfitting.jpg" /></p>
+<p><img alt="Overfitting" src="images/overfitting.jpg" /></p>
 <p>$$y = x_1 + w_2x_2^3 + w_3x_3^8$$</p>
 <p>These high-order terms let this equation define a precise decision boundary between the positive and negative values, but as a result, the training process has created a model that works very well on training data but poorly when asked to predict values based on data it has not trained - this is the class overfit problem and is an issue that must be handled to create machine learning models that work well not only on the training data but also on real-world data.</p>
 <p><strong>Regularization</strong>, <strong>Cross validation</strong>, <strong>Ensemble learning</strong> of which dropout is a part, are all ways to mitigate overfitting. We add an additional parameter where if the model coefficients get too complex we add a penalty to the objective function. This is the technique that we use in regression.</p>

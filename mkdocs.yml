@@ -23,7 +23,9 @@ nav:
   - About: index.md
   - Terminology: terminology.md
   - Math: math.md
-  - Algorithms: algorithms.md
+  - Algorithms: 
+    - Logistic Regression: logistic_regression.md
+    - Definition: algorithms.md
   - Deep Learning: deep_learning.md
   - Applications: applications.md
   - Data Analysis Process: dap.md

@@ -53,20 +53,20 @@ More complex algoritms use these as building blocks.
 
 ### Naive Bayes Algorithm
 
-![Naive Bayes](images/naive_bayes.jpg)
+![Naive Bayes](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/naive_bayes.jpg)
 
 The Naive Bayes algorithm is based on Bayes' Theorem. This theorem calculates a probability of a diabetes by looking at the likelihood of diabetes based on previous data combined with probability of diabetes on nearby feature values. In other words, so how often does the person having high blood pressure correlate to diabetes? It makes the naive assumption that all of the features we pass in are independent of each other and equally impact the result.  
 This assumption that every featuer is independent to the others allows for fast conversions and therefore requires a small amount of data to train.
 
 ### Logistic Regression Algorithm
 
-![Logistic Regression](images/logistic_regression.jpg)
+![Logistic Regression](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/logistic_regression.jpg)
 
 The Logistic Regression algorithm has a somewhat confusing name. In Statistics, Regression often implies continuous values. But Logistics Regression returns a binary result. The algorithm measures the relationship of each feature and weights them based on their impact on the result. The resultant value is mapped against a curve with two values, one and zero, which is equivalent to diabetes or no diabetes.
 
 ### Decision Tree Algorithm
 
-![Decision Tree](images/decision_tree.jpg)
+![Decision Tree](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/decision_tree.jpg)
 
 The Decision Tree algorithm can be nicely visualized. The algorithm uses a binary tree structure with each node making a decision based upon the values of the feature. At each node, the feature value causes us to go down one path or another. A lot of data may be required to find the value which defines taking one path or another. As we see decision trees have the advantage of having tools available to produce a picture of the tree. This makes it easy to follow along and visualize how the trained model works.
 

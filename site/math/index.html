@@ -612,6 +612,17 @@ A metric for classification models. Precision identifies the frequency with whic
 <p><strong>Recall</strong>
 A metric for classification models that answers the following question: Out of all the possible positive labels, how many did the model correctly identify? That is:</p>
 <p>$$\text{Recall} = \frac{\text{True Positives}} {\text{True Positives} + \text{False Negatives}}$$</p>
+<p>In medical field it is common to use Sensitivity and Specificity, where Sensitivity is same as Recall while Specificity is as follows:</p>
+<p>$$\text{Specificity} = \frac{\text{True Negatives}} {\text{True Negatives} + \text{False Positives}}$$</p>
+<p>Now, sensitivity and specificity are the rows of this matrix. More specifically, if we label</p>
+<ul>
+<li>TP: Sick people that we correctly diagnosed as sick.</li>
+<li>TN: Healthy people that we correctly diagnosed as healthy.</li>
+<li>FP: Healthy people that we incorrectly diagnosed as sick.</li>
+<li>FN: Sick people that we incorrectly diagnosed as healthy.</li>
+</ul>
+<p><img alt="Sensitivity-Specificity" src="https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/sensitivity-specificity.png" /></p>
+<p><img alt="Precision-Recall" src="https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/precision-recall.png" /></p>
 <h3 id="packages-overview">Packages Overview</h3>
 <ul>
 <li><strong>Numpy</strong> let's you perform mathematical functions on large multi dimensional arrays and matrices efficiently.</li>

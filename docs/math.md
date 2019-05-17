@@ -106,6 +106,21 @@ A metric for classification models that answers the following question: Out of a
 
 $$\text{Recall} = \frac{\text{True Positives}} {\text{True Positives} + \text{False Negatives}}$$
 
+In medical field it is common to use Sensitivity and Specificity, where Sensitivity is same as Recall while Specificity is as follows:
+
+$$\text{Specificity} = \frac{\text{True Negatives}} {\text{True Negatives} + \text{False Positives}}$$
+
+Now, sensitivity and specificity are the rows of this matrix. More specifically, if we label
+
+- TP: Sick people that we correctly diagnosed as sick.
+- TN: Healthy people that we correctly diagnosed as healthy.
+- FP: Healthy people that we incorrectly diagnosed as sick.
+- FN: Sick people that we incorrectly diagnosed as healthy.
+
+![Sensitivity-Specificity](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/sensitivity-specificity.png)
+
+![Precision-Recall](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/precision-recall.png)
+
 ### Packages Overview
 - **Numpy** let's you perform mathematical functions on large multi dimensional arrays and matrices efficiently.
 - **Pandas** is like a more powerful and flexible version of Excel that can handle large amounts of data.

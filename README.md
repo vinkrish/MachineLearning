@@ -16,3 +16,5 @@ Please check out the courses below for better understanding and to follow with t
 [https://classroom.udacity.com/nanodegrees/nd009-infn/dashboard/overview](https://classroom.udacity.com/nanodegrees/nd009-infn/dashboard/overview)
 
 [https://classroom.udacity.com/nanodegrees/nd009t/dashboard/overview](https://classroom.udacity.com/nanodegrees/nd009t/dashboard/overview)
+
+[https://www.coursera.org/specializations/deep-learning](https://www.coursera.org/specializations/deep-learning)

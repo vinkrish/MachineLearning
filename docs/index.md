@@ -79,3 +79,5 @@ Commonly used algorithms:
 - Ex-Hierarchical
 - Dimensionality Reduction (Principal Component Analysis)
 
+### Ensemble learning
+In statistics and machine learning, ensemble methods use multiple learning algorithms to obtain better predictive performance than could be obtained from any of the constituent learning algorithms alone (eg: Random Forest).

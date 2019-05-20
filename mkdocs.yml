@@ -29,7 +29,7 @@ nav:
   - Deep Learning: deep_learning.md
   - Applications: applications.md
   - Data Analysis Process: dap.md
-  - Machine Learning Workflow: ml_workflow.md
+  - Workflow with example: ml_workflow.md
   - Libraries: libraries.md
   - TensorFlow: tensorflow.md
   - Source: source.md

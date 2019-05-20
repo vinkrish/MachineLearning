@@ -46,6 +46,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://vinkrish.github.io/MachineLearning/libraries/</loc>
+     <lastmod>2019-05-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://vinkrish.github.io/MachineLearning/tensorflow/</loc>
      <lastmod>2019-05-20</lastmod>
      <changefreq>daily</changefreq>

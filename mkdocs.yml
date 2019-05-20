@@ -30,14 +30,6 @@ nav:
   - Applications: applications.md
   - Data Analysis Process: dap.md
   - Machine Learning Workflow: ml_workflow.md
+  - Libraries: libraries.md
   - TensorFlow: tensorflow.md
-  # - Andrew Ng's ML Course:
-  #   - Week 1:
-  #     - Model Representation: week_1/model_representation.md
-  #     - Cost Function: week_1/cost_function.md
-  #     - Cost Function Intuition 1: week_1/cost_function_intuition_1.md
-  #     - Cost Function Intuition 2: week_1/cost_function_intuition_2.md
-  #     - Gradient Descent: week_1/gradient_descent.md
-  #     - Gradient Descent Intuition: week_1/gradient_descent_intuition.md
-  #     - Gradient Descent For Linear Regression: week_1/gd_for_linear_regression.md
   - Source: source.md

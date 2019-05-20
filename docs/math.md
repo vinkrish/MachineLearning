@@ -120,15 +120,3 @@ Now, sensitivity and specificity are the rows of this matrix. More specifically,
 ![Sensitivity-Specificity](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/sensitivity-specificity.png)
 
 ![Precision-Recall](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/precision-recall.png)
-
-### Packages Overview
-- **Numpy** let's you perform mathematical functions on large multi dimensional arrays and matrices efficiently.
-- **Pandas** is like a more powerful and flexible version of Excel that can handle large amounts of data.
-- **Matplotlib** is a plotting library that can produce great visualizations often with very few lines of code.
-- **Scikit-learn** is designed to work with NumPy, SciPy and Pandas, provides toolset for training and evaluation tasks:
-    - Data splitting
-    - Pre-processing
-    - Feature selection
-    - Model training
-    - Model tuning
-    - and offers common interface across algorithms

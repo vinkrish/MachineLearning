@@ -1,0 +1,23 @@
+### Libraries
+
+- **Numpy** let's you perform mathematical functions on large multi dimensional arrays and matrices efficiently.
+- **Pandas** is used for data manipulation and analysis. In particular, it offers data structures and operations for manipulating numerical tables and time series.
+- **SciPy** is a collection of mathematical algorithms and convenience functions built on the Numpy extension of Python. It adds significant power to the interactive Python session by providing the user with high-level commands and classes for manipulating and visualizing data.
+- **PyTorch** provides a wide range of algorithms for deep learning and is used for applications such as natural language processing  (based on Torch).
+- **Keras** is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano; runs seamlessly on CPU and GPU.
+- **Eli5** allows to visualize and debug various Machine Learning models using unified API. It has built-in support for several ML frameworks and provides a way to explain black-box models.
+- **Matplotlib** is a plotting library that can produce great visualizations often with very few lines of code.
+- **Scikit-learn** is designed to work with NumPy, SciPy and Pandas, provides toolset for training and evaluation tasks:
+    - Data splitting
+    - Pre-processing
+    - Feature selection
+    - Model training
+    - Model tuning
+    - and offers common interface across algorithms
+- **XGBoost** is an optimized distributed gradient boosting library designed to be highly efficient, flexible and portable. It implements machine learning algorithms under the Gradient Boosting framework. XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way. The same code runs on major distributed environment (Hadoop, SGE, MPI).
+- **LightGBM** is a gradient boosting framework that uses tree based learning algorithms. It is designed to be distributed and efficient with the following advantages:
+- Faster training speed and higher efficiency.
+- Lower memory usage.
+- Better accuracy.
+- Support of parallel and GPU learning.
+- Capable of handling large-scale data.

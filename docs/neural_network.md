@@ -1,0 +1,8 @@
+![1](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nn_1.jpg)
+![2](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nn_2.jpg)
+![3](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nn_3.jpg)
+![4](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nn_4.jpg)
+![5](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nn_5.jpg)
+![6](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nn_6.jpg)
+![7](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nn_bp_1.jpg)
+![8](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nn_bp_1.jpg)

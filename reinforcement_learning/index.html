@@ -423,6 +423,41 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#policies" title="Policies" class="md-nav__link">
+    Policies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-value-functions" title="State-Value Functions" class="md-nav__link">
+    State-Value Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimality" title="Optimality" class="md-nav__link">
+    Optimality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-value-functions" title="Action-Value Functions" class="md-nav__link">
+    Action-Value Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-policies" title="Optimal Policies" class="md-nav__link">
+    Optimal Policies
+  </a>
+  
+</li>
+      
       
       
       
@@ -582,6 +617,41 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#policies" title="Policies" class="md-nav__link">
+    Policies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-value-functions" title="State-Value Functions" class="md-nav__link">
+    State-Value Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimality" title="Optimality" class="md-nav__link">
+    Optimality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-value-functions" title="Action-Value Functions" class="md-nav__link">
+    Action-Value Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-policies" title="Optimal Policies" class="md-nav__link">
+    Optimal Policies
+  </a>
+  
+</li>
+      
       
       
       
@@ -664,7 +734,7 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 <p>In this simple example, we saw that the value of any state can be calculated as the sum of the immediate reward and the (discounted) value of the next state.</p>
 <p>Alexis mentioned that for a general MDP, we have to instead work in terms of an expectation, since it's not often the case that the immediate reward and next state can be predicted with certainty. Indeed, we saw in an earlier lesson that the reward and next state are chosen according to the one-step dynamics of the MDP. In this case, where the reward <em>r</em> and next state <em>s′</em> are drawn from a (conditional) probability distribution <em>p(s',r|s,a)</em>, the <strong>Bellman Expectation Equation</strong> (for $ v_\piv 
 π $) expresses the value of any state <em>s</em> in terms of the expected immediate reward and the expected value of the next state:</p>
-<p>$$v_\pi(s) = \mathbb{E}<em>\pi[R</em>{t+1} + \gamma v_\pi(S_{t+1})|S_t =s]$$</p>
+<p>$$v_\pi(s) = \text{} \mathbb{E}<em> \pi[R</em>{t+1} + \gamma v_\pi(S_{t+1})|S_t =s]$$</p>
 <h2 id="calculating-the-expectation">Calculating the Expectation</h2>
 <p>In the event that the agent's policy π is <strong>deterministic</strong>, the agent selects action <em>π(s)</em> when in state <em>s</em>, and the Bellman Expectation Equation can be rewritten as the sum over two variables (<em>s′</em> and <em>r</em>):</p>
 <p>$$v_\pi(s) = \text{} \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,\pi(s))(r+\gamma v_\pi(s'))$$</p>
@@ -672,6 +742,41 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 <p>If the agent's policy π is <strong>stochastic</strong>, the agent selects action <em>a</em> with probability <em>π(a∣s)</em> when in state <em>s</em>, and the Bellman Expectation Equation can be rewritten as the sum over three variables <em>(s′, r, and a)</em>:</p>
 <p>$$v_\pi(s) = \text{} \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R},a\in\mathcal{A}(s)}\pi(a|s)p(s',r|s,a)(r+\gamma v_\pi(s'))$$</p>
 <p>In this case, we multiply the sum of the reward and discounted value of the next state $(r+\gamma v_\pi(s'))$ by its corresponding probability <em>π(a∣s)p(s′,r∣s,a)</em> and sum over all possibilities to yield the expected value.</p>
+<h2 id="policies">Policies</h2>
+<ul>
+<li>A <strong>deterministic</strong> policy is a mapping</li>
+</ul>
+<p>$$\pi: \mathcal{S}\to\mathcal{A}$$</p>
+<p>For each state s ∈ S, it yields the action a ∈ A that the agent will choose while in state <em>s</em>.</p>
+<ul>
+<li>A <strong>stochastic policy</strong> is a mapping</li>
+</ul>
+<p>$$\pi: \mathcal{S}\times\mathcal{A}\to [0,1]$$</p>
+<p>For each state s ∈ S and action a ∈ A, it yields the probability π(a∣s) that the agent chooses action <em>a__ while in state _s</em>.</p>
+<h2 id="state-value-functions">State-Value Functions</h2>
+<ul>
+<li>The state-value function for a policy π is denoted vπ. For each state s ∈ S, it yields the expected return if the agent starts in state <em>s</em> and then uses the policy to choose its actions for all time steps. That is,</li>
+</ul>
+<p>$$v_\pi(s) \doteq \text{} \mathbb{E}_\pi[G_t | S_t=s]$$</p>
+<p>We refer to vπ(s) as the value of state ss under policy π.</p>
+<ul>
+<li>The notation Eπ[⋅] is borrowed from the suggested textbook, where it is defined as the expected value of a random variable, given that the agent follows policy π.</li>
+</ul>
+<h2 id="optimality">Optimality</h2>
+<ul>
+<li>A policy π′ is defined to be better than or equal to a policy π if and only if $$v_{\pi'}(s) \geq v_\pi(s)$$ for all s ∈ S.</li>
+<li>An optimal policy π∗ satisfies π∗ ≥ π for all policies π. An optimal policy is guaranteed to exist but may not be unique.</li>
+<li>All optimal policies have the same state-value function v∗ called the optimal state-value function.</li>
+</ul>
+<h2 id="action-value-functions">Action-Value Functions</h2>
+<ul>
+<li>The action-value function for a policy π is denoted qπ. For each state s ∈ S and action a ∈ A, it yields the expected return if the agent starts in state <em>s</em>, takes action <em>a</em>, and then follows the policy for all future time steps. That is, $$q_\pi(s,a) \doteq \mathbb{E}<em>\pi[G_t|S_t=s, A_t=a]$$ We refer qπ(s,a) as the value of taking action _a</em> in state <em>s</em> under a policy π (or alternatively as the value of the state-action pair s,a).</li>
+<li>All optimal policies have the same action-value function q∗, called the optimal action-value function.</li>
+</ul>
+<h2 id="optimal-policies">Optimal Policies</h2>
+<ul>
+<li>Once the agent determines the optimal action-value function q∗, it can quickly obtain an optimal policy π∗ by setting $$\pi_<em>(s) = \arg\max_{a\in\mathcal{A}(s)} q_</em>(s,a)$$</li>
+</ul>
                 
                   
                 

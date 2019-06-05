@@ -611,12 +611,12 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 </ul>
 <h2 id="mdps-and-one-step-dynamics">MDPs and One-Step Dynamics</h2>
 <ul>
-<li>The state space \mathcal{S} is the set of all (nonterminal) states.</li>
+<li>The state space <strong>S</strong> is the set of all (nonterminal) states.</li>
 <li>In episodic tasks, we use \mathcal{S}^+ to refer to the set of all states, including terminal states.</li>
-<li>The action space <strong>A</strong> is the set of possible actions. (Alternatively, <strong>A(s)</strong> refers to the set of possible actions available in state s \in \mathcal{S}.)</li>
+<li>The action space <strong>A</strong> is the set of possible actions. (Alternatively, <strong>A(s)</strong> refers to the set of possible actions available in state <strong>s in S</strong>)</li>
 <li>The one-step dynamics of the environment determine how the environment decides the state and reward at every time step. The dynamics can be defined by specifying</li>
 </ul>
-<p>$$p(s',r|s,a) \doteq \mathbb{P}(S_{t+1}=s', R_{t+1}=r|S_{t} = s, A_{t}=a) \text{for each possible} s', r, s, \text{and } a$$</p>
+<p>$$p(s',r|s,a) \doteq \mathbb{P}(S_{t+1}=s', R_{t+1}=r|S_{t} = s, A_{t}=a) \text{ for each possible } s', r, s, \text{and } a$$</p>
 <ul>
 <li>A (finite) Markov Decision Process (MDP) is defined by:<ul>
 <li>a (finite) set of states <strong>S</strong> (or S+, in the case of an episodic task)</li>

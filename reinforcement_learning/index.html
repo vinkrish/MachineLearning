@@ -732,7 +732,7 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 <li>the reward can be predicted with complete certainty (contrasting general MDPs where the reward is a random draw from a probability distribution).</li>
 </ul>
 <p>In this simple example, we saw that the value of any state can be calculated as the sum of the immediate reward and the (discounted) value of the next state.</p>
-<p>Alexis mentioned that for a general MDP, we have to instead work in terms of an expectation, since it's not often the case that the immediate reward and next state can be predicted with certainty. Indeed, we saw in an earlier lesson that the reward and next state are chosen according to the one-step dynamics of the MDP. In this case, where the reward <em>r</em> and next state <em>s′</em> are drawn from a (conditional) probability distribution <em>p(s',r|s,a)</em>, the <strong>Bellman Expectation Equation</strong> (for $ v_\piv 
+<p>Alexis mentioned that for a general MDP, we have to instead work in terms of an expectation, since it's not often the case that the immediate reward and next state can be predicted with certainty. Indeed, we saw in an earlier lesson that the reward and next state are chosen according to the one-step dynamics of the MDP. In this case, where the reward <em>r</em> and next state <em>s′</em> are drawn from a (conditional) probability distribution <em>p(s',r|s,a)</em>, the <strong>Bellman Expectation Equation</strong> (for $ v_\piv
 π $) expresses the value of any state <em>s</em> in terms of the expected immediate reward and the expected value of the next state:</p>
 <p>$$v_\pi(s) = \mathbb{E}<em>\pi[R</em>{t+1} + \gamma v_\pi(S_{t+1})|S_t =s]$$</p>
 <h2 id="calculating-the-expectation">Calculating the Expectation</h2>
@@ -773,11 +773,13 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 <li>The action-value function for a policy π is denoted qπ. For each state s ∈ S and action a ∈ A, it yields the expected return if the agent starts in state <em>s</em>, takes action <em>a</em>, and then follows the policy for all future time steps. That is, </li>
 </ul>
 <p>$$q_\pi(s,a) \doteq \mathbb{E}_\pi[G_t|S_t=s, A_t=a]$$</p>
-<p>We refer qπ(s,a) as the value of taking action <em>a</em> in state <em>s</em> under a policy π (or alternatively as the value of the state-action pair s,a).
-- All optimal policies have the same action-value function q∗, called the optimal action-value function.</p>
+<p>We refer qπ(s,a) as the value of taking action <em>a</em> in state <em>s</em> under a policy π (or alternatively as the value of the state-action pair s,a).</p>
+<ul>
+<li>All optimal policies have the same action-value function q∗, called the optimal action-value function.</li>
+</ul>
 <h2 id="optimal-policies">Optimal Policies</h2>
 <ul>
-<li>Once the agent determines the optimal action-value function q∗, it can quickly obtain an optimal policy π∗ by setting </li>
+<li>Once the agent determines the optimal action-value function q∗, it can quickly obtain an optimal policy π∗ by setting</li>
 </ul>
 <p>$$\pi_<em>(s) = \arg\max_{a\in\mathcal{A}(s)} q_</em>(s,a)$$</p>
                 

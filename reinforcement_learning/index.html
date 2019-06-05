@@ -770,12 +770,15 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 </ul>
 <h2 id="action-value-functions">Action-Value Functions</h2>
 <ul>
-<li>The action-value function for a policy π is denoted qπ. For each state s ∈ S and action a ∈ A, it yields the expected return if the agent starts in state <em>s</em>, takes action <em>a</em>, and then follows the policy for all future time steps. That is, $$q_\pi(s,a) \doteq \mathbb{E}<em>\pi[G_t|S_t=s, A_t=a]$$ We refer qπ(s,a) as the value of taking action _a</em> in state <em>s</em> under a policy π (or alternatively as the value of the state-action pair s,a).</li>
+<li>The action-value function for a policy π is denoted qπ. For each state s ∈ S and action a ∈ A, it yields the expected return if the agent starts in state <em>s</em>, takes action <em>a</em>, and then follows the policy for all future time steps. That is, 
+$$q_\pi(s,a) \doteq \mathbb{E}<em>\pi[G_t|S_t=s, A_t=a]$$ 
+We refer qπ(s,a) as the value of taking action _a</em> in state <em>s</em> under a policy π (or alternatively as the value of the state-action pair s,a).</li>
 <li>All optimal policies have the same action-value function q∗, called the optimal action-value function.</li>
 </ul>
 <h2 id="optimal-policies">Optimal Policies</h2>
 <ul>
-<li>Once the agent determines the optimal action-value function q∗, it can quickly obtain an optimal policy π∗ by setting $$\pi_<em>(s) = \arg\max_{a\in\mathcal{A}(s)} q_</em>(s,a)$$</li>
+<li>Once the agent determines the optimal action-value function q∗, it can quickly obtain an optimal policy π∗ by setting 
+$$\pi_<em>(s) = \arg\max_{a\in\mathcal{A}(s)} q_</em>(s,a)$$</li>
 </ul>
                 
                   

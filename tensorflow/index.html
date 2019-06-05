@@ -580,7 +580,9 @@ predictions = classifier.predict(input_fn=predict_input_fn)
 <li><strong>Steps</strong>, which is the total number of training iterations. One step calculates the loss from one batch and uses that value to modify the model's weights once.</li>
 <li><strong>Batch Size</strong>, which is the number of examples (chosen at random) for a single step. For example, the batch size for SGD is 1.</li>
 </ul>
-<p>$$total\,number\,of\,trained\,examples = batch\,size * steps$$</p>
+<p>
+<script type="math/tex; mode=display">total\,number\,of\,trained\,examples = batch\,size * steps</script>
+</p>
                 
                   
                 
@@ -661,7 +663,7 @@ predictions = classifier.predict(input_fn=predict_input_fn)
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
     
   </body>

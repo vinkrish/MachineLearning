@@ -757,7 +757,8 @@
 <p>A label is the thing we're predicting—the y variable in simple linear regression. The label could be the future price of wheat, the kind of animal shown in a picture, the meaning of an audio clip, or just about anything.</p>
 <h3 id="features">Features</h3>
 <p>A feature is an input variable—the x variable in simple linear regression.
-$$x_1,x_2,x_3,....x_N$$</p>
+<script type="math/tex; mode=display">x_1,x_2,x_3,....x_N</script>
+</p>
 <p><strong>synthetic feature:</strong>
 A feature not present among the input features, but created from one or more of them. Kinds of synthetic features include:</p>
 <ul>
@@ -809,10 +810,11 @@ Once we've trained our model with labeled examples, we use that model to predict
 Loss function based on the absolute value of the difference between the values that a model is predicting and the actual values of the labels. L1 loss is less sensitive to outliers than L2 loss.</p>
 <p><strong>L2 Loss</strong><br />
 This function calculates the squares of the difference between a model's predicted value for a labeled example and the actual value of the label. Due to squaring, this loss function amplifies the influence of bad predictions. That is, squared loss reacts more strongly to outliers than L1 loss. (used in linear regression)
-$$ \begin{align} L_2 Loss &amp; = (observation - prediction)^2 \\ &amp; = (y - y')^2 \\ &amp; = \sum_{(x,y)\in D}(y-prediction(x))^2 \end{align} $$
-$$\sum \text{:We're summing over all examples in the training set.}$$
-$$D \text{: is a data set containing many labeled examples, which are (x,y) pairs.}$$
-$$ \text{ Sometimes useful to average over all examples, } \text{so divide out by} \frac{1}{|D|}.$$</p>
+<script type="math/tex; mode=display"> \begin{align} L_2 Loss & = (observation - prediction)^2 \\\\ & = (y - y')^2 \\\\ & = \sum_{(x,y)\in D}(y-prediction(x))^2 \end{align} </script>
+<script type="math/tex; mode=display">\sum \text{:We're summing over all examples in the training set.}</script>
+<script type="math/tex; mode=display">D \text{: is a data set containing many labeled examples, which are (x,y) pairs.}</script>
+<script type="math/tex; mode=display"> \text{ Sometimes useful to average over all examples, } \text{so divide out by} \frac{1}{\|D\|}.</script>
+</p>
 <h3 id="selection-bias">Selection Bias</h3>
 <p>Errors in conclusions drawn from sampled data due to a selection process that generates systematic differences between samples observed in the data and those not observed. The following forms of selection bias exist:</p>
 <ul>
@@ -823,7 +825,8 @@ $$ \text{ Sometimes useful to average over all examples, } \text{so divide out b
 <h3 id="gradient">Gradient</h3>
 <p><strong>Gradient</strong>
 The vector of partial derivatives with respect to all of the independent variables. In machine learning, the gradient is the vector of partial derivatives of the model function. The gradient points in the direction of steepest ascent.</p>
-<p>$$(y - y')^2$$ 
+<p>
+<script type="math/tex; mode=display">(y - y')^2</script> 
 The derivative of above with respect to the weights and biases tells us how loss changes for a given example</p>
 <p><strong>Gradient Descent</strong>
 A technique to minimize loss by computing the gradients of loss with respect to the model's parameters, conditioned on training data. Informally, gradient descent iteratively adjusts parameters, gradually finding the best combination of weights and bias to minimize loss.</p>
@@ -845,7 +848,9 @@ A commonly used mechanism to mitigate the exploding gradient problem by artifici
 <h3 id="overfitting">Overfitting</h3>
 <p>The algorithm analyses the data and trains itself to create a high mathematical order model based on the data.</p>
 <p><img alt="Overfitting" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/overfitting.jpg" /></p>
-<p>$$y = x_1 + w_2x_2^3 + w_3x_3^8$$</p>
+<p>
+<script type="math/tex; mode=display">y = x_1 + w_2x_2^3 + w_3x_3^8</script>
+</p>
 <p>These high-order terms let this equation define a precise decision boundary between the positive and negative values, but as a result, the training process has created a model that works very well on training data but poorly when asked to predict values based on data it has not trained - this is the class overfit problem and is an issue that must be handled to create machine learning models that work well not only on the training data but also on real-world data.</p>
 <p><strong>Regularization</strong>, <strong>Cross validation</strong>, <strong>Ensemble learning</strong> of which dropout is a part, are all ways to mitigate overfitting. We add an additional parameter where if the model coefficients get too complex we add a penalty to the objective function. This is the technique that we use in regression.</p>
 <p><strong>Regularization: </strong>
@@ -860,7 +865,7 @@ The penalty on a model's complexity. Different kinds of regularization include:<
 <p><strong>Dropout</strong> is a form of regularization useful in training neural networks. Dropout regularization works by removing a random selection of a fixed number of the units in a network layer for a single gradient step. The more units dropped out, the stronger the regularization. This is analogous to training the network to emulate an exponentially large ensemble of smaller networks.</p>
 <p><strong>Regularization rate</strong>
 A scalar value, represented as lambda, specifying the relative importance of the regularization function. The following simplified loss equation shows the regularization rate's influence:
-$$\text{minimize(loss function + }\lambda\text{(regularization function))}$$
+<script type="math/tex; mode=display">\text{minimize(loss function + }\lambda\text{(regularization function))}</script>
 Raising the regularization rate reduces overfitting but may make the model less accurate.</p>
 <h3 id="hyperplane">Hyperplane</h3>
 <p>A boundary that separates a space into two subspaces. For example, a line is a hyperplane in two dimensions and a plane is a hyperplane in three dimensions. More typically in machine learning, a hyperplane is the boundary separating a high-dimensional space. Kernel Support Vector Machines use hyperplanes to separate positive classes from negative classes, often in a very high-dimensional space.</p>
@@ -990,7 +995,7 @@ A scalar used to train a model via gradient descent. During each iteration, the 
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
     
   </body>

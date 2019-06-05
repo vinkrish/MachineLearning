@@ -570,38 +570,65 @@
                   <h1>Math</h1>
                 
                 <p><strong>Mean deviation</strong> refers to how far away every data point is from the average of those data points. Squared mean deviation simply squares this result. This is the square of the distance of every data point from the mean, and now we can finally calculate the variance of these data points.</p>
-<p>$$variance=\frac{\sum(x_i-\overline{x})^2}{n}$$</p>
+<p>
+<script type="math/tex; mode=display">variance=\frac{\sum(x_i-\overline{x})^2}{n}</script>
+</p>
 <p><strong>Variance</strong> describe the concentration of data points around the mean, It is a measure of spread/variability of data. </p>
 <p>It is calculated as sum of the squares of the distances of every individual data point from the mean divided by the total number of data points. The estimate of the variance can be improved by tweaking the denominator of this function. This tweak is called the <strong>Bessel's Correction</strong>. So instead of using N for all of the data points, we'll simply use N-1 as the denominator.</p>
-<p>$$variance=\frac{\sum(x_i-\overline{x})^2}{n-1}$$</p>
+<p>
+<script type="math/tex; mode=display">variance=\frac{\sum(x_i-\overline{x})^2}{n-1}</script>
+</p>
 <p>Mean and variance succinctly summarize a set of numbers along with <strong>Standard deviation</strong>, which once again measures how much the numbers jump around.</p>
-<p>$$SD = \sqrt{variance}$$</p>
+<p>
+<script type="math/tex; mode=display">SD = \sqrt{variance}</script>
+</p>
 <p><strong>Mean Square Error (MSE)</strong><br />
 MSE is the average squared loss per example over the whole dataset. To calculate MSE, sum up all the squared losses for individual examples and then divide by the number of examples:
-$$MSE = \frac{1}{N} \sum_{(x,y)\in D} (y - prediction(x))^2$$</p>
+<script type="math/tex; mode=display">MSE = \frac{1}{N} \sum_{(x,y)\in D} (y - prediction(x))^2</script>
+</p>
 <p><strong>Standard Error(SE)</strong> of a statistic is the standard deviation of its sampling distribution or an estimate of that standard deviation. If the parameter or the statistic is the mean, it is called the standard error of the mean (SEM).<br />
 $\sigma$=Standard Deviation of population, n=size of sample</p>
-<p>$$SE = \frac{\sigma}{\sqrt{n}}$$</p>
+<p>
+<script type="math/tex; mode=display">SE = \frac{\sigma}{\sqrt{n}}</script>
+</p>
 <h3 id="z-score-standard-score">Z score (Standard Score)</h3>
 <p>Given an observed value x, the Z score finds the number of Standard deviations x is away from the mean.</p>
-<p>$$Z = \frac{x-\mu}{\sigma}$$</p>
+<p>
+<script type="math/tex; mode=display">Z = \frac{x-\mu}{\sigma}</script>
+</p>
 <h3 id="t-distribution">T distribution</h3>
 <p>The t-Test is best to use when we do not know the population standard deviation. Instead we use the sample standard deviation.
 The number of degrees of freedom(df) is the number of values that are free to vary (n-1).</p>
-<p>$$S=\frac{\sum(x_i-\overline{x})^2}{n-1}$$</p>
-<p>$$t = \frac{\overline{x}-\mu}{SE}$$</p>
+<p>
+<script type="math/tex; mode=display">S=\frac{\sum(x_i-\overline{x})^2}{n-1}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">t = \frac{\overline{x}-\mu}{SE}</script>
+</p>
 <p>T-tests are also great for testing two sample means (i.e. paired t-tests), we modify the formula to become:</p>
-<p>$$SD = \sqrt{S_1^2 + S_2^2}$$</p>
-<p>$$SE = \sqrt{\frac{S_1^2}{n1} + \frac{S_2^2}{n2}}$$</p>
-<p>$$t = \frac{(\overline{x}_2-\overline{x}_1)-(\mu_2-\mu_1)}{\frac{\sqrt(s_1^2+s_2^2)}{n}}$$</p>
+<p>
+<script type="math/tex; mode=display">SD = \sqrt{S_1^2 + S_2^2}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">SE = \sqrt{\frac{S_1^2}{n1} + \frac{S_2^2}{n2}}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">t = \frac{(\overline{x}_2-\overline{x}_1)-(\mu_2-\mu_1)}{\frac{\sqrt(s_1^2+s_2^2)}{n}}</script>
+</p>
 <h3 id="cohens-d">Cohen's d</h3>
 <p>It measures the effect size of the strength of a phenomenon. Cohen’s d gives us the distance between means in standardized units.<br />
 $\overline{x} = \overline{x_1} - \overline{x_2}$</p>
-<p>$$d = \frac{\overline{x}-\mu}{S}$$</p>
+<p>
+<script type="math/tex; mode=display">d = \frac{\overline{x}-\mu}{S}</script>
+</p>
 <h3 id="margin-of-error-me">Margin of Error (ME)</h3>
-<p>$$ME = t_{critical} * SE$$</p>
+<p>
+<script type="math/tex; mode=display">ME = t_{critical} * SE</script>
+</p>
 <h3 id="confidence-interval-ci">Confidence Interval (CI)</h3>
-<p>$$CI = \overline{x} \pm ME$$</p>
+<p>
+<script type="math/tex; mode=display">CI = \overline{x} \pm ME</script>
+</p>
 <h3 id="evaluation-metrics">Evaluation Metrics</h3>
 <p><strong>Positive Class</strong>
 In binary classification, the two possible classes are labeled as positive and negative. The positive outcome is the thing we're testing for. (Admittedly, we're simultaneously testing for both outcomes, but play along.) For example, the positive class in a medical test might be "tumor." The positive class in an email classifier might be "spam".</p>
@@ -613,29 +640,43 @@ An example in which the model correctly predicted the positive class. For exampl
 An example in which the model correctly predicted the negative class. For example, the model inferred that a particular email message was not spam, and that email message really was not spam.</p>
 <p><strong>true positive rate (TPR)</strong>
 Synonym for recall. That is: True positive rate is the y-axis in an ROC curve.</p>
-<p>$$\text{True Positive Rate} = \frac{\text{True Positives}} {\text{True Positives} + \text{False Negatives}}$$</p>
+<p>
+<script type="math/tex; mode=display">\text{True Positive Rate} = \frac{\text{True Positives}} {\text{True Positives} + \text{False Negatives}}</script>
+</p>
 <p><strong>False Negative (FN)</strong>
 An example in which the model mistakenly predicted the negative class. For example, the model inferred that a particular email message was not spam (the negative class), but that email message actually was spam.</p>
 <p><strong>False Positive (FP)</strong>
 An example in which the model mistakenly predicted the positive class. For example, the model inferred that a particular email message was spam (the positive class), but that email message was actually not spam.</p>
 <p><strong>false positive rate (FPR)</strong>
 The x-axis in an ROC curve. The false positive rate is defined as follows:</p>
-<p>$$\text{False Positive Rate} = \frac{\text{False Positives}}{\text{False Positives} + \text{True Negatives}}$$</p>
+<p>
+<script type="math/tex; mode=display">\text{False Positive Rate} = \frac{\text{False Positives}}{\text{False Positives} + \text{True Negatives}}</script>
+</p>
 <p><strong>ROC (receiver operating characteristic) Curve: </strong>
 A curve of true positive rate vs. false positive rate at different classification thresholds.</p>
 <p><strong>Accuracy</strong>
 The fraction of predictions that a classification model got right. In multi-class classification, accuracy is defined as follows:</p>
-<p>$$\text{Accuracy} = \frac{\text{Correct Predictions}} {\text{Total Number Of Examples}}$$</p>
+<p>
+<script type="math/tex; mode=display">\text{Accuracy} = \frac{\text{Correct Predictions}} {\text{Total Number Of Examples}}</script>
+</p>
 <p>In binary classification, accuracy has the following definition:</p>
-<p>$$\text{Accuracy} = \frac{\text{True Positives} + \text{True Negatives}}{\text{Total Number Of Examples}}$$</p>
+<p>
+<script type="math/tex; mode=display">\text{Accuracy} = \frac{\text{True Positives} + \text{True Negatives}}{\text{Total Number Of Examples}}</script>
+</p>
 <p><strong>Precision</strong>
 A metric for classification models. Precision identifies the frequency with which a model was correct when predicting the positive class. That is:</p>
-<p>$$\text{Precision} = \frac{\text{True Positives}} {\text{True Positives} + \text{False Positives}}$$</p>
+<p>
+<script type="math/tex; mode=display">\text{Precision} = \frac{\text{True Positives}} {\text{True Positives} + \text{False Positives}}</script>
+</p>
 <p><strong>Recall</strong>
 A metric for classification models that answers the following question: Out of all the possible positive labels, how many did the model correctly identify? That is:</p>
-<p>$$\text{Recall} = \frac{\text{True Positives}} {\text{True Positives} + \text{False Negatives}}$$</p>
+<p>
+<script type="math/tex; mode=display">\text{Recall} = \frac{\text{True Positives}} {\text{True Positives} + \text{False Negatives}}</script>
+</p>
 <p>In medical field it is common to use Sensitivity and Specificity, where Sensitivity is same as Recall while Specificity is as follows:</p>
-<p>$$\text{Specificity} = \frac{\text{True Negatives}} {\text{True Negatives} + \text{False Positives}}$$</p>
+<p>
+<script type="math/tex; mode=display">\text{Specificity} = \frac{\text{True Negatives}} {\text{True Negatives} + \text{False Positives}}</script>
+</p>
 <p>Now, sensitivity and specificity are the rows of this matrix. More specifically, if we label</p>
 <ul>
 <li>TP: Sick people that we correctly diagnosed as sick.</li>
@@ -725,7 +766,7 @@ A metric for classification models that answers the following question: Out of a
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
     
   </body>

@@ -28,6 +28,7 @@ nav:
     - Neural Network: neural_network.md
     - Definition: algorithms.md
   - Deep Learning: deep_learning.md
+  - Reinforcement Learning: reinforcement_learning.md
   - Applications: applications.md
   - Data Analysis Process: dap.md
   - Workflow with example: ml_workflow.md

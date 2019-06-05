@@ -113,7 +113,7 @@ Producing a model with poor predictive ability because the model hasn't captured
 ### Overfitting
 The algorithm analyses the data and trains itself to create a high mathematical order model based on the data.
 
-![Overfitting](images/overfitting.jpg)
+![Overfitting](https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/overfitting.jpg)
 
 $$y = x_1 + w_2x_2^3 + w_3x_3^8$$
 

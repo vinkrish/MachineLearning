@@ -5,4 +5,4 @@
 ![5](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nn_5.jpg)
 ![6](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nn_6.jpg)
 ![7](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nn_bp_1.jpg)
-![8](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nn_bp_1.jpg)
+![8](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/nn_bp_2.jpg)

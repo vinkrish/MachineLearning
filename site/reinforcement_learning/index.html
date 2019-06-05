@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://vinkrish.github.io/MachineLearning/source/">
+        <link rel="canonical" href="https://vinkrish.github.io/MachineLearning/reinforcement_learning/">
       
       
         <meta name="author" content="Vinay Krishna">
@@ -40,7 +40,7 @@
     
     
       
-        <title>Source - Intro to Machine Learning</title>
+        <title>Reinforcement Learning - Intro to Machine Learning</title>
       
     
     
@@ -98,6 +98,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#reinforcement-learning" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -119,7 +123,7 @@
               Intro to Machine Learning
             </span>
             <span class="md-header-nav__topic">
-              Source
+              Reinforcement Learning
             </span>
           
         </div>
@@ -335,11 +339,77 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../reinforcement_learning/" title="Reinforcement Learning" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Reinforcement Learning
+      </label>
+    
+    <a href="./" title="Reinforcement Learning" class="md-nav__link md-nav__link--active">
       Reinforcement Learning
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-setting-revisited" title="The Setting, Revisited" class="md-nav__link">
+    The Setting, Revisited
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#episodic-vs-continuing-tasks" title="Episodic vs. Continuing Tasks" class="md-nav__link">
+    Episodic vs. Continuing Tasks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-reward-hypothesis" title="The Reward Hypothesis" class="md-nav__link">
+    The Reward Hypothesis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cumulative-reward" title="Cumulative Reward" class="md-nav__link">
+    Cumulative Reward
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mdps-and-one-step-dynamics" title="MDPs and One-Step Dynamics" class="md-nav__link">
+    MDPs and One-Step Dynamics
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -407,18 +477,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Source" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../source/" title="Source" class="md-nav__link">
       Source
     </a>
-    
   </li>
 
     
@@ -429,130 +492,116 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-setting-revisited" title="The Setting, Revisited" class="md-nav__link">
+    The Setting, Revisited
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#episodic-vs-continuing-tasks" title="Episodic vs. Continuing Tasks" class="md-nav__link">
+    Episodic vs. Continuing Tasks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-reward-hypothesis" title="The Reward Hypothesis" class="md-nav__link">
+    The Reward Hypothesis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cumulative-reward" title="Cumulative Reward" class="md-nav__link">
+    Cumulative Reward
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mdps-and-one-step-dynamics" title="MDPs and One-Step Dynamics" class="md-nav__link">
+    MDPs and One-Step Dynamics
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/vinkrish/MachineLearning/edit/master/docs/source.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/vinkrish/MachineLearning/edit/master/docs/reinforcement_learning.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Source</h1>
-                
-                <table>
-<thead>
-<tr>
-<th>DS &amp; Model</th>
-<th>Report</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Playground.html">Playground</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/NumPy.html">NumPy</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Pandas.html">Pandas</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/DataFrame.html">DataFrame</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://s3.us-west-2.amazonaws.com/vinkrish-notes/Stroop_Effect.html">Stroop Effect</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/PracticeProblem.html">Practice Problem</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Data Analysis Process</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/assessing.html">Assessing</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/cleaning.html">Cleaning</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/plotting_with_pandas.html">Plotting</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/conclusions.html">Conclusion</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/communicate.html">Communicate</a></td>
-</tr>
-<tr>
-<td>Case Study</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/CaseStudy.html">Wine Rating</a></td>
-</tr>
-<tr>
-<td>Case Study</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/FuelEconomy.html">Fuel Economy</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/drawing-conclusions.html">Fuel Economy - Conclusion</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/exploring_visuals.html">Fuel Economy - Visuals</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/merging_data.html">Fuel Economy - Merging Data</a></td>
-</tr>
-<tr>
-<td>Investigate Dataset</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/investigate-titanic-dataset.html">Titanic</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/investigate-movies-dataset.html">Movies</a></td>
-</tr>
-<tr>
-<td>ML Nanodegree</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/boston_housing.html">Predict House Price</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/finding_donors.html">Finding Donors</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/customer_segments.html">Customer Segments</a></td>
-</tr>
-<tr>
-<td>Decision Tree</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/titanic_survival_exploration.html">Titanic Survival Exploration</a></td>
-</tr>
-<tr>
-<td>Naive Bayes</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Bayesian_Inference.html">Email Spam or Ham</a></td>
-</tr>
-<tr>
-<td>Random Forest &amp; Logistic Regression</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Pima-Prediction-with-reload.html">Predict Diabetes</a></td>
-</tr>
-<tr>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/CategoricalAndNumericData.html">Categorical and Numeric Data</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/TextFeatureExtraction.html">Text Feature Extraction</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/ImageFeatureExtraction.html">Image Feature Extraction</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Lasso &amp; Ridge Regression</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/vehiclePrice-LassoRidge.html">Vehicle Price</a></td>
-</tr>
-<tr>
-<td>SVR</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/mpg-SVR.html">Mileage</a></td>
-</tr>
-<tr>
-<td>SVM</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/DocumentClassification-SVM.html">Document Classification</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/MNISTClassification-SVM.html">Image Classification</a></td>
-</tr>
-<tr>
-<td>Gradient Boost Regression / Decision Tree</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/autoPrice-GradientBoosting.html">Automobile Price</a></td>
-</tr>
-<tr>
-<td>Mean Shift Clustering</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/ClusteringWithMeanShift.html">Titanic Survivor</a></td>
-</tr>
-<tr>
-<td>PCA</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/PCA-DimensionalityReduction.html">Wine Rating</a></td>
-</tr>
-<tr>
-<td>NLTK</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Getting_Started_NLTK.html">Getting Started with NLTK</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Accessing+Text+Corpora+and+Lexical+Resources.html">Accessing Text Corpora and Lexical Resources</a></td>
-</tr>
-<tr>
-<td>Spark</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Spark/1.Getting+Started+with+Spark+2.html">Getting Started with Spark 2</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Spark/2.LondonCrime.html">London Crime Data</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Spark/3.Soccer.html">Soccer Data</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Spark/4.MiscellaneousOperations.html">Miscellaneous Operations</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Spark/5.IntroducingSparkSQL.html">Introducing SparkSQL</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Spark/6.AirlineData.html">Airline Data</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Spark/7.InferredAndExplicitSchemas.html">Inferred And Explicit Schemas</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/Spark/8.WindowingFunctions.html">Windowing Functions</a></td>
-</tr>
-<tr>
-<td>Deep Learning</td>
-<td><a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/deeplearning/Python+Basics+With+Numpy.html">Python Basics With Numpy</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/deeplearning/Logistic+Regression+with+a+Neural+Network+mindset.html">Logistic Regression with a Neural Network mindset</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/deeplearning/Planar+data+classification+with+one+hidden+layer.html">Neural Network with one hidden layer</a> <br> <a href="https://vinkrish-notes.s3-us-west-2.amazonaws.com/deeplearning/Building+your+Deep+Neural+Network+-+Step+by+Step.html">Building Deep Neural Network</a> <br> <a href="https://vinkrish-notes.s3-us-west-2.amazonaws.com/deeplearning/Deep+Neural+Network+-+Application.html">Deep Neural Network Application</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/GradientDescent.html">Gradient Descent</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/XOR.html">XOR Network</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/StudentAdmissionsKeras.html">Student Admission(Keras)</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/IMDB_In_Keras.html">IMDB Review(Keras)</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/conv-dims.html">Convolution Layer Dimension</a> <br> <a href="https://s3-us-west-2.amazonaws.com/vinkrish-notes/mnist_mlp.html">MNIST-Identify Digit</a></td>
-</tr>
-</tbody>
-</table>
+                <h1 id="reinforcement-learning">Reinforcement Learning</h1>
+<p><img alt="reinforce_learning" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/reinforce_learning.png" /></p>
+<h2 id="the-setting-revisited">The Setting, Revisited</h2>
+<ul>
+<li>The reinforcement learning (RL) framework is characterized by an agent learning to interact with its environment.</li>
+<li>At each time step, the agent receives the environment's state (the environment presents a situation to the agent), and the agent must choose an appropriate action in response. One time step later, the agent receives a reward (the environment indicates whether the agent has responded appropriately to the state) and a new state.</li>
+<li>All agents have the goal to maximize expected cumulative reward, or the expected sum of rewards attained over all time steps.</li>
+</ul>
+<h2 id="episodic-vs-continuing-tasks">Episodic vs. Continuing Tasks</h2>
+<ul>
+<li>A task is an instance of the reinforcement learning (RL) problem.</li>
+<li>Continuing tasks are tasks that continue forever, without end.</li>
+<li>Episodic tasks are tasks with a well-defined starting and ending point.</li>
+<li>In this case, we refer to a complete sequence of interaction, from start to finish, as an episode.</li>
+<li>Episodic tasks come to an end whenever the agent reaches a terminal state.</li>
+</ul>
+<h2 id="the-reward-hypothesis">The Reward Hypothesis</h2>
+<ul>
+<li>Reward Hypothesis: All goals can be framed as the maximization of (expected) cumulative reward.</li>
+</ul>
+<h2 id="cumulative-reward">Cumulative Reward</h2>
+<p>The return at time step tt is G_t := R_{t+1} + R_{t+2} + R_{t+3} + \ldots
+The agent selects actions with the goal of maximizing expected (discounted) return. (Note: discounting is covered in the next concept.)
+Discounted Return
+The discounted return at time step tt is G_t := R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \ldots
+The discount rate \gammaγ is something that you set, to refine the goal that you have the agent.
+It must satisfy 0 \leq \gamma \leq
+If \gamma=0, the agent only cares about the most immediate reward.
+If \gamma=1, the return is not discounted.
+For larger values of \gammaγ, the agent cares more about the distant future. Smaller values of \gammaγ result in more extreme discounting, where - in the most extreme case - agent only cares about the most immediate reward.</p>
+<h2 id="mdps-and-one-step-dynamics">MDPs and One-Step Dynamics</h2>
+<ul>
+<li>The state space \mathcal{S} is the set of all (nonterminal) states.</li>
+<li>In episodic tasks, we use \mathcal{S}^+ to refer to the set of all states, including terminal states.</li>
+<li>The action space \mathcal{A} is the set of possible actions. (Alternatively, \mathcal{A}(s) refers to the set of possible actions available in state s \in \mathcal{S}.)</li>
+<li>The one-step dynamics of the environment determine how the environment decides the state and reward at every time step. The dynamics can be defined by specifying p(s',r|s,a) \doteq \mathbb{P}(S_{t+1}=s', R_{t+1}=r|S_{t} = s, A_{t}=a) for each possible s', r, s, \text{and } a.</li>
+<li>A (finite) Markov Decision Process (MDP) is defined by:</li>
+<li>a (finite) set of states \mathcal{S} (or \mathcal{S}^+, in the case of an episodic task)</li>
+<li>a (finite) set of actions \mathcal{A}</li>
+<li>a set of rewards \mathcal{R}</li>
+<li>the one-step dynamics of the environment</li>
+<li>the discount rate \gamma \in [0,1]</li>
+</ul>
                 
                   
                 
@@ -573,7 +622,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../tensorflow/" title="TensorFlow" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../deep_learning/" title="Deep Learning" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -582,11 +631,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                TensorFlow
+                Deep Learning
               </span>
             </div>
           </a>
         
+        
+          <a href="../applications/" title="Applications" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Applications
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>

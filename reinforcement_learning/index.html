@@ -594,11 +594,11 @@
 <li>Reward Hypothesis: All goals can be framed as the maximization of (expected) cumulative reward.</li>
 </ul>
 <h2 id="cumulative-reward">Cumulative Reward</h2>
-<p>The return at time step t is $$ G_t := R_{t+1} + R_{t+2} + R_{t+3} + \ldots $$
+<p>The return at time step t is $$G_t := R_{t+1} + R_{t+2} + R_{t+3} + \ldots$$
 The agent selects actions with the goal of maximizing expected (discounted) return.</p>
 <h2 id="discounted-return">Discounted Return</h2>
 <ul>
-<li>The discounted return at time step t is $$ G_t := R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \ldots $$</li>
+<li>The discounted return at time step t is $$G_t := R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \ldots$$</li>
 <li>The discount rate γ is something that you set, to refine the goal that you have the agent.</li>
 <li>It must satisfy 0 &lt;=  γ &lt;= 1</li>
 <li>If γ=0, the agent only cares about the most immediate reward.</li>
@@ -612,7 +612,7 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 <li>The action space <strong>A</strong> is the set of possible actions. (Alternatively, <strong>A(s)</strong> refers to the set of possible actions available in state s \in \mathcal{S}.)</li>
 <li>The one-step dynamics of the environment determine how the environment decides the state and reward at every time step. The dynamics can be defined by specifying</li>
 </ul>
-<p>$$p(s',r|s,a) \doteq \mathbb{P}(S_{t+1}=s', R_{t+1}=r|S_{t} = s, A_{t}=a) for each possible s', r, s, \text{and } a$$</p>
+<p>$$p(s',r|s,a) \doteq \mathbb{P}(S_{t+1}=s', R_{t+1}=r|S_{t} = s, A_{t}=a) \text{for each possible} s', r, s, \text{and } a$$</p>
 <ul>
 <li>A (finite) Markov Decision Process (MDP) is defined by:</li>
 <li>a (finite) set of states <strong>S</strong> (or S+, in the case of an episodic task)</li>

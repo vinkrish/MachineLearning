@@ -662,16 +662,16 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 <li>the reward can be predicted with complete certainty (contrasting general MDPs where the reward is a random draw from a probability distribution).</li>
 </ul>
 <p>In this simple example, we saw that the value of any state can be calculated as the sum of the immediate reward and the (discounted) value of the next state.</p>
-<p>Alexis mentioned that for a general MDP, we have to instead work in terms of an expectation, since it's not often the case that the immediate reward and next state can be predicted with certainty. Indeed, we saw in an earlier lesson that the reward and next state are chosen according to the one-step dynamics of the MDP. In this case, where the reward <em>r</em> and next state <em>s′</em> are drawn from a (conditional) probability distribution <em>p(s',r|s,a)</em>, the <strong>Bellman Expectation Equation</strong> (for $v_\piv 
-π$) expresses the value of any state <em>s</em> in terms of the expected immediate reward and the expected value of the next state:</p>
-<p>$$v_\pi(s) = \text{} \mathbb{E}<em>\pi[R</em>{t+1} + \gamma v_\pi(S_{t+1})|S_t =s]$$</p>
+<p>Alexis mentioned that for a general MDP, we have to instead work in terms of an expectation, since it's not often the case that the immediate reward and next state can be predicted with certainty. Indeed, we saw in an earlier lesson that the reward and next state are chosen according to the one-step dynamics of the MDP. In this case, where the reward <em>r</em> and next state <em>s′</em> are drawn from a (conditional) probability distribution <em>p(s',r|s,a)</em>, the <strong>Bellman Expectation Equation</strong> (for $ v_\piv 
+π $) expresses the value of any state <em>s</em> in terms of the expected immediate reward and the expected value of the next state:</p>
+<p>$$v_\pi(s) = \mathbb{E}<em>\pi[R</em>{t+1} + \gamma v_\pi(S_{t+1})|S_t =s]$$</p>
 <h2 id="calculating-the-expectation">Calculating the Expectation</h2>
 <p>In the event that the agent's policy π is <strong>deterministic</strong>, the agent selects action <em>π(s)</em> when in state <em>s</em>, and the Bellman Expectation Equation can be rewritten as the sum over two variables (<em>s′</em> and <em>r</em>):</p>
 <p>$$v_\pi(s) = \text{} \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,\pi(s))(r+\gamma v_\pi(s'))$$</p>
 <p>In this case, we multiply the sum of the reward and discounted value of the next state $(r+\gamma v_\pi(s'))$ by its corresponding probability $p(s',r|s,\pi(s))$ and sum over all possibilities to yield the expected value.</p>
 <p>If the agent's policy π is <strong>stochastic</strong>, the agent selects action <em>a</em> with probability <em>π(a∣s)</em> when in state <em>s</em>, and the Bellman Expectation Equation can be rewritten as the sum over three variables <em>(s′, r, and a)</em>:</p>
 <p>$$v_\pi(s) = \text{} \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R},a\in\mathcal{A}(s)}\pi(a|s)p(s',r|s,a)(r+\gamma v_\pi(s'))$$</p>
-<p>In this case, we multiply the sum of the reward and discounted value of the next state \$(r+\gamma v_\pi(s'))$ by its corresponding probability <em>π(a∣s)p(s′,r∣s,a)</em> and sum over all possibilities to yield the expected value.</p>
+<p>In this case, we multiply the sum of the reward and discounted value of the next state $(r+\gamma v_\pi(s'))$ by its corresponding probability <em>π(a∣s)p(s′,r∣s,a)</em> and sum over all possibilities to yield the expected value.</p>
                 
                   
                 

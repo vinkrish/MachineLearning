@@ -2,7 +2,7 @@
 
 - **Linear regression** is a method for finding the straight line or hyperplane that best fits a set of points.
 
- - **Logistic Regression** is a powerful statistical way of modeling a binomial outcome with one or more explanatory variables. It measures the relationship between the categorical dependent variable and one or more independent variables by estimating probabilities using a logistic function, which is the cumulative logistic distribution. Examples:
+- **Logistic Regression** is a powerful statistical way of modeling a binomial outcome with one or more explanatory variables. It measures the relationship between the categorical dependent variable and one or more independent variables by estimating probabilities using a logistic function, which is the cumulative logistic distribution. Examples:
     - Credit Scoring
     - Measuring the success rates of marketing campaigns
     - Predicting the revenues of a certain product

@@ -16,13 +16,18 @@ extra:
 
 extra_javascript:
   # Add MathJax support
-  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+
+markdown_extensions:
+  - mdx_math
 
 # Navigation
 nav:
   - About: index.md
-  - Terminology: terminology.md
   - Math: math.md
+  - Libraries: libraries.md
+  - Data Analysis Process: dap.md
+  - Workflow: ml_workflow.md
   - Algorithms: 
     - Logistic Regression: logistic_regression.md
     - Neural Network: neural_network.md
@@ -30,8 +35,7 @@ nav:
   - Deep Learning: deep_learning.md
   - Reinforcement Learning: reinforcement_learning.md
   - Applications: applications.md
-  - Data Analysis Process: dap.md
-  - Workflow with example: ml_workflow.md
-  - Libraries: libraries.md
+  - Big Data: big_data.md
   - TensorFlow: tensorflow.md
+  - Terminology: terminology.md
   - Source: source.md

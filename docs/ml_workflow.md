@@ -7,9 +7,11 @@ An orchestrated and repeatable pattern which systematically transforms and proce
 - Testing the model
 
 ### Solution Statement
+
 _Use the Machine Learning Workflow to process and transform Pima Indian data to create a prediction model. This model must predict which peopel are likely to develop diabetes with 70% or greater accuracy_
 
 ### Tidy Data
+
 Tidy datasets are easy to manipulate, model and visualize, and have a specific structure:
 
 - each variable is a column
@@ -43,6 +45,7 @@ Based on the Statment, the algorithm must support Binary classification.
 Since this is our initial algorithm, let's stick to the basic algorithms.
 
 ### Selecting Our Initial Algorithm
+
 Candidate Algorithms:
 
 - Naive Bayes
@@ -71,13 +74,14 @@ The Logistic Regression algorithm has a somewhat confusing name. In Statistics, 
 The Decision Tree algorithm can be nicely visualized. The algorithm uses a binary tree structure with each node making a decision based upon the values of the feature. At each node, the feature value causes us to go down one path or another. A lot of data may be required to find the value which defines taking one path or another. As we see decision trees have the advantage of having tools available to produce a picture of the tree. This makes it easy to follow along and visualize how the trained model works.
 
 ### Training the Model
+
 Letting specific data teach a machine learning algorithm to create a specific prediction model.
 **Why retrain?**  
 Retraining will ensure that our model can take advantage of the new data to make better predictions. And also verify the algorithm can still create a high-performance model with the new data.
 
 We will compare our model prediction with actual prediction or actual labels that are associated with training data and use this as feeback to tweak our model parameters, this is the loss function or cost function and its primary purpose is to improve our model parameters and build stronger model.
 
-**Performance Improvement Options**
+#### Performance Improvement Options
 
 - Adjust current algorithm
 - Get more data or improve data

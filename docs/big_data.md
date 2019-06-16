@@ -12,9 +12,11 @@ Ambari is an Apache project supported by Hortonworks. It offers a web based GUI 
 
 ### MapReduce
 
+MapReduce distributes the processing of data on your cluster. Divides your data up intro partitions that are MAPPED (transformed) and REDUCED (aggregated) by mapper and reducer functions you define.
+
 MapReduce is a programming model and an associated implementation for processing and generating big data sets with a parallel, distributed algorithm on a cluster.
 
-A MapReduce program is composed of a map procedure (or method) - which performs filtering and sorting (such as sorting students by first name into queues, one queue for each name), and a reduce method - which performs a summary operation (such as counting the number of students in each queue, yielding name frequencies). 
+A MapReduce program is composed of a map procedure (or method) - which performs filtering and sorting (such as sorting students by first name into queues, one queue for each name), and a reduce method - which performs a summary operation (such as counting the number of students in each queue, yielding name frequencies).
 
 The "MapReduce System" (also called "infrastructure" or "framework") orchestrates the processing by marshalling the distributed servers, running the various tasks in parallel, managing all communications and data transfers between the various parts of the system, and providing for redundancy and fault tolerance.
 

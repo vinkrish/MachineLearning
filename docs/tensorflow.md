@@ -1,5 +1,20 @@
+It is an open source library for numerical computation using data flow graphs.
+
+### Computation Graph
+
+The computation graph is the way TensorFlow represents any model in the real world. In the world of TensorFlow, everything can be modeled as a graph. The **nodes** in a graph are the _computations or operators_ that act upon data, and the **edges** in a graph is basically the _tensors_ of the data that are transformed by flowing through these nodes.
+
+Data within the computation graph are called **tensors**. These are nothing but n-dimensional matrices used to represent massive data sets. TensorFlow graph is a directed-acyclic graph, every edge in the graph has an arrow, i.e it points towards a certain node - this is the direction in which data flows, these edges point forward towards a result. The computational nodes within this graph depend on other nodes to forward a data before it can perform its computation. One node can send its output to multiple nodes or it can receive inputs from multiple nodes; In such a case - the node can perform its computation only after all its inputs are available.
+
+### Unrolling the Graph
+
+We model cyclical dependencies by unrolling the graph. The output of the last node is fed into a copy of this graph. Instead of feeding the output into the first node of the same graph, you feed it into the first node of this copy.
+
+How much you unroll your TensorFlow graph depends on the number of iterations you want to run. Even though TensorFlow models the world as a directed-acyclic graph, when you run multiple iterations, it'll automatically unroll graphs to model cyclic dependencies, which are very common in machine learning.
+
 ### Tensor
-In TensorFlow, data isn’t stored as integers, floats, or strings. These values are encapsulated in an object called a tensor.
+
+The cental unit of data in TensorFlow. A tensor consists of a set of primitive values shaped into an array of any number of dimensions. In TensorFlow, data isn’t stored as integers, floats, or strings. These values are encapsulated in an object called a tensor.
 
 ```py
 import tensorflow as tf

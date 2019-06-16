@@ -78,10 +78,10 @@ Loss function based on the absolute value of the difference between the values t
 
 **L2 Loss**  
 This function calculates the squares of the difference between a model's predicted value for a labeled example and the actual value of the label. Due to squaring, this loss function amplifies the influence of bad predictions. That is, squared loss reacts more strongly to outliers than L1 loss. (used in linear regression)
-$$ \begin{align} L_2 Loss & = (observation - prediction)^2 \\\\ & = (y - y')^2 \\\\ & = \sum_{(x,y)\in D}(y-prediction(x))^2 \end{align} $$
-$$\sum \text{:We're summing over all examples in the training set.}$$
-$$D \text{: is a data set containing many labeled examples, which are (x,y) pairs.}$$
-$$ \text{ Sometimes useful to average over all examples, } \text{so divide out by} \frac{1}{\|D\|}.$$
+$$ \begin{align} L_2\text{ }Loss & = (observation - prediction)^2 \\\\ & = (y - y')^2 \\\\ & = \sum_{(x,y)\in D}(y-prediction(x))^2 \end{align} $$
+\(\sum \text{:We're summing over all examples in the training set.}\)
+\(D \text{: is a data set containing many labeled examples, which are (x,y) pairs.}\)
+\(\text{ Sometimes useful to average over all examples, } \text{so divide out by} \frac{1}{\|D\|}\)
 
 ### Selection Bias
 
@@ -123,6 +123,10 @@ Producing a model with poor predictive ability because the model hasn't captured
 - Training with too high a regularization rate.
 - Providing too few hidden layers in a deep neural network.
 
+### Bias
+
+The bias is an error from erroneous assumptions in the learning algorithm. High bias can cause an algorithm to miss the relevant relations between features and target outputs (underfitting).
+
 ### Overfitting
 
 The algorithm analyses the data and trains itself to create a high mathematical order model based on the data.
@@ -132,6 +136,10 @@ The algorithm analyses the data and trains itself to create a high mathematical 
 $$y = x_1 + w_2x_2^3 + w_3x_3^8$$
 
 These high-order terms let this equation define a precise decision boundary between the positive and negative values, but as a result, the training process has created a model that works very well on training data but poorly when asked to predict values based on data it has not trained - this is the class overfit problem and is an issue that must be handled to create machine learning models that work well not only on the training data but also on real-world data.
+
+### Variance
+
+The variance is an error from sensitivity to small fluctuations in the training set. High variance can cause an algorithm to model the random noise in the training data, rather than the intended outputs (overfitting).
 
 **Regularization**, **Cross validation**, **Ensemble learning** of which dropout is a part, are all ways to mitigate overfitting. We add an additional parameter where if the model coefficients get too complex we add a penalty to the objective function. This is the technique that we use in regression.
 
@@ -198,7 +206,9 @@ Hyperparameters are often referred to as model parameters which can make things 
 
 Some examples of model hyperparameters include:
 
-- The learning rate for training a neural network.
+- The learning rate, number of hidden layers in deep learning models (MXNet, TensorFlow, PyTorch)
+- Number of trees in a forest, Maximum depth per tree in _Random Forest_ (sklearn)
+- Regularization coefficient and weight of the l1 norm term in _Elastic Net_ (sklearn)
 - The C and sigma hyperparameters for support vector machines.
 - The k in k-nearest neighbors.
 
@@ -206,6 +216,10 @@ Some examples of model hyperparameters include:
 
 **Learning Rate**
 A scalar used to train a model via gradient descent. During each iteration, the gradient descent algorithm multiplies the learning rate by the gradient. The resulting product is called the gradient step.
+
+### HPO
+
+Hyperparameter Optimization is the search for the set of hyperparameters that produces the best model performance.
 
 ### Time Series Analysis
 

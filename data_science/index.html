@@ -426,6 +426,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#new-model-building-workflow" title="New model building workflow" class="md-nav__link">
+    New model building workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recommendation-system" title="Recommendation System" class="md-nav__link">
     Recommendation System
   </a>
@@ -558,6 +565,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#new-model-building-workflow" title="New model building workflow" class="md-nav__link">
+    New model building workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recommendation-system" title="Recommendation System" class="md-nav__link">
     Recommendation System
   </a>
@@ -649,6 +663,21 @@
 <li>Accurate?</li>
 <li>Enough to work with?</li>
 </ul>
+<h3 id="new-model-building-workflow">New model building workflow</h3>
+<ol>
+<li>Gather data</li>
+<li>Feature extraction</li>
+<li>Pick ML framework</li>
+<li>Spin up AWS EC2 instance</li>
+<li>Setup machine</li>
+<li>Launch training job</li>
+<li>Analyze results</li>
+</ol>
+<p>When you have a standard computer, and you want to run multiple processes on it, the operating system is what deals with the scheduling - it determines which process gets access to which processor at a given point in time, which process gets access to which parts of memory, decides which processes should be frozen or die in cases where there is a shortage of resources.</p>
+<p>Use <strong>Docker</strong> to containerize model development environment, setup code and dependencies on each remote machine.</p>
+<p><strong>Kubernetes</strong> is an open-source container-orchestration system for automating application deployment, scaling and management.</p>
+<p>These tools allow for easy to use debugging and monitoring.</p>
+<p><strong>Borg</strong> is a Cluster OS Google uses for managing internal workloads. It manages thousands of machines with very good internal network connectivity. When you want to run a “service” - which is the equivalent of a “daemon” on a normal machine, something that should stay up all the time - you “run it on Borg” - that is, you tell the Borg cluster scheduler that you want, say, 200 copies of the binary that determines the service. The Borg scheduler identifies machines in the cluster that will have the spare capacity to run your service and sends a request to run the service to the node agents on these machines.</p>
 <h3 id="recommendation-system">Recommendation System</h3>
 <h4 id="collaborative-filtering">Collaborative Filtering</h4>
 <p>Collaborative filtering systems recommend items based on how well users prefer those items over others. It's based on crowdsourced user preference data.</p>

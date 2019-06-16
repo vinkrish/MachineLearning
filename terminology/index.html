@@ -539,8 +539,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bias" title="Bias" class="md-nav__link">
+    Bias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overfitting" title="Overfitting" class="md-nav__link">
     Overfitting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variance" title="Variance" class="md-nav__link">
+    Variance
   </a>
   
 </li>
@@ -562,6 +576,13 @@
         <li class="md-nav__item">
   <a href="#hyperparameter" title="Hyperparameter" class="md-nav__link">
     Hyperparameter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hpo" title="HPO" class="md-nav__link">
+    HPO
   </a>
   
 </li>
@@ -713,8 +734,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bias" title="Bias" class="md-nav__link">
+    Bias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overfitting" title="Overfitting" class="md-nav__link">
     Overfitting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variance" title="Variance" class="md-nav__link">
+    Variance
   </a>
   
 </li>
@@ -736,6 +771,13 @@
         <li class="md-nav__item">
   <a href="#hyperparameter" title="Hyperparameter" class="md-nav__link">
     Hyperparameter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hpo" title="HPO" class="md-nav__link">
+    HPO
   </a>
   
 </li>
@@ -834,10 +876,10 @@ Once we've trained our model with labeled examples, we use that model to predict
 Loss function based on the absolute value of the difference between the values that a model is predicting and the actual values of the labels. L1 loss is less sensitive to outliers than L2 loss.</p>
 <p><strong>L2 Loss</strong><br />
 This function calculates the squares of the difference between a model's predicted value for a labeled example and the actual value of the label. Due to squaring, this loss function amplifies the influence of bad predictions. That is, squared loss reacts more strongly to outliers than L1 loss. (used in linear regression)
-<script type="math/tex; mode=display"> \begin{align} L_2 Loss & = (observation - prediction)^2 \\\\ & = (y - y')^2 \\\\ & = \sum_{(x,y)\in D}(y-prediction(x))^2 \end{align} </script>
-<script type="math/tex; mode=display">\sum \text{:We're summing over all examples in the training set.}</script>
-<script type="math/tex; mode=display">D \text{: is a data set containing many labeled examples, which are (x,y) pairs.}</script>
-<script type="math/tex; mode=display"> \text{ Sometimes useful to average over all examples, } \text{so divide out by} \frac{1}{\|D\|}.</script>
+<script type="math/tex; mode=display"> \begin{align} L_2\text{ }Loss & = (observation - prediction)^2 \\\\ & = (y - y')^2 \\\\ & = \sum_{(x,y)\in D}(y-prediction(x))^2 \end{align} </script>
+<script type="math/tex">\sum \text{:We're summing over all examples in the training set.}</script>
+<script type="math/tex">D \text{: is a data set containing many labeled examples, which are (x,y) pairs.}</script>
+<script type="math/tex">\text{ Sometimes useful to average over all examples, } \text{so divide out by} \frac{1}{\|D\|}</script>
 </p>
 <h3 id="selection-bias">Selection Bias</h3>
 <p>Errors in conclusions drawn from sampled data due to a selection process that generates systematic differences between samples observed in the data and those not observed. The following forms of selection bias exist:</p>
@@ -869,6 +911,8 @@ A commonly used mechanism to mitigate the exploding gradient problem by artifici
 <li>Training with too high a regularization rate.</li>
 <li>Providing too few hidden layers in a deep neural network.</li>
 </ul>
+<h3 id="bias">Bias</h3>
+<p>The bias is an error from erroneous assumptions in the learning algorithm. High bias can cause an algorithm to miss the relevant relations between features and target outputs (underfitting).</p>
 <h3 id="overfitting">Overfitting</h3>
 <p>The algorithm analyses the data and trains itself to create a high mathematical order model based on the data.</p>
 <p><img alt="Overfitting" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/overfitting.jpg" /></p>
@@ -876,6 +920,8 @@ A commonly used mechanism to mitigate the exploding gradient problem by artifici
 <script type="math/tex; mode=display">y = x_1 + w_2x_2^3 + w_3x_3^8</script>
 </p>
 <p>These high-order terms let this equation define a precise decision boundary between the positive and negative values, but as a result, the training process has created a model that works very well on training data but poorly when asked to predict values based on data it has not trained - this is the class overfit problem and is an issue that must be handled to create machine learning models that work well not only on the training data but also on real-world data.</p>
+<h3 id="variance">Variance</h3>
+<p>The variance is an error from sensitivity to small fluctuations in the training set. High variance can cause an algorithm to model the random noise in the training data, rather than the intended outputs (overfitting).</p>
 <p><strong>Regularization</strong>, <strong>Cross validation</strong>, <strong>Ensemble learning</strong> of which dropout is a part, are all ways to mitigate overfitting. We add an additional parameter where if the model coefficients get too complex we add a penalty to the objective function. This is the technique that we use in regression.</p>
 <p><strong>Regularization:</strong>
 The penalty on a model's complexity. Different kinds of regularization include:</p>
@@ -928,13 +974,17 @@ Raising the regularization rate reduces overfitting but may make the model less 
 </blockquote>
 <p>Some examples of model hyperparameters include:</p>
 <ul>
-<li>The learning rate for training a neural network.</li>
+<li>The learning rate, number of hidden layers in deep learning models (MXNet, TensorFlow, PyTorch)</li>
+<li>Number of trees in a forest, Maximum depth per tree in <em>Random Forest</em> (sklearn)</li>
+<li>Regularization coefficient and weight of the l1 norm term in <em>Elastic Net</em> (sklearn)</li>
 <li>The C and sigma hyperparameters for support vector machines.</li>
 <li>The k in k-nearest neighbors.</li>
 </ul>
 <p><strong>Grid Search</strong> is an approach to hyperparameter tuning that will methodically build and evaluate model for each combination of algorithm parameters specified in a grid.</p>
 <p><strong>Learning Rate</strong>
 A scalar used to train a model via gradient descent. During each iteration, the gradient descent algorithm multiplies the learning rate by the gradient. The resulting product is called the gradient step.</p>
+<h3 id="hpo">HPO</h3>
+<p>Hyperparameter Optimization is the search for the set of hyperparameters that produces the best model performance.</p>
 <h3 id="time-series-analysis">Time Series Analysis</h3>
 <p>A subfield of machine learning and statistics that analyzes temporal data. Many types of machine learning problems require time series analysis, including classification, clustering, forecasting, and anomaly detection. For example, you could use time series analysis to forecast the future sales of winter coats by month based on historical sales data.</p>
 <h3 id="keras">Keras</h3>

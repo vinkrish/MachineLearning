@@ -390,15 +390,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#machine-learning" title="Machine Learning" class="md-nav__link">
-    Machine Learning
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#artificial-neural-network" title="Artificial Neural Network" class="md-nav__link">
-    Artificial Neural Network
+  <a href="#neural-network" title="Neural Network" class="md-nav__link">
+    Neural Network
   </a>
   
 </li>
@@ -406,6 +399,54 @@
         <li class="md-nav__item">
   <a href="#deep-neural-networks" title="Deep Neural Networks" class="md-nav__link">
     Deep Neural Networks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-weight-initialization" title="1. Weight Initialization" class="md-nav__link">
+    1. Weight Initialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-regularization" title="2. Regularization" class="md-nav__link">
+    2. Regularization
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-l2-regularization-actually-doing" title="What is L2-regularization actually doing" class="md-nav__link">
+    What is L2-regularization actually doing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dropout" title="3. Dropout" class="md-nav__link">
+    3. Dropout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gradient-checking" title="4. Gradient Checking" class="md-nav__link">
+    4. Gradient Checking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensorflow" title="TensorFlow" class="md-nav__link">
+    TensorFlow
   </a>
   
 </li>
@@ -446,8 +487,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deep-reinforcement-learning" title="Deep Reinforcement Learning" class="md-nav__link">
-    Deep Reinforcement Learning
+  <a href="#reinforcement-learning" title="Reinforcement Learning" class="md-nav__link">
+    Reinforcement Learning
   </a>
   
 </li>
@@ -580,15 +621,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#machine-learning" title="Machine Learning" class="md-nav__link">
-    Machine Learning
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#artificial-neural-network" title="Artificial Neural Network" class="md-nav__link">
-    Artificial Neural Network
+  <a href="#neural-network" title="Neural Network" class="md-nav__link">
+    Neural Network
   </a>
   
 </li>
@@ -596,6 +630,54 @@
         <li class="md-nav__item">
   <a href="#deep-neural-networks" title="Deep Neural Networks" class="md-nav__link">
     Deep Neural Networks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-weight-initialization" title="1. Weight Initialization" class="md-nav__link">
+    1. Weight Initialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-regularization" title="2. Regularization" class="md-nav__link">
+    2. Regularization
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-l2-regularization-actually-doing" title="What is L2-regularization actually doing" class="md-nav__link">
+    What is L2-regularization actually doing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dropout" title="3. Dropout" class="md-nav__link">
+    3. Dropout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gradient-checking" title="4. Gradient Checking" class="md-nav__link">
+    4. Gradient Checking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensorflow" title="TensorFlow" class="md-nav__link">
+    TensorFlow
   </a>
   
 </li>
@@ -636,8 +718,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deep-reinforcement-learning" title="Deep Reinforcement Learning" class="md-nav__link">
-    Deep Reinforcement Learning
+  <a href="#reinforcement-learning" title="Reinforcement Learning" class="md-nav__link">
+    Reinforcement Learning
   </a>
   
 </li>
@@ -673,9 +755,7 @@
 <li>Encoding Domain Knowledge</li>
 <li>Statistical Patterns Detection</li>
 </ul>
-<h3 id="machine-learning">Machine Learning</h3>
-<p>ML is a type of artificial intelligence where we teach machines how to solve problems without explicitly programming then to do so.</p>
-<h3 id="artificial-neural-network">Artificial Neural Network</h3>
+<h3 id="neural-network">Neural Network</h3>
 <p>It is a machine learning algorihtm based on a very crude approximation of biological neural network in a brain. If we connect a series of artificial neurons in a network, we get an artificial neural network or neural network.</p>
 <ul>
 <li><strong>Forward Propagation:</strong> we use the network with its current parameters to compute a prediction for each example in our training dataset. We use the known correct answer that a human provided to determine if the network made a correct prediction or not. An incorrected prediction, which we refer to as a prediction error, will be used to teach the network to change the weights of its connections to avoid making prediction errors in the future.</li>
@@ -683,6 +763,76 @@
 </ul>
 <h3 id="deep-neural-networks">Deep Neural Networks</h3>
 <p>It is a neural network with more than one hidden layer.</p>
+<h3 id="1-weight-initialization">1. Weight Initialization</h3>
+<p>Training your neural network requires specifying an initial value of the weights.</p>
+<p>A well chosen initialization can:</p>
+<ul>
+<li>Speed up the convergence of gradient descent</li>
+<li>Increase the odds of gradient descent converging to a lower training (and generalization) error</li>
+</ul>
+<p>Things to remember:</p>
+<ul>
+<li>Different initializations lead to different results</li>
+<li>Random initialization is used to break symmetry and make sure different hidden units can learn different things</li>
+<li>Don't intialize to values that are too large</li>
+<li>He initialization works well for networks with ReLU activations.</li>
+</ul>
+<h3 id="2-regularization">2. Regularization</h3>
+<p>Deep Learning models have so much flexibility and capacity that overfitting can be a serious problem, if the training dataset is not big enough. Sure it does well on the training set, but the learned network doesn't generalize to new examples that it has never seen!</p>
+<h4 id="what-is-l2-regularization-actually-doing">What is L2-regularization actually doing</h4>
+<p>L2-regularization relies on the assumption that a model with small weights is simpler than a model with large weights. Thus, by penalizing the square values of the weights in the cost function you drive all the weights to smaller values. It becomes too costly for the cost to have large weights! This leads to a smoother model in which the output changes more slowly as the input changes.</p>
+<p>What you should remember -- the implications of L2-regularization on:</p>
+<ul>
+<li>The cost computation:<ul>
+<li>A regularization term is added to the cost</li>
+</ul>
+</li>
+<li>The backpropagation function:<ul>
+<li>There are extra terms in the gradients with respect to weight matrices</li>
+</ul>
+</li>
+<li>Weights end up smaller ("weight decay"):<ul>
+<li>Weights are pushed to smaller values.</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-dropout">3. Dropout</h4>
+<p>Finally, dropout is a widely used regularization technique that is specific to deep learning. It randomly shuts down some neurons in each iteration. Watch these two videos to see what this means!</p>
+<p>What you should remember about dropout:</p>
+<ul>
+<li>Dropout is a regularization technique.</li>
+<li>You only use dropout during training. Don't use dropout (randomly eliminate nodes) during test time.</li>
+<li>Apply dropout both during forward and backward propagation.</li>
+<li>During training time, divide each dropout layer by keep_prob to keep the same expected value for the activations. For example, if keep_prob is 0.5, then we will on average shut down half the nodes, so the output will be scaled by 0.5 since only the remaining half are contributing to the solution. Dividing by 0.5 is equivalent to multiplying by 2. Hence, the output now has the same expected value. You can check that this works even when keep_prob is other values than 0.5.</li>
+</ul>
+<p>Things to remember:</p>
+<ul>
+<li>Regularization will help you reduce overfitting.</li>
+<li>Regularization will drive your weights to lower values.</li>
+<li>L2 regularization and Dropout are two very effective regularization techniques.</li>
+</ul>
+<h3 id="4-gradient-checking">4. Gradient Checking</h3>
+<ul>
+<li>Gradient checking verifies closeness between the gradients from backpropagation and the numerical approximation of the gradient (computed using forward propagation).</li>
+<li>Gradient checking is slow, so we don't run it in every iteration of training. You would usually run it only to make sure your code is correct, then turn it off and use backprop for the actual learning process.</li>
+</ul>
+<h3 id="tensorflow">TensorFlow</h3>
+<p>Machine learning frameworks like TensorFlow, PaddlePaddle, Torch, Caffe, Keras, and many others can speed up your machine learning development significantly. All of these frameworks also have a lot of documentation, which you should feel free to read.</p>
+<p>Programing frameworks can not only shorten your coding time, but sometimes also perform optimizations that speed up your code.</p>
+<p>Things to remember:</p>
+<ul>
+<li>Tensorflow is a programming framework used in deep learning</li>
+<li>The two main object classes in tensorflow are Tensors and Operators.</li>
+<li>When you code in tensorflow you have to take the following steps:<ul>
+<li>Create a graph containing Tensors (Variables, Placeholders ...) and Operations (tf.matmul, tf.add, ...)</li>
+<li>Create a session</li>
+<li>Initialize the session</li>
+<li>Run the session to execute the graph</li>
+</ul>
+</li>
+<li>You can execute the graph multiple times as you've seen in model()</li>
+<li>The backpropagation and optimization is automatically done when running the session on the "optimizer" object.</li>
+</ul>
 <h3 id="techniques">Techniques</h3>
 <p>Which allow deep learning to solve a variety of problems:</p>
 <ul>
@@ -690,7 +840,7 @@
 <li>Convolutional Networks</li>
 <li>Recurrent Networks</li>
 <li>Generative Adversarial Networks</li>
-<li>Deep Reinforcement Learning</li>
+<li>Reinforcement Learning</li>
 </ul>
 <h3 id="fully-connected-neural-networks">Fully Connected Neural Networks</h3>
 <p>By fully connected, we mean that each neuron in the preceding layer is connected to every neuron in the subsequent layer. By feedforward, we mean that neurons in any preceding layer are only ever connected to the neurons in a subsequent layer. That is, there are no cycles or loops in the connections of the graph of neurons.</p>
@@ -745,7 +895,7 @@ The GAN is a combination of two deep learning neural networks: a Generator Netwo
 <p><img alt="GANE" src="https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/gane.jpg" /></p>
 <p><strong>For example</strong>, imagine we want to create a neural network that generates synthetic images. First, we'd acquire a library of real-world images that we can use to provide real images for the image detector network. Next, we'd create an Image Generator network to produce synthetic images. This would typically be a deconvolutional neural network, which we discussed earlier in this module. Then we'd create an Image Detector network to detect real images versus fake images. This would typically be a convolutional neural network which we also discussed earlier in this module. At first, the generator would essentially create random noise as it learns how to create images that can fool the detector. In addition, the detector would only have roughly 50/50 accuracy when predicting real versus fake images. However, with each training iteration, the generator gets progressively better at generating real images, and the detector gets progressively better at detecting fake images. If you let these networks compete with one another for long enough, the generator begins producing fake images that approximate real images. Generative Adversarial Networks have gained quite a bit of popularity in recent years.</p>
 <p>Some of their applications include: image generation, image enhancement, text generation, speech synthesis new drug discovery, and more.</p>
-<h3 id="deep-reinforcement-learning">Deep Reinforcement Learning</h3>
+<h3 id="reinforcement-learning">Reinforcement Learning</h3>
 <p><img alt="RL" src="https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/rl.jpg" />
 Now let's discuss reinforcement learning: our final technique for creating deep neural networks that can solve a variety of problems. Reinforcement learning involves an agent interacting with an environment. The agent is trying to achieve a goal of some kind within the environment. The environment has state, which the agent can observe. The agent has actions that it can take, which modify the state of the environment, and the agent receives reward signals when it achieves a goal of some kind. The objective of the agent is to learn how to interact with its environment in such a way that allows it to achieve its goals.</p>
 <p><img alt="RLE" src="https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/rle.jpg" /></p>

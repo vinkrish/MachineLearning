@@ -1,37 +1,113 @@
 ### Deep Learning
+
 Deep Learning is a form of artificial intelligence that uses a type of machine learning called an artificial neural network with multiple hidden layers that learns hierarchical representations of the underlying data in order to make predictions given new data.
 
 Deep Learning attempts to model high-level abstractions about data using networks of graphs. It is focused on learning representations in data. Additionally, modeling high-level abstractions about data is very similar to artificial intelligence — the idea that knowledge can be represented and acted upon intelligently.
 
 ### Artificial Intelligence
+
 AI is a field of computer science that attempts to create machines that act rationally in response to their environment.
 
 - Explicit Programming
 - Encoding Domain Knowledge
 - Statistical Patterns Detection
 
-### Machine Learning
-ML is a type of artificial intelligence where we teach machines how to solve problems without explicitly programming then to do so.
+### Neural Network
 
-### Artificial Neural Network
 It is a machine learning algorihtm based on a very crude approximation of biological neural network in a brain. If we connect a series of artificial neurons in a network, we get an artificial neural network or neural network.
 
 - **Forward Propagation:** we use the network with its current parameters to compute a prediction for each example in our training dataset. We use the known correct answer that a human provided to determine if the network made a correct prediction or not. An incorrected prediction, which we refer to as a prediction error, will be used to teach the network to change the weights of its connections to avoid making prediction errors in the future.
 - **Backward Propagation:** we use the prediction error that we computed in the last step to properly update the weights of the connections between each neuron to help the network make better future prediction. We use a technique called **gradient descent** to help us decide whether to increase or decrease each individual connection's weights, Training Rate is used to determine how much to increase or decrease the weights during each training step. We repeat this process for each training sample in the training dataset, and then we repeat the whole many times until the weights of the network become stable.
 
 ### Deep Neural Networks
+
 It is a neural network with more than one hidden layer.
 
+### 1. Weight Initialization
+
+Training your neural network requires specifying an initial value of the weights.
+
+A well chosen initialization can:
+
+- Speed up the convergence of gradient descent
+- Increase the odds of gradient descent converging to a lower training (and generalization) error
+
+Things to remember:
+
+- Different initializations lead to different results
+- Random initialization is used to break symmetry and make sure different hidden units can learn different things
+- Don't intialize to values that are too large
+- He initialization works well for networks with ReLU activations.
+
+### 2. Regularization
+
+Deep Learning models have so much flexibility and capacity that overfitting can be a serious problem, if the training dataset is not big enough. Sure it does well on the training set, but the learned network doesn't generalize to new examples that it has never seen!
+
+#### What is L2-regularization actually doing
+
+L2-regularization relies on the assumption that a model with small weights is simpler than a model with large weights. Thus, by penalizing the square values of the weights in the cost function you drive all the weights to smaller values. It becomes too costly for the cost to have large weights! This leads to a smoother model in which the output changes more slowly as the input changes.
+
+What you should remember -- the implications of L2-regularization on:
+
+- The cost computation:
+    - A regularization term is added to the cost
+- The backpropagation function:
+    - There are extra terms in the gradients with respect to weight matrices
+- Weights end up smaller ("weight decay"):
+    - Weights are pushed to smaller values.
+
+#### 3. Dropout
+
+Finally, dropout is a widely used regularization technique that is specific to deep learning. It randomly shuts down some neurons in each iteration. Watch these two videos to see what this means!
+
+What you should remember about dropout:
+
+- Dropout is a regularization technique.
+- You only use dropout during training. Don't use dropout (randomly eliminate nodes) during test time.
+- Apply dropout both during forward and backward propagation.
+- During training time, divide each dropout layer by keep_prob to keep the same expected value for the activations. For example, if keep_prob is 0.5, then we will on average shut down half the nodes, so the output will be scaled by 0.5 since only the remaining half are contributing to the solution. Dividing by 0.5 is equivalent to multiplying by 2. Hence, the output now has the same expected value. You can check that this works even when keep_prob is other values than 0.5.
+
+Things to remember:
+
+- Regularization will help you reduce overfitting.
+- Regularization will drive your weights to lower values.
+- L2 regularization and Dropout are two very effective regularization techniques.
+
+### 4. Gradient Checking
+
+- Gradient checking verifies closeness between the gradients from backpropagation and the numerical approximation of the gradient (computed using forward propagation).
+- Gradient checking is slow, so we don't run it in every iteration of training. You would usually run it only to make sure your code is correct, then turn it off and use backprop for the actual learning process.
+
+### TensorFlow
+
+Machine learning frameworks like TensorFlow, PaddlePaddle, Torch, Caffe, Keras, and many others can speed up your machine learning development significantly. All of these frameworks also have a lot of documentation, which you should feel free to read.
+
+Programing frameworks can not only shorten your coding time, but sometimes also perform optimizations that speed up your code.
+
+Things to remember:
+
+- Tensorflow is a programming framework used in deep learning
+- The two main object classes in tensorflow are Tensors and Operators.
+- When you code in tensorflow you have to take the following steps:
+    - Create a graph containing Tensors (Variables, Placeholders ...) and Operations (tf.matmul, tf.add, ...)
+    - Create a session
+    - Initialize the session
+    - Run the session to execute the graph
+- You can execute the graph multiple times as you've seen in model()
+- The backpropagation and optimization is automatically done when running the session on the "optimizer" object.
+
 ### Techniques
+
 Which allow deep learning to solve a variety of problems:
 
 - Fully Connected Networks
 - Convolutional Networks
 - Recurrent Networks
 - Generative Adversarial Networks
-- Deep Reinforcement Learning
+- Reinforcement Learning
 
 ### Fully Connected Neural Networks
+
 By fully connected, we mean that each neuron in the preceding layer is connected to every neuron in the subsequent layer. By feedforward, we mean that neurons in any preceding layer are only ever connected to the neurons in a subsequent layer. That is, there are no cycles or loops in the connections of the graph of neurons.
 
 ![FCN](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/fcn.jpg)
@@ -58,6 +134,7 @@ The more neurons we add to each hidden layer, the wider the network becomes. In 
 As a result, there are certain non-fully connected neural network architectures called **sparse neural networks** that allow us to create deep neural networks without paying the high cost of a large fully connected network.
 
 ### Convolutional Neural Networks(CNN)
+
 CNN is a type of deep neural network architecture designed for specific tasks like image classification. CNNs were inspired by the organization of neurons in the visual cortex of the animal brain. As a result, they provide some very interesting features that are useful for processing certain types of data; like images, audio, and video.
 
 ![CNN](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/cnnl.jpg)
@@ -91,6 +168,7 @@ We can also reverse this architecture to create what is known as a **deconvoluti
 CNN work well for a variety of tasks including image recognition, image processing, image segmentation, video analysis, and natural language processing
 
 ### Recurrent Neural Networks
+
 All of the neural networks we've seen so far have been feedforward neural networks. They are called this because data flows only from the input x through one or more hidden neurons, h, to the output y. However, we also have several types of neural network architectures that contain feedback loops. Unlike feedforward neural networks, the recurrent neural network, or RNN, can operate effectively on sequences of data with variable input length. 
 
 ![RNN](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/rnn.jpg)
@@ -108,6 +186,7 @@ This feature makes RNNs very effective for working with sequences of data that o
 RNNs work well for applications that involve a sequence of data that changes over time. These applications include natural language processing, speech recognition, language translation, conversation modeling, image captioning, and visual Q&A.
 
 ### Generative Adversarial Networks
+
 ![GAN](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/gan.jpg)
 The GAN is a combination of two deep learning neural networks: a Generator Network, and a Discriminator Network. The **Generator Network** produces synthetic data, and the **Discriminator Network** tries to detect if the data that it's seeing is real or synthetic. These two networks are adversaries in the sense that they're both competing to beat one another. The Generator is trying to produce synthetic data indistinguishable from real data, and the Discriminator is trying to become progressively better at detecting fake data.
 
@@ -117,7 +196,8 @@ The GAN is a combination of two deep learning neural networks: a Generator Netwo
 
 Some of their applications include: image generation, image enhancement, text generation, speech synthesis new drug discovery, and more.
 
-### Deep Reinforcement Learning
+### Reinforcement Learning
+
 ![RL](https://s3-us-west-2.amazonaws.com/vinkrish-notes/img/rl.jpg)
 Now let's discuss reinforcement learning: our final technique for creating deep neural networks that can solve a variety of problems. Reinforcement learning involves an agent interacting with an environment. The agent is trying to achieve a goal of some kind within the environment. The environment has state, which the agent can observe. The agent has actions that it can take, which modify the state of the environment, and the agent receives reward signals when it achieves a goal of some kind. The objective of the agent is to learn how to interact with its environment in such a way that allows it to achieve its goals.
 

@@ -38,6 +38,14 @@ These tools allow for easy to use debugging and monitoring.
 
 **Borg** is a Cluster OS Google uses for managing internal workloads. It manages thousands of machines with very good internal network connectivity. When you want to run a “service” - which is the equivalent of a “daemon” on a normal machine, something that should stay up all the time - you “run it on Borg” - that is, you tell the Borg cluster scheduler that you want, say, 200 copies of the binary that determines the service. The Borg scheduler identifies machines in the cluster that will have the spare capacity to run your service and sends a request to run the service to the node agents on these machines.
 
+### Descriptive Statistics
+
+Descriptive statistics summarize a given data set, which can be either a representation of the entire or a sample of a population. It is broken down into measure of central tendency (mean, median & mode) and measure of variability (standard deviation, variance & skewness).
+
+### Inferential Statistics
+
+It is the process of using data analysis to deduce properties of an underlying probability distribution. Inferential statistical analysis infers properties of a population, for example by testing hypotheses and driving estimates. It is assumed that the observed data set is sampled from a larger population.
+
 ### Recommendation System
 
 #### Collaborative Filtering

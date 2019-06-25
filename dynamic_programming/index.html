@@ -507,6 +507,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../dp_algorithms/" title="Algorithms" class="md-nav__link">
+      Algorithms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../applications/" title="Applications" class="md-nav__link">
       Applications
     </a>
@@ -737,7 +749,9 @@
                 
                 <p>The term dynamic programming (DP) refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environment as a Markov decision process (MDP).</p>
 <p>The key idea of DP, and of reinforcement learning generally, is the use of value functions to organize and structure the search for good policies.</p>
+<p>In the dynamic programming setting, the agent has full knowledge of the MDP. (This is much easier than the reinforcement learning setting, where the agent initially knows nothing about how the environment decides state and reward and must learn entirely from interaction how to select actions.)</p>
 <h3 id="an-iterative-method">An Iterative Method</h3>
+<p>In order to obtain the state-value function <script type="math/tex">v_\pi</script> corresponding to a policy <script type="math/tex">\pi</script>, we need to solve the system of equations corresponding to the Bellman expectation equation for <script type="math/tex">v_\pi</script>.</p>
 <p><img alt="iterative_method" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/iterative_method.jpg" /></p>
 <p>Notes on the Bellman Expectation Equation</p>
 <p>for state <script type="math/tex">s_1</script>, we saw that:</p>
@@ -878,7 +892,7 @@
 </p>
 <p>For each state <script type="math/tex">s\in\mathcal{S}</script>, you need to select the action that maximizes the action-value function estimate. In other words,</p>
 <p>
-<script type="math/tex">\pi'(s)=\arg\max_{a\inA(s)}Q(s,a)</script> for all <script type="math/tex">s\in\mathcal{S}</script>.</p>
+<script type="math/tex">\pi'(s)=\arg\max_{a\in\mathcal{A}(s)}Q(s,a)</script> for all <script type="math/tex">s\in\mathcal{S}</script>.</p>
 <p><img alt="improve" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/improve.jpg" /></p>
 <p>In the event that there is some state <script type="math/tex">s\in\mathcal{S}</script> for which <script type="math/tex">\arg\max_{a\in\mathcal{A}(s)}</script> is not unique, there is some flexibility in how the improved policy <script type="math/tex">\pi'</script> is constructed.</p>
 <p>In fact, as long as the policy <script type="math/tex">\pi'</script> satisfies for each <script type="math/tex">s\in\mathcal{S}</script> and <script type="math/tex">a\in\mathcal{A}(s)</script>:</p>
@@ -935,13 +949,13 @@
           </a>
         
         
-          <a href="../applications/" title="Applications" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../dp_algorithms/" title="Algorithms" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Applications
+                Algorithms
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

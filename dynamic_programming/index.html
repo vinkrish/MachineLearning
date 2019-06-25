@@ -450,6 +450,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#policy-improvement" title="Policy Improvement" class="md-nav__link">
+    Policy Improvement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" title="Implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy-iteration" title="Policy Iteration" class="md-nav__link">
+    Policy Iteration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value-iteration" title="Value Iteration" class="md-nav__link">
+    Value Iteration
+  </a>
+  
+</li>
+      
       
       
       
@@ -634,6 +668,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#policy-improvement" title="Policy Improvement" class="md-nav__link">
+    Policy Improvement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" title="Implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy-iteration" title="Policy Iteration" class="md-nav__link">
+    Policy Iteration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value-iteration" title="Value Iteration" class="md-nav__link">
+    Value Iteration
+  </a>
+  
+</li>
+      
       
       
       
@@ -749,8 +817,7 @@
 <p>The state-value function for the equiprobable random policy is visualized below:</p>
 <p><img alt="statevalue" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/statevalue.jpg" /></p>
 <h3 id="implementation-iterative-policy-evaluation">Implementation: Iterative Policy Evaluation</h3>
-<p>The pseudocode for iterative policy evaluation can be found below.</p>
-<p><img alt="policy-eval" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/policy-eval.png" /></p>
+<p><img alt="policy-eval" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/policy-eval.jpg" /></p>
 <p>Note that policy evaluation is guaranteed to converge to the state-value function <script type="math/tex">v_\pi</script> corresponding to a policy <script type="math/tex">\pi</script>, as long as <script type="math/tex">v_\pi(s)</script> is finite for each state <script type="math/tex">s\in\mathcal{S}</script>. For a finite Markov decision process (MDP), this is guaranteed as long as either:</p>
 <ul>
 <li>
@@ -791,8 +858,36 @@
 <p>Use the one-step dynamics <script type="math/tex">p(s',r|s,a)</script> of MDP to obtain <script type="math/tex">q_\pi</script> from <script type="math/tex">v_\pi</script>. Namely,</p>
 <p>
 <script type="math/tex">q_\pi(s,a) = \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,a)(r+\gamma v_\pi(s'))</script> holds for all <script type="math/tex">s\in\mathcal{S} \text{ and } a\in\mathcal{A}(s)</script>.</p>
-<p>Associated pseudocode below:
-<img alt="action" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/est-action.png" /></p>
+<p><img alt="action" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/est-action.jpg" /></p>
+<h3 id="policy-improvement">Policy Improvement</h3>
+<p>Our reason for computing the value function for a policy is to help find better policies. Suppose we have determined the value function <script type="math/tex">v_\pi</script> for an arbitrary deterministic policy <script type="math/tex">\pi</script>. For some state <script type="math/tex">s</script> we would like to know whether or not we should change the policy to deterministically choose an action <script type="math/tex">a \neq \pi(s)</script>.</p>
+<h4 id="implementation">Implementation</h4>
+<p>It is possible to construct an improved (or equivalent) policy <script type="math/tex">\pi'</script>, where <script type="math/tex">\pi'\geq\pi</script>
+</p>
+<p>For each state <script type="math/tex">s\in\mathcal{S}</script>, you need to select the action that maximizes the action-value function estimate. In other words,</p>
+<p>
+<script type="math/tex">\pi'(s)=\arg\max_{a\inA(s)}Q(s,a)</script> for all <script type="math/tex">s\in\mathcal{S}</script>.</p>
+<p><img alt="improve" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/improve.jpg" /></p>
+<p>In the event that there is some state <script type="math/tex">s\in\mathcal{S}</script> for which <script type="math/tex">\arg\max_{a\in\mathcal{A}(s)}</script> is not unique, there is some flexibility in how the improved policy <script type="math/tex">\pi'</script> is constructed.</p>
+<p>In fact, as long as the policy <script type="math/tex">\pi'</script> satisfies for each <script type="math/tex">s\in\mathcal{S}</script> and <script type="math/tex">a\in\mathcal{A}(s)</script>:</p>
+<p>
+<script type="math/tex">\pi'(a|s)=0 \text{ if a }\notin \arg\max_{a'\in\mathcal{A}(s)}Q(s,a')</script>
+</p>
+<p>It is an improved policy. In other words, any policy that (for each state) assigns zero probability to the actions that do not maximize the action-value function estimate (for that state) is an improved policy.</p>
+<h3 id="policy-iteration">Policy Iteration</h3>
+<p><img alt="policy_iter" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/policy_iter.png" /></p>
+<p>This way of finding an optimal policy is called <em>policy iteration</em>.</p>
+<p>Policy iteration is guaranteed to find the optimal policy for any finite Markov decision process (MDP) in a finite number of iterations.</p>
+<p><img alt="iteration" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/iteration.jpg" /></p>
+<h3 id="value-iteration">Value Iteration</h3>
+<p>One drawback to policy iteration is that each of its iterations involves policy evaluation, which may itself be a protracted iterative computation requiring multiple sweeps through the state set. If policy evaluation is done iteratively, then convergence exactly to <script type="math/tex">v_\pi</script> occurs only in the limit.</p>
+<p>In fact, the policy evaluation step of policy iteration can be truncated in several ways without losing the convergence guarantees of policy iteration. One important special case is when policy evaluation is stopped after just one sweep (one update of each state). This algorithm is called <em>value iteration</em>.</p>
+<p>In this algorithm, each sweep over the state space effectively performs both policy evaluation and policy improvement. Value iteration is guaranteed to find the optimal policy <script type="math/tex">\pi_*</script> for any finite MDP.</p>
+<p><img alt="value-iteration" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/value-iteration.jpg" /></p>
+<p>Note that the stopping criterion is satisfied when the difference between successive value function estimates is sufficiently small. In particular, the loop terminates if the difference is less than <script type="math/tex">\theta</script> for each state. And, the closer we want the final value function estimate to be to the optimal value function, the smaller we need to set the value of <script type="math/tex">\theta</script>.</p>
+<blockquote>
+<p>note that in the case of the FrozenLake environment, values around <code>1e-8</code> seem to work reasonably well.</p>
+</blockquote>
                 
                   
                 

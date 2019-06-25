@@ -444,22 +444,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#estimation-of-action-values" title="Estimation of Action Values" class="md-nav__link">
-    Estimation of Action Values
+  <a href="#implementation-estimation-of-action-values" title="Implementation: Estimation of Action Values" class="md-nav__link">
+    Implementation: Estimation of Action Values
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#implementation" title="Implementation" class="md-nav__link">
-    Implementation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -641,22 +628,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#estimation-of-action-values" title="Estimation of Action Values" class="md-nav__link">
-    Estimation of Action Values
+  <a href="#implementation-estimation-of-action-values" title="Implementation: Estimation of Action Values" class="md-nav__link">
+    Implementation: Estimation of Action Values
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#implementation" title="Implementation" class="md-nav__link">
-    Implementation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -787,7 +761,7 @@
 <p>Use the simple gridworld to practice converting a state-value function <script type="math/tex">v_\pi</script> to an action-value function <script type="math/tex">q_\pi</script>
 </p>
 <p>Image below corresponds to the action-value function for the same policy.</p>
-<p><img alt="actionvalue" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/actionvalue.png" /></p>
+<p><img alt="actionvalue" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/actionvalue.jpg" /></p>
 <p>As an example, consider <script type="math/tex">q_\pi(s_1, \text{right})</script>. This action value can be calculated as</p>
 <p>
 <script type="math/tex">q_\pi(s_1, \text{right}) = -1 + v_\pi(s_2) = -1 + 2 = 1</script>
@@ -811,16 +785,13 @@
 <p>In this case, when the agent is in state <script type="math/tex">s</script> and takes action <script type="math/tex">a</script>, the probability of each possible next state <script type="math/tex">s'</script> and reward <script type="math/tex">r</script> is given by <script type="math/tex">p(s',r|s,a)</script>. In this case, we must have <script type="math/tex">q_\pi(s,a) = \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,a)(r+\gamma v_\pi(s'))</script>, where we take the expected value of the sum <script type="math/tex">r + \gamma v_\pi(s')</script>
 </p>
 </blockquote>
-<h3 id="estimation-of-action-values">Estimation of Action Values</h3>
-<h4 id="implementation">Implementation</h4>
+<h3 id="implementation-estimation-of-action-values">Implementation: Estimation of Action Values</h3>
 <p>Write an algorithm that accepts an estimate <script type="math/tex">V</script> of the state-value function <script type="math/tex">v_\pi</script> along with the one-step dynamics of the MDP <script type="math/tex">p(s',r|s,a)</script> and returns an estimate <script type="math/tex">Q</script> the action-value function <script type="math/tex">q_\pi</script>
 </p>
 <p>Use the one-step dynamics <script type="math/tex">p(s',r|s,a)</script> of MDP to obtain <script type="math/tex">q_\pi</script> from <script type="math/tex">v_\pi</script>. Namely,</p>
 <p>
-<script type="math/tex">q_\pi(s,a) = \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,a)(r+\gamma v_\pi(s'))</script>
-</p>
-<p>holds for all <script type="math/tex">s\in\mathcal{S} \text{ and } a\in\mathcal{A}(s)</script>.</p>
-<p>associated pseudocode below:
+<script type="math/tex">q_\pi(s,a) = \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,a)(r+\gamma v_\pi(s'))</script> holds for all <script type="math/tex">s\in\mathcal{S} \text{ and } a\in\mathcal{A}(s)</script>.</p>
+<p>Associated pseudocode below:
 <img alt="action" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/est-action.png" /></p>
                 
                   

@@ -429,6 +429,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#action-values" title="Action Values" class="md-nav__link">
+    Action Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-more-complex-environments" title="For More Complex Environments" class="md-nav__link">
+    For More Complex Environments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estimation-of-action-values" title="Estimation of Action Values" class="md-nav__link">
+    Estimation of Action Values
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" title="Implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -592,6 +626,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#action-values" title="Action Values" class="md-nav__link">
+    Action Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-more-complex-environments" title="For More Complex Environments" class="md-nav__link">
+    For More Complex Environments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estimation-of-action-values" title="Estimation of Action Values" class="md-nav__link">
+    Estimation of Action Values
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" title="Implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -613,12 +681,12 @@
                 
                   <h1>Dynamic Programming</h1>
                 
-                <h3 id="an-iterative-method">An Iterative Method</h3>
-<p><img alt="iterative_method" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/iterative_method.png" /></p>
-<p>Notes on the Bellman Expectation Equation
-In the previous video, we derived one equation for each environment state. For instance, for state <script type="math/tex">s_1</script>
-</p>
-<p>we saw that:</p>
+                <p>The term dynamic programming (DP) refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environment as a Markov decision process (MDP).</p>
+<p>The key idea of DP, and of reinforcement learning generally, is the use of value functions to organize and structure the search for good policies.</p>
+<h3 id="an-iterative-method">An Iterative Method</h3>
+<p><img alt="iterative_method" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/iterative_method.jpg" /></p>
+<p>Notes on the Bellman Expectation Equation</p>
+<p>for state <script type="math/tex">s_1</script>, we saw that:</p>
 <p>
 <script type="math/tex; mode=display">v_\pi(s_1) = \frac{1}{2}(-1 + v_\pi(s_2)) + \frac{1}{2}(-3 + v_\pi(s_3))</script>
 </p>
@@ -637,7 +705,7 @@ In the previous video, we derived one equation for each environment state. For i
 <li>
 <script type="math/tex">\mathcal{A}(s_1=\{ \text{down}, \text{right} \}</script> (When in state s_1, the agent only has two potential actions: down or right.)</li>
 <li>
-<script type="math/tex">p({down}|s_1) = p(\text{right}|s_1) = \frac{1}{2}</script> (We are currently examining the policy where the agent goes down with 50% probability and right with 50% probability when in state <script type="math/tex">s_1</script>.)</li>
+<script type="math/tex">\pi({down}|s_1) = \pi(\text{right}|s_1) = \frac{1}{2}</script> (We are currently examining the policy where the agent goes down with 50% probability and right with 50% probability when in state <script type="math/tex">s_1</script>.)</li>
 <li>
 <script type="math/tex">p(s_3,-3|s_1,\text{down}) = 1 (\text{and } p(s',r|s_1,\text{down}) = 0 \text{ if } s'\neq s_3 \text{ or } r\neq -3)</script> (If the agent chooses to go down in state <script type="math/tex">s_1</script> then with 100% probability, the next state is <script type="math/tex">s_3</script>, and the agent receives a reward of -3.)</li>
 <li>
@@ -646,6 +714,7 @@ In the previous video, we derived one equation for each environment state. For i
 <script type="math/tex">\gamma = 1</script> (We chose to set the discount rate to 1 in this gridworld example.)</li>
 </ul>
 <h3 id="notes-on-solving-the-system-of-equations">Notes on Solving the System of Equations</h3>
+<p>This example serves to illustrate the fact that it is possible to directly solve the system of equations given by the Bellman expectation equation for <script type="math/tex">v_\pi</script> However, in practice, and especially for much larger Markov decision processes (MDPs), we will instead use an iterative solution approach.</p>
 <p>You can directly solve the system of equations:</p>
 <p>
 <script type="math/tex">v_\pi(s_1) = \frac{1}{2}(-1 + v_\pi(s_2)) + \frac{1}{2}(-3 + v_\pi(s_3))</script>
@@ -687,7 +756,6 @@ In the previous video, we derived one equation for each environment state. For i
 <p>
 <script type="math/tex">v_\pi(s_4) = 0</script>
 </p>
-<p><em>Note</em>: This example serves to illustrate the fact that it is possible to directly solve the system of equations given by the Bellman expectation equation for <script type="math/tex">v_\pi</script> However, in practice, and especially for much larger Markov decision processes (MDPs), we will instead use an iterative solution approach.</p>
 <p>we have discussed how an agent might obtain the state-value function <script type="math/tex">v_\pi</script> corresponding to a policy <script type="math/tex">\pi</script>.</p>
 <p>In the dynamic programming setting, the agent has full knowledge of the Markov decision process (MDP). In this case, it's possible to use the one-step dynamics <script type="math/tex">p(s',r|s,a)</script> of the MDP to obtain a system of equations corresponding to the Bellman expectation equation for <script type="math/tex">v_\pi</script>.</p>
 <p>In order to obtain the state-value function, we need only solve the system of equations.</p>
@@ -704,6 +772,8 @@ In the previous video, we derived one equation for each environment state. For i
 <p>
 <script type="math/tex; mode=display">V(s_3) \leftarrow \frac{1}{2}(-1 + V(s_1)) + \frac{1}{2}(5)</script>
 </p>
+<p>The state-value function for the equiprobable random policy is visualized below:</p>
+<p><img alt="statevalue" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/statevalue.jpg" /></p>
 <h3 id="implementation-iterative-policy-evaluation">Implementation: Iterative Policy Evaluation</h3>
 <p>The pseudocode for iterative policy evaluation can be found below.</p>
 <p><img alt="policy-eval" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/policy-eval.png" /></p>
@@ -713,6 +783,45 @@ In the previous video, we derived one equation for each environment state. For i
 <script type="math/tex">\gamma < 1</script>, or</li>
 <li>if the agent starts in any state <script type="math/tex">s\in\mathcal{S}</script>, it is guaranteed to eventually reach a terminal state if it follows policy <script type="math/tex">\pi</script>.</li>
 </ul>
+<h3 id="action-values">Action Values</h3>
+<p>Use the simple gridworld to practice converting a state-value function <script type="math/tex">v_\pi</script> to an action-value function <script type="math/tex">q_\pi</script>
+</p>
+<p>Image below corresponds to the action-value function for the same policy.</p>
+<p><img alt="actionvalue" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/actionvalue.png" /></p>
+<p>As an example, consider <script type="math/tex">q_\pi(s_1, \text{right})</script>. This action value can be calculated as</p>
+<p>
+<script type="math/tex">q_\pi(s_1, \text{right}) = -1 + v_\pi(s_2) = -1 + 2 = 1</script>
+</p>
+<p>where we just use the fact that we can express the value of the state-action pair <script type="math/tex">s_1, \text{right}</script> as the sum of two quantities:</p>
+<ul>
+<li>the immediate reward after moving right and landing on state <script type="math/tex">s_2</script>
+</li>
+<li>the cumulative reward obtained if the agent begins in state <script type="math/tex">s_2</script> and follows the policy.</li>
+</ul>
+<h3 id="for-more-complex-environments">For More Complex Environments</h3>
+<p>In this simple gridworld example, the environment is <strong>deterministic</strong>. In other words, after the agent selects an action, the next state and reward are 100% guaranteed and non-random. For deterministic environments, <script type="math/tex">p(s',r|s,a) \in {0,1} \text{ for all } s', r, s, a</script>
+</p>
+<blockquote>
+<p>In this case, when the agent is in state s and takes action <script type="math/tex">a</script>, the next state <script type="math/tex">s'</script> and reward <script type="math/tex">r</script> can be predicted with certainty, and we must have <script type="math/tex">q_\pi(s,a) = r + \gamma v_\pi(s')</script>
+</p>
+</blockquote>
+<p>In general, the environment need not be deterministic, and instead may be <strong>stochastic</strong>. This is the default behavior of the FrozenLake environment; in this case, once the agent selects an action, the next state and reward cannot be predicted with certainty and instead are random draws from a (conditional) probability distribution <script type="math/tex">p(s',r|s,a)</script>
+</p>
+<blockquote>
+<p>In this case, when the agent is in state <script type="math/tex">s</script> and takes action <script type="math/tex">a</script>, the probability of each possible next state <script type="math/tex">s'</script> and reward <script type="math/tex">r</script> is given by <script type="math/tex">p(s',r|s,a)</script>. In this case, we must have <script type="math/tex">q_\pi(s,a) = \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,a)(r+\gamma v_\pi(s'))</script>, where we take the expected value of the sum <script type="math/tex">r + \gamma v_\pi(s')</script>
+</p>
+</blockquote>
+<h3 id="estimation-of-action-values">Estimation of Action Values</h3>
+<h4 id="implementation">Implementation</h4>
+<p>Write an algorithm that accepts an estimate <script type="math/tex">V</script> of the state-value function <script type="math/tex">v_\pi</script> along with the one-step dynamics of the MDP <script type="math/tex">p(s',r|s,a)</script> and returns an estimate <script type="math/tex">Q</script> the action-value function <script type="math/tex">q_\pi</script>
+</p>
+<p>Use the one-step dynamics <script type="math/tex">p(s',r|s,a)</script> of MDP to obtain <script type="math/tex">q_\pi</script> from <script type="math/tex">v_\pi</script>. Namely,</p>
+<p>
+<script type="math/tex">q_\pi(s,a) = \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,a)(r+\gamma v_\pi(s'))</script>
+</p>
+<p>holds for all <script type="math/tex">s\in\mathcal{S} \text{ and } a\in\mathcal{A}(s)</script>.</p>
+<p>associated pseudocode below:
+<img alt="action" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/est-action.png" /></p>
                 
                   
                 

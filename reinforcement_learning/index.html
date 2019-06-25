@@ -842,12 +842,12 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 <script type="math/tex; mode=display">v_\pi(s) = \mathbb{E}_\pi[R_{t+1} + \gamma v_\pi(S_{t+1})|S_t =s]</script>
 </p>
 <h2 id="calculating-the-expectation">Calculating the Expectation</h2>
-<p>In the event that the agent's policy π is <strong>deterministic</strong>, the agent selects action <em>π(s)</em> when in state <em>s</em>, and the Bellman Expectation Equation can be rewritten as the sum over two variables (<em>s′</em> and <em>r</em>):</p>
+<p>In the event that the agent's policy π is <strong>deterministic</strong>, the agent selects action <em>π(s)</em> when in state <em>s</em>, and the Bellman Expectation Equation can be rewritten as the sum over two variables (<script type="math/tex">s′ and r</script>):</p>
 <p>
 <script type="math/tex; mode=display">v_\pi(s) = \text{} \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,\pi(s))(r+\gamma v_\pi(s'))</script>
 </p>
 <p>In this case, we multiply the sum of the reward and discounted value of the next state <script type="math/tex">(r+\gamma v_\pi(s'))</script> by its corresponding probability <script type="math/tex">p(s',r|s,\pi(s))</script> and sum over all possibilities to yield the expected value.</p>
-<p>If the agent's policy π is <strong>stochastic</strong>, the agent selects action <em>a</em> with probability <em>π(a∣s)</em> when in state <em>s</em>, and the Bellman Expectation Equation can be rewritten as the sum over three variables <script type="math/tex">(s′, r, and a)</script>:</p>
+<p>If the agent's policy <script type="math/tex">\pi</script> is <strong>stochastic</strong>, the agent selects action <script type="math/tex">a</script> with probability <script type="math/tex">\pi(a∣s)</script> when in state <script type="math/tex">a</script>, and the Bellman Expectation Equation can be rewritten as the sum over three variables <script type="math/tex">(s′, r, a)</script>:</p>
 <p>
 <script type="math/tex; mode=display">v_\pi(s) = \text{} \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R},a\in\mathcal{A}(s)}\pi(a|s)p(s',r|s,a)(r+\gamma v_\pi(s'))</script>
 </p>
@@ -855,10 +855,10 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 <h2 id="policies">Policies</h2>
 <ul>
 <li>
-<p>A <strong>deterministic</strong> policy is a mapping <script type="math/tex">\pi: \mathcal{S}\to\mathcal{A}</script>. For each state s ∈ S, it yields the action a ∈ A that the agent will choose while in state <em>s</em>.</p>
+<p>A <strong>deterministic</strong> policy is a mapping <script type="math/tex">\pi: \mathcal{S}\to\mathcal{A}</script>. For each state <script type="math/tex">s \in S</script>, it yields the action (a \in A) that the agent will choose while in state <script type="math/tex">s</script>.</p>
 </li>
 <li>
-<p>A <strong>stochastic policy</strong> is a mapping <script type="math/tex">\pi: \mathcal{S}\times\mathcal{A}\to [0,1]</script>. For each state s ∈ S and action a ∈ A, it yields the probability <script type="math/tex">\pi(a|s)</script> that the agent chooses action <em>a</em> while in state <em>s</em>.</p>
+<p>A <strong>stochastic</strong> policy is a mapping <script type="math/tex">\pi: \mathcal{S}\times\mathcal{A}\to [0,1]</script>. For each state <script type="math/tex">s \in S</script> and action <script type="math/tex">a \in A</script>, it yields the probability <script type="math/tex">\pi(a|s)</script> that the agent chooses action <script type="math/tex">a</script> while in state <script type="math/tex">s</script>.</p>
 </li>
 </ul>
 <h2 id="state-value-functions">State-Value Functions</h2>

@@ -1,0 +1,975 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://vinkrish.github.io/MachineLearning/dynamic_programming/">
+      
+      
+        <meta name="author" content="Vinay Krishna">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>Dynamic Programming - Intro to Machine Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#an-iterative-method" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://vinkrish.github.io/MachineLearning/" title="Intro to Machine Learning" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Intro to Machine Learning
+            </span>
+            <span class="md-header-nav__topic">
+              Dynamic Programming
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/vinkrish/MachineLearning/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    vinkrish/MachineLearning
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://vinkrish.github.io/MachineLearning/" title="Intro to Machine Learning" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Intro to Machine Learning
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/vinkrish/MachineLearning/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    vinkrish/MachineLearning
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../math/" title="Math" class="md-nav__link">
+      Math
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../libraries/" title="Libraries" class="md-nav__link">
+      Libraries
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ml_workflow/" title="Workflow" class="md-nav__link">
+      Workflow
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Algorithms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Algorithms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../logistic_regression/" title="Logistic Regression" class="md-nav__link">
+      Logistic Regression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../neural_network/" title="Neural Network" class="md-nav__link">
+      Neural Network
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../algorithms/" title="Definition" class="md-nav__link">
+      Definition
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Deep Learning
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Deep Learning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deep_learning/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../reinforcement_learning/" title="Reinforcement Learning" class="md-nav__link">
+      Reinforcement Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Dynamic Programming
+      </label>
+    
+    <a href="./" title="Dynamic Programming" class="md-nav__link md-nav__link--active">
+      Dynamic Programming
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#an-iterative-method" title="An Iterative Method" class="md-nav__link">
+    An Iterative Method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-solving-the-system-of-equations" title="Notes on Solving the System of Equations" class="md-nav__link">
+    Notes on Solving the System of Equations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-iterative-policy-evaluation" title="Implementation: Iterative Policy Evaluation" class="md-nav__link">
+    Implementation: Iterative Policy Evaluation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-values" title="Action Values" class="md-nav__link">
+    Action Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-more-complex-environments" title="For More Complex Environments" class="md-nav__link">
+    For More Complex Environments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-estimation-of-action-values" title="Implementation: Estimation of Action Values" class="md-nav__link">
+    Implementation: Estimation of Action Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy-improvement" title="Policy Improvement" class="md-nav__link">
+    Policy Improvement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" title="Implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy-iteration" title="Policy Iteration" class="md-nav__link">
+    Policy Iteration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value-iteration" title="Value Iteration" class="md-nav__link">
+    Value Iteration
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../applications/" title="Applications" class="md-nav__link">
+      Applications
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Data Science
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_science/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dap/" title="Data Analysis Process" class="md-nav__link">
+      Data Analysis Process
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../big_data/" title="Big Data" class="md-nav__link">
+      Big Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensorflow/" title="TensorFlow" class="md-nav__link">
+      TensorFlow
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../terminology/" title="Terminology" class="md-nav__link">
+      Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="Source" class="md-nav__link">
+      Source
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#an-iterative-method" title="An Iterative Method" class="md-nav__link">
+    An Iterative Method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-solving-the-system-of-equations" title="Notes on Solving the System of Equations" class="md-nav__link">
+    Notes on Solving the System of Equations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-iterative-policy-evaluation" title="Implementation: Iterative Policy Evaluation" class="md-nav__link">
+    Implementation: Iterative Policy Evaluation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-values" title="Action Values" class="md-nav__link">
+    Action Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-more-complex-environments" title="For More Complex Environments" class="md-nav__link">
+    For More Complex Environments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-estimation-of-action-values" title="Implementation: Estimation of Action Values" class="md-nav__link">
+    Implementation: Estimation of Action Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy-improvement" title="Policy Improvement" class="md-nav__link">
+    Policy Improvement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" title="Implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy-iteration" title="Policy Iteration" class="md-nav__link">
+    Policy Iteration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value-iteration" title="Value Iteration" class="md-nav__link">
+    Value Iteration
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/vinkrish/MachineLearning/edit/master/docs/dynamic_programming.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Dynamic Programming</h1>
+                
+                <p>The term dynamic programming (DP) refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environment as a Markov decision process (MDP).</p>
+<p>The key idea of DP, and of reinforcement learning generally, is the use of value functions to organize and structure the search for good policies.</p>
+<h3 id="an-iterative-method">An Iterative Method</h3>
+<p><img alt="iterative_method" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/iterative_method.jpg" /></p>
+<p>Notes on the Bellman Expectation Equation</p>
+<p>for state <script type="math/tex">s_1</script>, we saw that:</p>
+<p>
+<script type="math/tex; mode=display">v_\pi(s_1) = \frac{1}{2}(-1 + v_\pi(s_2)) + \frac{1}{2}(-3 + v_\pi(s_3))</script>
+</p>
+<p>We mentioned that this equation follows directly from the Bellman expectation equation for <script type="math/tex">v_\pi</script>
+</p>
+<p>
+<script type="math/tex; mode=display">v_\pi(s) = \text{} \mathbb{E}_\pi[R_{t+1} + \gamma v_\pi(S_{t+1}) | S_t=s] = \sum_{a \in \mathcal{A}(s)}\pi(a|s)\sum_{s' \in \mathcal{S}, r\in\mathcal{R}}p(s',r|s,a)(r + \gamma v_\pi(s'))</script>
+</p>
+<p>(The Bellman expectation equation for <script type="math/tex">v_\pi</script>)</p>
+<p>In order to see this, we can begin by looking at what the Bellman expectation equation tells us about the value of state <script type="math/tex">s_1</script> (where we just need to plug in s_1 for state <script type="math/tex">s</script>).</p>
+<p>
+<script type="math/tex; mode=display">v_\pi(s_1) = \sum_{a \in \mathcal{A}(s_1)}\pi(a|s_1)\sum_{s' \in \mathcal{S}, r\in\mathcal{R}}p(s',r|s_1,a)(r + \gamma v_\pi(s'))</script>
+</p>
+<p>Then, it's possible to derive the equation for state <script type="math/tex">s_1</script> by using the following:</p>
+<ul>
+<li>
+<script type="math/tex">\mathcal{A}(s_1=\{ \text{down}, \text{right} \}</script> (When in state s_1, the agent only has two potential actions: down or right.)</li>
+<li>
+<script type="math/tex">\pi({down}|s_1) = \pi(\text{right}|s_1) = \frac{1}{2}</script> (We are currently examining the policy where the agent goes down with 50% probability and right with 50% probability when in state <script type="math/tex">s_1</script>.)</li>
+<li>
+<script type="math/tex">p(s_3,-3|s_1,\text{down}) = 1 (\text{and } p(s',r|s_1,\text{down}) = 0 \text{ if } s'\neq s_3 \text{ or } r\neq -3)</script> (If the agent chooses to go down in state <script type="math/tex">s_1</script> then with 100% probability, the next state is <script type="math/tex">s_3</script>, and the agent receives a reward of -3.)</li>
+<li>
+<script type="math/tex">p(s_2,-1|s_1,\text{right}) = 1 (\text{and } p(s',r|s_1,\text{right}) = 0 \text{ if } s'\neq s_2 \text{ or } r\neq -1)</script> (If the agent chooses to go right in state <script type="math/tex">s_1</script>, then with 100% probability, the next state is <script type="math/tex">s_2</script>, and the agent receives a reward of -1.)</li>
+<li>
+<script type="math/tex">\gamma = 1</script> (We chose to set the discount rate to 1 in this gridworld example.)</li>
+</ul>
+<h3 id="notes-on-solving-the-system-of-equations">Notes on Solving the System of Equations</h3>
+<p>This example serves to illustrate the fact that it is possible to directly solve the system of equations given by the Bellman expectation equation for <script type="math/tex">v_\pi</script> However, in practice, and especially for much larger Markov decision processes (MDPs), we will instead use an iterative solution approach.</p>
+<p>You can directly solve the system of equations:</p>
+<p>
+<script type="math/tex">v_\pi(s_1) = \frac{1}{2}(-1 + v_\pi(s_2)) + \frac{1}{2}(-3 + v_\pi(s_3))</script>
+</p>
+<p>
+<script type="math/tex">v_\pi(s_2) = \frac{1}{2}(-1 + v_\pi(s_1)) + \frac{1}{2}(5 + v_\pi(s_4))</script>
+</p>
+<p>
+<script type="math/tex">v_\pi(s_3) = \frac{1}{2}(-1 + v_\pi(s_1)) + \frac{1}{2}(5 + v_\pi(s_4))</script>
+</p>
+<p>
+<script type="math/tex">v_\pi(s_4) = 0</script>
+</p>
+<p>Since the equations for <script type="math/tex">v_\pi(s_2)</script> and <script type="math/tex">v_\pi(s_3)</script> are identical, we must have that <script type="math/tex">v_\pi(s_2) = v_\pi(s_3)</script>
+</p>
+<p>Thus, the equations for <script type="math/tex">v_\pi(s_1)</script> and <script type="math/tex">v_\pi(s_2)</script> can be changed to:</p>
+<p>
+<script type="math/tex">v_\pi(s_1) = \frac{1}{2}(-1 + v_\pi(s_2)) + \frac{1}{2}(-3 + v_\pi(s_2)) = -2 + v_\pi(s_2)</script>
+</p>
+<p>
+<script type="math/tex">v_\pi(s_2) = \frac{1}{2}(-1 + v_\pi(s_1)) + \frac{1}{2}(5 + 0) = 2 + \frac{1}{2}v_\pi(s_1)</script>
+</p>
+<p>Combining the two latest equations yields</p>
+<p>
+<script type="math/tex">v_\pi(s_1) = -2 + 2 + \frac{1}{2}v_\pi(s_1) = \frac{1}{2}v_\pi(s_1)</script>
+</p>
+<p>which implies <script type="math/tex">v_\pi(s_1)=0</script> Furthermore, <script type="math/tex">v_\pi(s_3) = v_\pi(s_2) = 2 + \frac{1}{2}v_\pi(s_1) = 2 + 0 = 2</script>
+</p>
+<p>Thus, the state-value function is given by:</p>
+<p>
+<script type="math/tex">v_\pi(s_1) = 0</script>
+</p>
+<p>
+<script type="math/tex">v_\pi(s_2) = 2</script>
+</p>
+<p>
+<script type="math/tex">v_\pi(s_3) = 2</script>
+</p>
+<p>
+<script type="math/tex">v_\pi(s_4) = 0</script>
+</p>
+<p>we have discussed how an agent might obtain the state-value function <script type="math/tex">v_\pi</script> corresponding to a policy <script type="math/tex">\pi</script>.</p>
+<p>In the dynamic programming setting, the agent has full knowledge of the Markov decision process (MDP). In this case, it's possible to use the one-step dynamics <script type="math/tex">p(s',r|s,a)</script> of the MDP to obtain a system of equations corresponding to the Bellman expectation equation for <script type="math/tex">v_\pi</script>.</p>
+<p>In order to obtain the state-value function, we need only solve the system of equations.</p>
+<p>While it is always possible to directly solve the system, we will instead use an iterative solution approach.</p>
+<p>The iterative method begins with an initial guess for the value of each state. In particular, we began by assuming that the value of each state was zero.</p>
+<p>Then, we looped over the state space and amended the estimate for the state-value function through applying successive update equations.</p>
+<p>Recall that <script type="math/tex">V</script> denotes the most recent guess for the state-value function, and the update equations are:</p>
+<p>
+<script type="math/tex; mode=display">V(s_1) \leftarrow \frac{1}{2}(-1 + V(s_2)) + \frac{1}{2}(-3 + V(s_3))</script>
+</p>
+<p>
+<script type="math/tex; mode=display">V(s_2) \leftarrow \frac{1}{2}(-1 + V(s_1)) + \frac{1}{2}(5)</script>
+</p>
+<p>
+<script type="math/tex; mode=display">V(s_3) \leftarrow \frac{1}{2}(-1 + V(s_1)) + \frac{1}{2}(5)</script>
+</p>
+<p>The state-value function for the equiprobable random policy is visualized below:</p>
+<p><img alt="statevalue" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/statevalue.jpg" /></p>
+<h3 id="implementation-iterative-policy-evaluation">Implementation: Iterative Policy Evaluation</h3>
+<p><img alt="policy-eval" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/policy-eval.jpg" /></p>
+<p>Note that policy evaluation is guaranteed to converge to the state-value function <script type="math/tex">v_\pi</script> corresponding to a policy <script type="math/tex">\pi</script>, as long as <script type="math/tex">v_\pi(s)</script> is finite for each state <script type="math/tex">s\in\mathcal{S}</script>. For a finite Markov decision process (MDP), this is guaranteed as long as either:</p>
+<ul>
+<li>
+<script type="math/tex">\gamma < 1</script>, or</li>
+<li>if the agent starts in any state <script type="math/tex">s\in\mathcal{S}</script>, it is guaranteed to eventually reach a terminal state if it follows policy <script type="math/tex">\pi</script>.</li>
+</ul>
+<h3 id="action-values">Action Values</h3>
+<p>Use the simple gridworld to practice converting a state-value function <script type="math/tex">v_\pi</script> to an action-value function <script type="math/tex">q_\pi</script>
+</p>
+<p>Image below corresponds to the action-value function for the same policy.</p>
+<p><img alt="actionvalue" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/actionvalue.jpg" /></p>
+<p>As an example, consider <script type="math/tex">q_\pi(s_1, \text{right})</script>. This action value can be calculated as</p>
+<p>
+<script type="math/tex">q_\pi(s_1, \text{right}) = -1 + v_\pi(s_2) = -1 + 2 = 1</script>
+</p>
+<p>where we just use the fact that we can express the value of the state-action pair <script type="math/tex">s_1, \text{right}</script> as the sum of two quantities:</p>
+<ul>
+<li>the immediate reward after moving right and landing on state <script type="math/tex">s_2</script>
+</li>
+<li>the cumulative reward obtained if the agent begins in state <script type="math/tex">s_2</script> and follows the policy.</li>
+</ul>
+<h3 id="for-more-complex-environments">For More Complex Environments</h3>
+<p>In this simple gridworld example, the environment is <strong>deterministic</strong>. In other words, after the agent selects an action, the next state and reward are 100% guaranteed and non-random. For deterministic environments, <script type="math/tex">p(s',r|s,a) \in {0,1} \text{ for all } s', r, s, a</script>
+</p>
+<blockquote>
+<p>In this case, when the agent is in state s and takes action <script type="math/tex">a</script>, the next state <script type="math/tex">s'</script> and reward <script type="math/tex">r</script> can be predicted with certainty, and we must have <script type="math/tex">q_\pi(s,a) = r + \gamma v_\pi(s')</script>
+</p>
+</blockquote>
+<p>In general, the environment need not be deterministic, and instead may be <strong>stochastic</strong>. This is the default behavior of the FrozenLake environment; in this case, once the agent selects an action, the next state and reward cannot be predicted with certainty and instead are random draws from a (conditional) probability distribution <script type="math/tex">p(s',r|s,a)</script>
+</p>
+<blockquote>
+<p>In this case, when the agent is in state <script type="math/tex">s</script> and takes action <script type="math/tex">a</script>, the probability of each possible next state <script type="math/tex">s'</script> and reward <script type="math/tex">r</script> is given by <script type="math/tex">p(s',r|s,a)</script>. In this case, we must have <script type="math/tex">q_\pi(s,a) = \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,a)(r+\gamma v_\pi(s'))</script>, where we take the expected value of the sum <script type="math/tex">r + \gamma v_\pi(s')</script>
+</p>
+</blockquote>
+<h3 id="implementation-estimation-of-action-values">Implementation: Estimation of Action Values</h3>
+<p>Write an algorithm that accepts an estimate <script type="math/tex">V</script> of the state-value function <script type="math/tex">v_\pi</script> along with the one-step dynamics of the MDP <script type="math/tex">p(s',r|s,a)</script> and returns an estimate <script type="math/tex">Q</script> the action-value function <script type="math/tex">q_\pi</script>
+</p>
+<p>Use the one-step dynamics <script type="math/tex">p(s',r|s,a)</script> of MDP to obtain <script type="math/tex">q_\pi</script> from <script type="math/tex">v_\pi</script>. Namely,</p>
+<p>
+<script type="math/tex">q_\pi(s,a) = \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,a)(r+\gamma v_\pi(s'))</script> holds for all <script type="math/tex">s\in\mathcal{S} \text{ and } a\in\mathcal{A}(s)</script>.</p>
+<p><img alt="action" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/est-action.jpg" /></p>
+<h3 id="policy-improvement">Policy Improvement</h3>
+<p>Our reason for computing the value function for a policy is to help find better policies. Suppose we have determined the value function <script type="math/tex">v_\pi</script> for an arbitrary deterministic policy <script type="math/tex">\pi</script>. For some state <script type="math/tex">s</script> we would like to know whether or not we should change the policy to deterministically choose an action <script type="math/tex">a \neq \pi(s)</script>.</p>
+<h4 id="implementation">Implementation</h4>
+<p>It is possible to construct an improved (or equivalent) policy <script type="math/tex">\pi'</script>, where <script type="math/tex">\pi'\geq\pi</script>
+</p>
+<p>For each state <script type="math/tex">s\in\mathcal{S}</script>, you need to select the action that maximizes the action-value function estimate. In other words,</p>
+<p>
+<script type="math/tex">\pi'(s)=\arg\max_{a\inA(s)}Q(s,a)</script> for all <script type="math/tex">s\in\mathcal{S}</script>.</p>
+<p><img alt="improve" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/improve.jpg" /></p>
+<p>In the event that there is some state <script type="math/tex">s\in\mathcal{S}</script> for which <script type="math/tex">\arg\max_{a\in\mathcal{A}(s)}</script> is not unique, there is some flexibility in how the improved policy <script type="math/tex">\pi'</script> is constructed.</p>
+<p>In fact, as long as the policy <script type="math/tex">\pi'</script> satisfies for each <script type="math/tex">s\in\mathcal{S}</script> and <script type="math/tex">a\in\mathcal{A}(s)</script>:</p>
+<p>
+<script type="math/tex">\pi'(a|s)=0 \text{ if a }\notin \arg\max_{a'\in\mathcal{A}(s)}Q(s,a')</script>
+</p>
+<p>It is an improved policy. In other words, any policy that (for each state) assigns zero probability to the actions that do not maximize the action-value function estimate (for that state) is an improved policy.</p>
+<h3 id="policy-iteration">Policy Iteration</h3>
+<p><img alt="policy_iter" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/policy_iter.png" /></p>
+<p>This way of finding an optimal policy is called <em>policy iteration</em>.</p>
+<p>Policy iteration is guaranteed to find the optimal policy for any finite Markov decision process (MDP) in a finite number of iterations.</p>
+<p><img alt="iteration" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/iteration.jpg" /></p>
+<h3 id="value-iteration">Value Iteration</h3>
+<p>One drawback to policy iteration is that each of its iterations involves policy evaluation, which may itself be a protracted iterative computation requiring multiple sweeps through the state set. If policy evaluation is done iteratively, then convergence exactly to <script type="math/tex">v_\pi</script> occurs only in the limit.</p>
+<p>In fact, the policy evaluation step of policy iteration can be truncated in several ways without losing the convergence guarantees of policy iteration. One important special case is when policy evaluation is stopped after just one sweep (one update of each state). This algorithm is called <em>value iteration</em>.</p>
+<p>In this algorithm, each sweep over the state space effectively performs both policy evaluation and policy improvement. Value iteration is guaranteed to find the optimal policy <script type="math/tex">\pi_*</script> for any finite MDP.</p>
+<p><img alt="value-iteration" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/value-iteration.jpg" /></p>
+<p>Note that the stopping criterion is satisfied when the difference between successive value function estimates is sufficiently small. In particular, the loop terminates if the difference is less than <script type="math/tex">\theta</script> for each state. And, the closer we want the final value function estimate to be to the optimal value function, the smaller we need to set the value of <script type="math/tex">\theta</script>.</p>
+<blockquote>
+<p>note that in the case of the FrozenLake environment, values around <code>1e-8</code> seem to work reasonably well.</p>
+</blockquote>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../reinforcement_learning/" title="Reinforcement Learning" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Reinforcement Learning
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../applications/" title="Applications" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Applications
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/vinkrish" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.d9aa80ab.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

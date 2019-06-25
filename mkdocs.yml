@@ -26,16 +26,19 @@ nav:
   - About: index.md
   - Math: math.md
   - Libraries: libraries.md
-  - Data Analysis Process: dap.md
   - Workflow: ml_workflow.md
   - Algorithms: 
     - Logistic Regression: logistic_regression.md
     - Neural Network: neural_network.md
     - Definition: algorithms.md
-  - Deep Learning: deep_learning.md
-  - Reinforcement Learning: reinforcement_learning.md
-  - Applications: applications.md
-  - Data Science: data_science.md
+  - Deep Learning:
+    - Intro: deep_learning.md
+    - Reinforcement Learning: reinforcement_learning.md
+    - Dynamic Programming: dynamic_programming.md
+    - Applications: applications.md
+  - Data Science:
+    - Intro: data_science.md
+    - Data Analysis Process: dap.md
   - Big Data: big_data.md
   - TensorFlow: tensorflow.md
   - Terminology: terminology.md

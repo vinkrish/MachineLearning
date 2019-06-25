@@ -269,18 +269,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../dap/" title="Data Analysis Process" class="md-nav__link">
-      Data Analysis Process
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
     <a href="../ml_workflow/" title="Workflow" class="md-nav__link">
       Workflow
     </a>
@@ -294,13 +282,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-5">
       Algorithms
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-5">
         Algorithms
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -351,17 +339,38 @@
       
       
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Deep Learning
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Deep Learning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="../deep_learning/" title="Deep Learning" class="md-nav__link">
-      Deep Learning
+    <a href="../deep_learning/" title="Intro" class="md-nav__link">
+      Intro
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
   
 
@@ -390,13 +399,6 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-setting-revisited" title="The Setting, Revisited" class="md-nav__link">
-    The Setting, Revisited
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#episodic-vs-continuing-tasks" title="Episodic vs. Continuing Tasks" class="md-nav__link">
@@ -492,10 +494,22 @@
     
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamic_programming/" title="Dynamic Programming" class="md-nav__link">
+      Dynamic Programming
+    </a>
+  </li>
+
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -504,16 +518,57 @@
     </a>
   </li>
 
+        
+      </ul>
+    </nav>
+  </li>
+
     
       
       
       
 
 
-  <li class="md-nav__item">
-    <a href="../data_science/" title="Data Science" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
       Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Data Science
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_science/" title="Intro" class="md-nav__link">
+      Intro
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dap/" title="Data Analysis Process" class="md-nav__link">
+      Data Analysis Process
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -584,13 +639,6 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-setting-revisited" title="The Setting, Revisited" class="md-nav__link">
-    The Setting, Revisited
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#episodic-vs-continuing-tasks" title="Episodic vs. Continuing Tasks" class="md-nav__link">
@@ -696,13 +744,35 @@
                 
                 
                 <h1 id="reinforcement-learning">Reinforcement Learning</h1>
-<p><img alt="reinforce_learning" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/reinforce_learning.png" /></p>
-<h2 id="the-setting-revisited">The Setting, Revisited</h2>
+<p>Reinforcement learning is learning what to do—how to map situations to actions—so as to maximize a numerical reward signal. The learner is not told which actions to take, but instead must discover which actions yield the most reward by trying them.</p>
 <ul>
-<li>The reinforcement learning (RL) framework is characterized by an <strong>agent</strong> learning to interact with its <strong>environment</strong>.</li>
+<li>A <strong>policy</strong> defines the learning agent’s way of behaving at a given time. Roughly speaking, a policy is a mapping from perceived states of the environment to actions to be taken when in those states.</li>
+<li>A reward signal defines the goal of a reinforcement learning problem. On each time step, the environment sends a single number called the <strong>reward</strong> to the reinforcement learning agent.</li>
+<li>The reward signal indicates what is good in an immediate sense, a value function specifies what is good in the long run. Roughly speaking, the <strong>value</strong> of a state is the total amount of reward an agent can expect to accumulate over the future, starting from that state.</li>
+<li><strong>Model</strong> mimics the behavior of the environment, or more generally, that allows inferences to be made about how the environment will behave.</li>
+</ul>
+<p>Methods for solving reinforcement learning problems that use models and planning are called model-based methods, as opposed to simpler model-free methods that are explicitly trial-and-error learners.</p>
+<p><em>Reinforcement learning</em> uses the formal framework of Markov decision processes to define the interaction between a learning agent and its environment in terms of states, actions, and rewards. We will learn problem formulation with finite <em>Markov Decision Processes</em> and its main ideas including Bellman equations and value functions.</p>
+<p>Three fundamental classes of methods for solving finite Markov decision problems:</p>
+<ul>
+<li>Dynamic programming</li>
+<li>Monte Carlo methods</li>
+<li>Temporal difference learning</li>
+</ul>
+<p>The methods also differ in several ways with respect to their efficiency and speed of convergence.</p>
+<p><strong>Dynamic programming</strong> methods are well developed mathematically, but require a complete and accurate model of the environment.</p>
+<p><strong>Monte Carlo</strong> methods don’t require a model and are conceptually simple, but are not well suited for step-by-step incremental computation.</p>
+<p><strong>Temporal-difference</strong> methods require no model and are fully incremental, but are more complex to analyze.</p>
+<p>If actions are allowed to affect the next situation as well as the reward, then we have the full reinforcement learning problem.</p>
+<p><img alt="reinforce_learning" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/reinforce_learning.png" /></p>
+<ul>
+<li>The learner and decision maker is called the <strong>agent</strong>.</li>
+<li>The thing it interacts with, comprising everything outside the agent, is called the <strong>environment</strong>.</li>
+<li>Thus RL framework is characterized by an <em>agent</em> learning to interact with its <em>environment</em>.</li>
 <li>At each time step, the agent receives the environment's <strong>state</strong> (the environment presents a situation to the agent), and the agent must choose an appropriate <strong>action</strong> in response. One time step later, the agent receives a <strong>reward</strong> (the environment indicates whether the agent has responded appropriately to the state) and a new state.</li>
 <li>All agents have the goal to maximize expected <strong>cumulative reward</strong>, or the expected sum of rewards attained over all time steps.</li>
 </ul>
+<p>The state must include information about all aspects of the past agent–environment interaction that make a difference for the future. If it does, then the state is said to have the <strong>Markov property</strong>.</p>
 <h2 id="episodic-vs-continuing-tasks">Episodic vs. Continuing Tasks</h2>
 <ul>
 <li>A <strong>task</strong> is an instance of the reinforcement learning (RL) problem.</li>
@@ -722,7 +792,11 @@
 The agent selects actions with the goal of maximizing expected (discounted) return.</p>
 <h2 id="discounted-return">Discounted Return</h2>
 <ul>
+<li>Discounting: The agent tries to select actions so that the sum of the discounted rewards it receives over the future is maximized.</li>
 <li>The discounted return at time step t is <script type="math/tex; mode=display">G_t := R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \ldots</script>
+<script type="math/tex; mode=display">G_t = R_{t+1} + \gamma (R_{t+2} + \gamma R_{t+3} + \ldots)</script>
+<script type="math/tex; mode=display">G_t = R_{t+1} + \gamma G_{t+1}</script>
+<script type="math/tex; mode=display">G_t = \sum_{k=0}^\infty \gamma^k R_{t+k+1}</script>
 </li>
 <li>The discount rate <script type="math/tex">\gamma</script> is something that you set, to refine the goal that you have the agent.<ul>
 <li>It must satisfy 0 &lt;= <script type="math/tex">\gamma</script> &lt;= 1</li>
@@ -768,12 +842,12 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 <script type="math/tex; mode=display">v_\pi(s) = \mathbb{E}_\pi[R_{t+1} + \gamma v_\pi(S_{t+1})|S_t =s]</script>
 </p>
 <h2 id="calculating-the-expectation">Calculating the Expectation</h2>
-<p>In the event that the agent's policy π is <strong>deterministic</strong>, the agent selects action <em>π(s)</em> when in state <em>s</em>, and the Bellman Expectation Equation can be rewritten as the sum over two variables (<em>s′</em> and <em>r</em>):</p>
+<p>In the event that the agent's policy π is <strong>deterministic</strong>, the agent selects action <em>π(s)</em> when in state <em>s</em>, and the Bellman Expectation Equation can be rewritten as the sum over two variables (<script type="math/tex">s′ and r</script>):</p>
 <p>
 <script type="math/tex; mode=display">v_\pi(s) = \text{} \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,\pi(s))(r+\gamma v_\pi(s'))</script>
 </p>
 <p>In this case, we multiply the sum of the reward and discounted value of the next state <script type="math/tex">(r+\gamma v_\pi(s'))</script> by its corresponding probability <script type="math/tex">p(s',r|s,\pi(s))</script> and sum over all possibilities to yield the expected value.</p>
-<p>If the agent's policy π is <strong>stochastic</strong>, the agent selects action <em>a</em> with probability <em>π(a∣s)</em> when in state <em>s</em>, and the Bellman Expectation Equation can be rewritten as the sum over three variables <script type="math/tex">(s′, r, and a)</script>:</p>
+<p>If the agent's policy <script type="math/tex">\pi</script> is <strong>stochastic</strong>, the agent selects action <script type="math/tex">a</script> with probability <script type="math/tex">\pi(a∣s)</script> when in state <script type="math/tex">a</script>, and the Bellman Expectation Equation can be rewritten as the sum over three variables <script type="math/tex">(s′, r, a)</script>:</p>
 <p>
 <script type="math/tex; mode=display">v_\pi(s) = \text{} \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R},a\in\mathcal{A}(s)}\pi(a|s)p(s',r|s,a)(r+\gamma v_\pi(s'))</script>
 </p>
@@ -781,26 +855,27 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 <h2 id="policies">Policies</h2>
 <ul>
 <li>
-<p>A <strong>deterministic</strong> policy is a mapping <script type="math/tex">\pi: \mathcal{S}\to\mathcal{A}</script>. For each state s ∈ S, it yields the action a ∈ A that the agent will choose while in state <em>s</em>.</p>
+<p>A <strong>deterministic</strong> policy is a mapping <script type="math/tex">\pi: \mathcal{S}\to\mathcal{A}</script>. For each state <script type="math/tex">s \in S</script>, it yields the action (a \in A) that the agent will choose while in state <script type="math/tex">s</script>.</p>
 </li>
 <li>
-<p>A <strong>stochastic policy</strong> is a mapping <script type="math/tex">\pi: \mathcal{S}\times\mathcal{A}\to [0,1]</script>. For each state s ∈ S and action a ∈ A, it yields the probability <script type="math/tex">\pi(a|s)</script> that the agent chooses action <em>a</em> while in state <em>s</em>.</p>
+<p>A <strong>stochastic</strong> policy is a mapping <script type="math/tex">\pi: \mathcal{S}\times\mathcal{A}\to [0,1]</script>. For each state <script type="math/tex">s \in S</script> and action <script type="math/tex">a \in A</script>, it yields the probability <script type="math/tex">\pi(a|s)</script> that the agent chooses action <script type="math/tex">a</script> while in state <script type="math/tex">s</script>.</p>
 </li>
 </ul>
 <h2 id="state-value-functions">State-Value Functions</h2>
 <ul>
-<li>The state-value function for a policy π is denoted <script type="math/tex">v_\pi</script>. For each state s ∈ S, it yields the expected return if the agent starts in state <em>s</em> and then uses the policy to choose its actions for all time steps. That is,</li>
+<li>The state-value function for a policy <script type="math/tex">\pi</script> is denoted <script type="math/tex">v_\pi</script>. For each state <script type="math/tex">s \in S</script>, it yields the expected return if the agent starts in state <script type="math/tex">s</script> and then uses the policy to choose its actions for all time steps. That is,</li>
 </ul>
 <p>
-<script type="math/tex; mode=display">v_\pi(s) \doteq \text{} \mathbb{E}_\pi[G_t | S_t=s]</script>
-We refer to <script type="math/tex">v_\pi(s)</script> as the <strong>value of state</strong> <em>s</em> <strong>under policy</strong> π.</p>
+<script type="math/tex; mode=display">v_\pi(s) \doteq \mathbb{E}_\pi[G_t | S_t=s]</script>
+We refer to <script type="math/tex">v_\pi(s)</script> as the value of state <script type="math/tex">s</script> under policy <script type="math/tex">\pi</script>.</p>
 <ul>
-<li>The notation <script type="math/tex">\mathbb{E}_\pi[\cdot]</script> is borrowed from the suggested textbook, where <script type="math/tex">\mathbb{E}_\pi[\cdot]</script> is defined as the expected value of a random variable, given that the agent follows policy π.</li>
+<li>The notation <script type="math/tex">\mathbb{E}_\pi[\cdot]</script> denotes the expected value of a random variable given that the agent follows
+policy <script type="math/tex">\pi</script>, and <script type="math/tex">t</script> is any time step.</li>
 </ul>
 <h2 id="optimality">Optimality</h2>
 <ul>
 <li>
-<p>A policy π′ is defined to be better than or equal to a policy π if and only if <script type="math/tex">v_{\pi'}(s) \geq v_\pi(s)</script> for all s ∈ S.</p>
+<p>A policy <script type="math/tex">\pi′</script> is defined to be better than or equal to a policy <script type="math/tex">\pi</script> if and only if <script type="math/tex">v_{\pi'}(s) \geq v_\pi(s)</script> for all <script type="math/tex">s \in S</script>.</p>
 </li>
 <li>
 <p>An <strong>optimal policy</strong> <script type="math/tex">\pi_*</script> satisfies <script type="math/tex">\pi_*\ge\pi</script> for all policies π. An optimal policy is guaranteed to exist but may not be unique.</p>
@@ -809,12 +884,12 @@ We refer to <script type="math/tex">v_\pi(s)</script> as the <strong>value of st
 </ul>
 <h2 id="action-value-functions">Action-Value Functions</h2>
 <ul>
-<li>The <strong>action-value function</strong> for a policy π is denoted <script type="math/tex">q_\pi</script>. For each state s ∈ S and action a ∈ A, it yields the expected return if the agent starts in state <em>s</em>, takes action <em>a</em>, and then follows the policy for all future time steps. That is, </li>
+<li>The <strong>action-value function</strong> for a policy <script type="math/tex">\pi</script> is denoted <script type="math/tex">q_\pi</script>. For each state <script type="math/tex">s \in S</script> and action <script type="math/tex">a \in A</script>, it yields the expected return if the agent starts in state <script type="math/tex">s</script>, takes action <script type="math/tex">a</script>, and then follows the policy for all future time steps. That is,</li>
 </ul>
 <p>
 <script type="math/tex; mode=display">q_\pi(s,a) \doteq \mathbb{E}_\pi[G_t|S_t=s, A_t=a]</script>
 </p>
-<p>We refer <script type="math/tex">q_\pi(s,a)</script> as the <strong>value of taking action</strong> <em>a</em> <strong>in state</strong> <em>s</em> <strong>under a policy</strong> π (or alternatively as the value of the state-action pair <em>s</em>,<em>a</em>).</p>
+<p>We refer <script type="math/tex">q_\pi(s,a)</script> as the value of taking action <script type="math/tex">a</script> in state <script type="math/tex">s</script> under a policy <script type="math/tex">\pi</script> (or alternatively as the value of the state-action pair <em>s</em>,<em>a</em>).</p>
 <ul>
 <li>All optimal policies have the same action-value function <script type="math/tex">q_*</script>, called the <strong>optimal action-value function</strong>.</li>
 </ul>
@@ -845,7 +920,7 @@ We refer to <script type="math/tex">v_\pi(s)</script> as the <strong>value of st
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../deep_learning/" title="Deep Learning" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../deep_learning/" title="Intro" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -854,19 +929,19 @@ We refer to <script type="math/tex">v_\pi(s)</script> as the <strong>value of st
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Deep Learning
+                Intro
               </span>
             </div>
           </a>
         
         
-          <a href="../applications/" title="Applications" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../dynamic_programming/" title="Dynamic Programming" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Applications
+                Dynamic Programming
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

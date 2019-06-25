@@ -1,12 +1,41 @@
 # Reinforcement Learning
 
+Reinforcement learning is learning what to do—how to map situations to actions—so as to maximize a numerical reward signal. The learner is not told which actions to take, but instead must discover which actions yield the most reward by trying them.
+
+- A **policy** defines the learning agent’s way of behaving at a given time. Roughly speaking, a policy is a mapping from perceived states of the environment to actions to be taken when in those states.
+- A reward signal defines the goal of a reinforcement learning problem. On each time step, the environment sends a single number called the **reward** to the reinforcement learning agent.
+- The reward signal indicates what is good in an immediate sense, a value function specifies what is good in the long run. Roughly speaking, the **value** of a state is the total amount of reward an agent can expect to accumulate over the future, starting from that state.
+- **Model** mimics the behavior of the environment, or more generally, that allows inferences to be made about how the environment will behave.
+
+Methods for solving reinforcement learning problems that use models and planning are called model-based methods, as opposed to simpler model-free methods that are explicitly trial-and-error learners.
+
+_Reinforcement learning_ uses the formal framework of Markov decision processes to define the interaction between a learning agent and its environment in terms of states, actions, and rewards. We will learn problem formulation with finite _Markov Decision Processes_ and its main ideas including Bellman equations and value functions.
+
+Three fundamental classes of methods for solving finite Markov decision problems:
+
+- Dynamic programming
+- Monte Carlo methods
+- Temporal difference learning
+
+The methods also differ in several ways with respect to their efficiency and speed of convergence.
+
+**Dynamic programming** methods are well developed mathematically, but require a complete and accurate model of the environment.
+
+**Monte Carlo** methods don’t require a model and are conceptually simple, but are not well suited for step-by-step incremental computation.
+
+**Temporal-difference** methods require no model and are fully incremental, but are more complex to analyze.
+
+If actions are allowed to affect the next situation as well as the reward, then we have the full reinforcement learning problem.
+
 ![reinforce_learning](https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/reinforce_learning.png)
 
-## The Setting, Revisited
-
-- The reinforcement learning (RL) framework is characterized by an **agent** learning to interact with its **environment**.
+- The learner and decision maker is called the **agent**.
+- The thing it interacts with, comprising everything outside the agent, is called the **environment**.
+- Thus RL framework is characterized by an _agent_ learning to interact with its _environment_.
 - At each time step, the agent receives the environment's **state** (the environment presents a situation to the agent), and the agent must choose an appropriate **action** in response. One time step later, the agent receives a **reward** (the environment indicates whether the agent has responded appropriately to the state) and a new state.
 - All agents have the goal to maximize expected **cumulative reward**, or the expected sum of rewards attained over all time steps.
+
+The state must include information about all aspects of the past agent–environment interaction that make a difference for the future. If it does, then the state is said to have the **Markov property**.
 
 ## Episodic vs. Continuing Tasks
 
@@ -27,7 +56,8 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 
 ## Discounted Return
 
-- The discounted return at time step t is $$G_t := R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \ldots$$
+- Discounting: The agent tries to select actions so that the sum of the discounted rewards it receives over the future is maximized.
+- The discounted return at time step t is $$G_t := R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \ldots$$ $$G_t = R_{t+1} + \gamma (R_{t+2} + \gamma R_{t+3} + \ldots)$$ $$G_t = R_{t+1} + \gamma G_{t+1}$$ $$G_t = \sum_{k=0}^\infty \gamma^k R_{t+k+1}$$
 - The discount rate \(\gamma\) is something that you set, to refine the goal that you have the agent.
     - It must satisfy 0 <= \(\gamma\) <= 1
     - If \(\gamma=0\), the agent only cares about the most immediate reward.
@@ -65,13 +95,13 @@ $$v_\pi(s) = \mathbb{E}_\pi[R_{t+1} + \gamma v_\pi(S_{t+1})|S_t =s]$$
 
 ## Calculating the Expectation
 
-In the event that the agent's policy π is **deterministic**, the agent selects action _π(s)_ when in state _s_, and the Bellman Expectation Equation can be rewritten as the sum over two variables (_s′_ and _r_):
+In the event that the agent's policy π is **deterministic**, the agent selects action _π(s)_ when in state _s_, and the Bellman Expectation Equation can be rewritten as the sum over two variables (\(s′ and r\)):
 
 $$v_\pi(s) = \text{} \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,\pi(s))(r+\gamma v_\pi(s'))$$
 
 In this case, we multiply the sum of the reward and discounted value of the next state \((r+\gamma v_\pi(s'))\) by its corresponding probability \(p(s',r|s,\pi(s))\) and sum over all possibilities to yield the expected value.
 
-If the agent's policy π is **stochastic**, the agent selects action _a_ with probability _π(a∣s)_ when in state _s_, and the Bellman Expectation Equation can be rewritten as the sum over three variables \((s′, r, and a)\):
+If the agent's policy \(\pi\) is **stochastic**, the agent selects action \(a\) with probability \(\pi(a∣s)\) when in state \(a\), and the Bellman Expectation Equation can be rewritten as the sum over three variables \((s′, r, a)\):
 
 $$v_\pi(s) = \text{} \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R},a\in\mathcal{A}(s)}\pi(a|s)p(s',r|s,a)(r+\gamma v_\pi(s'))$$
 
@@ -79,33 +109,34 @@ In this case, we multiply the sum of the reward and discounted value of the next
 
 ## Policies
 
-- A **deterministic** policy is a mapping \(\pi: \mathcal{S}\to\mathcal{A}\). For each state s ∈ S, it yields the action a ∈ A that the agent will choose while in state _s_.
+- A **deterministic** policy is a mapping \(\pi: \mathcal{S}\to\mathcal{A}\). For each state \(s \in S\), it yields the action (a \in A\) that the agent will choose while in state \(s\).
 
-- A **stochastic policy** is a mapping \(\pi: \mathcal{S}\times\mathcal{A}\to [0,1]\). For each state s ∈ S and action a ∈ A, it yields the probability \(\pi(a|s)\) that the agent chooses action _a_ while in state _s_.
+- A **stochastic** policy is a mapping \(\pi: \mathcal{S}\times\mathcal{A}\to [0,1]\). For each state \(s \in S\) and action \(a \in A\), it yields the probability \(\pi(a|s)\) that the agent chooses action \(a\) while in state \(s\).
 
 ## State-Value Functions
 
-- The state-value function for a policy π is denoted \(v_\pi\). For each state s ∈ S, it yields the expected return if the agent starts in state _s_ and then uses the policy to choose its actions for all time steps. That is,
+- The state-value function for a policy \(\pi\) is denoted \(v_\pi\). For each state \(s \in S\), it yields the expected return if the agent starts in state \(s\) and then uses the policy to choose its actions for all time steps. That is,
 
-$$v_\pi(s) \doteq \text{} \mathbb{E}_\pi[G_t | S_t=s]$$
-We refer to \(v_\pi(s)\) as the **value of state** _s_ **under policy** π.
+$$v_\pi(s) \doteq \mathbb{E}_\pi[G_t | S_t=s]$$
+We refer to \(v_\pi(s)\) as the value of state \(s\) under policy \(\pi\).
 
-- The notation \(\mathbb{E}_\pi[\cdot]\) is borrowed from the suggested textbook, where \(\mathbb{E}_\pi[\cdot]\) is defined as the expected value of a random variable, given that the agent follows policy π.
+- The notation \(\mathbb{E}_\pi[\cdot]\) denotes the expected value of a random variable given that the agent follows
+policy \(\pi\), and \(t\) is any time step.
 
 ## Optimality
 
-- A policy π′ is defined to be better than or equal to a policy π if and only if \(v_{\pi'}(s) \geq v_\pi(s)\) for all s ∈ S.
+- A policy \(\pi′\) is defined to be better than or equal to a policy \(\pi\) if and only if \(v_{\pi'}(s) \geq v_\pi(s)\) for all \(s \in S\).
 
 - An **optimal policy** \(\pi_*\) satisfies \(\pi_*\ge\pi\) for all policies π. An optimal policy is guaranteed to exist but may not be unique.
 - All optimal policies have the same state-value function \(v_*\) called the **optimal state-value function**.
 
 ## Action-Value Functions
 
-- The **action-value function** for a policy π is denoted \(q_\pi\). For each state s ∈ S and action a ∈ A, it yields the expected return if the agent starts in state _s_, takes action _a_, and then follows the policy for all future time steps. That is, 
+- The **action-value function** for a policy \(\pi\) is denoted \(q_\pi\). For each state \(s \in S\) and action \(a \in A\), it yields the expected return if the agent starts in state \(s\), takes action \(a\), and then follows the policy for all future time steps. That is,
 
 $$q_\pi(s,a) \doteq \mathbb{E}_\pi[G_t|S_t=s, A_t=a]$$
 
-We refer \(q_\pi(s,a)\) as the **value of taking action** _a_ **in state** _s_ **under a policy** π (or alternatively as the value of the state-action pair _s_,_a_).
+We refer \(q_\pi(s,a)\) as the value of taking action \(a\) in state \(s\) under a policy \(\pi\) (or alternatively as the value of the state-action pair _s_,_a_).
 
 - All optimal policies have the same action-value function \(q_*\), called the **optimal action-value function**.
 

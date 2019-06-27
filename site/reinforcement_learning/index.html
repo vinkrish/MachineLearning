@@ -513,6 +513,42 @@
 
 
   <li class="md-nav__item">
+    <a href="../monte_carlo_methods/" title="Monte Carlo Methods" class="md-nav__link">
+      Monte Carlo Methods
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../temporal_difference_methods/" title="Temporal Difference Methods" class="md-nav__link">
+      Temporal Difference Methods
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rl_summary/" title="Summary" class="md-nav__link">
+      Summary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../applications/" title="Applications" class="md-nav__link">
       Applications
     </a>
@@ -842,7 +878,7 @@ The agent selects actions with the goal of maximizing expected (discounted) retu
 <script type="math/tex; mode=display">v_\pi(s) = \mathbb{E}_\pi[R_{t+1} + \gamma v_\pi(S_{t+1})|S_t =s]</script>
 </p>
 <h2 id="calculating-the-expectation">Calculating the Expectation</h2>
-<p>In the event that the agent's policy π is <strong>deterministic</strong>, the agent selects action <em>π(s)</em> when in state <em>s</em>, and the Bellman Expectation Equation can be rewritten as the sum over two variables (<script type="math/tex">s′ and r</script>):</p>
+<p>In the event that the agent's policy π is <strong>deterministic</strong>, the agent selects action <script type="math/tex">\pi(s)</script> when in state <script type="math/tex">s</script>, and the Bellman Expectation Equation can be rewritten as the sum over two variables (<script type="math/tex">s′ \text{ and } r</script>):</p>
 <p>
 <script type="math/tex; mode=display">v_\pi(s) = \text{} \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,\pi(s))(r+\gamma v_\pi(s'))</script>
 </p>

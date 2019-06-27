@@ -2,7 +2,11 @@ The term dynamic programming (DP) refers to a collection of algorithms that can 
 
 The key idea of DP, and of reinforcement learning generally, is the use of value functions to organize and structure the search for good policies.
 
+In the dynamic programming setting, the agent has full knowledge of the MDP. (This is much easier than the reinforcement learning setting, where the agent initially knows nothing about how the environment decides state and reward and must learn entirely from interaction how to select actions.)
+
 ### An Iterative Method
+
+In order to obtain the state-value function \(v_\pi\) corresponding to a policy \(\pi\), we need to solve the system of equations corresponding to the Bellman expectation equation for \(v_\pi\).
 
 ![iterative_method](https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/iterative_method.jpg)
 
@@ -92,7 +96,7 @@ The state-value function for the equiprobable random policy is visualized below:
 
 ![statevalue](https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/statevalue.jpg)
 
-### Implementation: Iterative Policy Evaluation
+### Iterative Policy Evaluation
 
 ![policy-eval](https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/policy-eval.jpg)
 
@@ -118,7 +122,7 @@ where we just use the fact that we can express the value of the state-action pai
 - the immediate reward after moving right and landing on state \(s_2\)
 - the cumulative reward obtained if the agent begins in state \(s_2\) and follows the policy.
 
-### For More Complex Environments
+#### For More Complex Environments
 
 In this simple gridworld example, the environment is **deterministic**. In other words, after the agent selects an action, the next state and reward are 100% guaranteed and non-random. For deterministic environments, \(p(s',r|s,a) \in {0,1} \text{ for all } s', r, s, a\)
 
@@ -128,7 +132,7 @@ In general, the environment need not be deterministic, and instead may be **stoc
 
 >In this case, when the agent is in state \(s\) and takes action \(a\), the probability of each possible next state \(s'\) and reward \(r\) is given by \(p(s',r|s,a)\). In this case, we must have \(q_\pi(s,a) = \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,a)(r+\gamma v_\pi(s'))\), where we take the expected value of the sum \(r + \gamma v_\pi(s')\)
 
-### Implementation: Estimation of Action Values
+### Estimation of Action Values
 
 Write an algorithm that accepts an estimate \(V\) of the state-value function \(v_\pi\) along with the one-step dynamics of the MDP \(p(s',r|s,a)\) and returns an estimate \(Q\) the action-value function \(q_\pi\)
 
@@ -148,7 +152,7 @@ It is possible to construct an improved (or equivalent) policy \(\pi'\), where \
 
 For each state \(s\in\mathcal{S}\), you need to select the action that maximizes the action-value function estimate. In other words,
 
-\(\pi'(s)=\arg\max_{a\inA(s)}Q(s,a)\) for all \(s\in\mathcal{S}\).
+\(\pi'(s)=\arg\max_{a\in\mathcal{A}(s)}Q(s,a)\) for all \(s\in\mathcal{S}\).
 
 ![improve](https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/improve.jpg)
 

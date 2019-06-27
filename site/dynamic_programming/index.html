@@ -423,8 +423,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation-iterative-policy-evaluation" title="Implementation: Iterative Policy Evaluation" class="md-nav__link">
-    Implementation: Iterative Policy Evaluation
+  <a href="#iterative-policy-evaluation" title="Iterative Policy Evaluation" class="md-nav__link">
+    Iterative Policy Evaluation
   </a>
   
 </li>
@@ -434,18 +434,24 @@
     Action Values
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#for-more-complex-environments" title="For More Complex Environments" class="md-nav__link">
     For More Complex Environments
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#implementation-estimation-of-action-values" title="Implementation: Estimation of Action Values" class="md-nav__link">
-    Implementation: Estimation of Action Values
+  <a href="#estimation-of-action-values" title="Estimation of Action Values" class="md-nav__link">
+    Estimation of Action Values
   </a>
   
 </li>
@@ -492,6 +498,42 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../monte_carlo_methods/" title="Monte Carlo Methods" class="md-nav__link">
+      Monte Carlo Methods
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../temporal_difference_methods/" title="Temporal Difference Methods" class="md-nav__link">
+      Temporal Difference Methods
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rl_summary/" title="Summary" class="md-nav__link">
+      Summary
+    </a>
   </li>
 
         
@@ -641,8 +683,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation-iterative-policy-evaluation" title="Implementation: Iterative Policy Evaluation" class="md-nav__link">
-    Implementation: Iterative Policy Evaluation
+  <a href="#iterative-policy-evaluation" title="Iterative Policy Evaluation" class="md-nav__link">
+    Iterative Policy Evaluation
   </a>
   
 </li>
@@ -652,18 +694,24 @@
     Action Values
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#for-more-complex-environments" title="For More Complex Environments" class="md-nav__link">
     For More Complex Environments
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#implementation-estimation-of-action-values" title="Implementation: Estimation of Action Values" class="md-nav__link">
-    Implementation: Estimation of Action Values
+  <a href="#estimation-of-action-values" title="Estimation of Action Values" class="md-nav__link">
+    Estimation of Action Values
   </a>
   
 </li>
@@ -725,7 +773,9 @@
                 
                 <p>The term dynamic programming (DP) refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environment as a Markov decision process (MDP).</p>
 <p>The key idea of DP, and of reinforcement learning generally, is the use of value functions to organize and structure the search for good policies.</p>
+<p>In the dynamic programming setting, the agent has full knowledge of the MDP. (This is much easier than the reinforcement learning setting, where the agent initially knows nothing about how the environment decides state and reward and must learn entirely from interaction how to select actions.)</p>
 <h3 id="an-iterative-method">An Iterative Method</h3>
+<p>In order to obtain the state-value function <script type="math/tex">v_\pi</script> corresponding to a policy <script type="math/tex">\pi</script>, we need to solve the system of equations corresponding to the Bellman expectation equation for <script type="math/tex">v_\pi</script>.</p>
 <p><img alt="iterative_method" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/iterative_method.jpg" /></p>
 <p>Notes on the Bellman Expectation Equation</p>
 <p>for state <script type="math/tex">s_1</script>, we saw that:</p>
@@ -816,7 +866,7 @@
 </p>
 <p>The state-value function for the equiprobable random policy is visualized below:</p>
 <p><img alt="statevalue" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/statevalue.jpg" /></p>
-<h3 id="implementation-iterative-policy-evaluation">Implementation: Iterative Policy Evaluation</h3>
+<h3 id="iterative-policy-evaluation">Iterative Policy Evaluation</h3>
 <p><img alt="policy-eval" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/policy-eval.jpg" /></p>
 <p>Note that policy evaluation is guaranteed to converge to the state-value function <script type="math/tex">v_\pi</script> corresponding to a policy <script type="math/tex">\pi</script>, as long as <script type="math/tex">v_\pi(s)</script> is finite for each state <script type="math/tex">s\in\mathcal{S}</script>. For a finite Markov decision process (MDP), this is guaranteed as long as either:</p>
 <ul>
@@ -839,7 +889,7 @@
 </li>
 <li>the cumulative reward obtained if the agent begins in state <script type="math/tex">s_2</script> and follows the policy.</li>
 </ul>
-<h3 id="for-more-complex-environments">For More Complex Environments</h3>
+<h4 id="for-more-complex-environments">For More Complex Environments</h4>
 <p>In this simple gridworld example, the environment is <strong>deterministic</strong>. In other words, after the agent selects an action, the next state and reward are 100% guaranteed and non-random. For deterministic environments, <script type="math/tex">p(s',r|s,a) \in {0,1} \text{ for all } s', r, s, a</script>
 </p>
 <blockquote>
@@ -852,7 +902,7 @@
 <p>In this case, when the agent is in state <script type="math/tex">s</script> and takes action <script type="math/tex">a</script>, the probability of each possible next state <script type="math/tex">s'</script> and reward <script type="math/tex">r</script> is given by <script type="math/tex">p(s',r|s,a)</script>. In this case, we must have <script type="math/tex">q_\pi(s,a) = \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,a)(r+\gamma v_\pi(s'))</script>, where we take the expected value of the sum <script type="math/tex">r + \gamma v_\pi(s')</script>
 </p>
 </blockquote>
-<h3 id="implementation-estimation-of-action-values">Implementation: Estimation of Action Values</h3>
+<h3 id="estimation-of-action-values">Estimation of Action Values</h3>
 <p>Write an algorithm that accepts an estimate <script type="math/tex">V</script> of the state-value function <script type="math/tex">v_\pi</script> along with the one-step dynamics of the MDP <script type="math/tex">p(s',r|s,a)</script> and returns an estimate <script type="math/tex">Q</script> the action-value function <script type="math/tex">q_\pi</script>
 </p>
 <p>Use the one-step dynamics <script type="math/tex">p(s',r|s,a)</script> of MDP to obtain <script type="math/tex">q_\pi</script> from <script type="math/tex">v_\pi</script>. Namely,</p>
@@ -866,7 +916,7 @@
 </p>
 <p>For each state <script type="math/tex">s\in\mathcal{S}</script>, you need to select the action that maximizes the action-value function estimate. In other words,</p>
 <p>
-<script type="math/tex">\pi'(s)=\arg\max_{a\inA(s)}Q(s,a)</script> for all <script type="math/tex">s\in\mathcal{S}</script>.</p>
+<script type="math/tex">\pi'(s)=\arg\max_{a\in\mathcal{A}(s)}Q(s,a)</script> for all <script type="math/tex">s\in\mathcal{S}</script>.</p>
 <p><img alt="improve" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/improve.jpg" /></p>
 <p>In the event that there is some state <script type="math/tex">s\in\mathcal{S}</script> for which <script type="math/tex">\arg\max_{a\in\mathcal{A}(s)}</script> is not unique, there is some flexibility in how the improved policy <script type="math/tex">\pi'</script> is constructed.</p>
 <p>In fact, as long as the policy <script type="math/tex">\pi'</script> satisfies for each <script type="math/tex">s\in\mathcal{S}</script> and <script type="math/tex">a\in\mathcal{A}(s)</script>:</p>
@@ -923,13 +973,13 @@
           </a>
         
         
-          <a href="../applications/" title="Applications" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../monte_carlo_methods/" title="Monte Carlo Methods" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Applications
+                Monte Carlo Methods
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -95,7 +95,7 @@ $$v_\pi(s) = \mathbb{E}_\pi[R_{t+1} + \gamma v_\pi(S_{t+1})|S_t =s]$$
 
 ## Calculating the Expectation
 
-In the event that the agent's policy π is **deterministic**, the agent selects action _π(s)_ when in state _s_, and the Bellman Expectation Equation can be rewritten as the sum over two variables (\(s′ and r\)):
+In the event that the agent's policy π is **deterministic**, the agent selects action \(\pi(s)\) when in state \(s\), and the Bellman Expectation Equation can be rewritten as the sum over two variables (\(s′ \text{ and } r\)):
 
 $$v_\pi(s) = \text{} \sum_{s'\in\mathcal{S}^+, r\in\mathcal{R}}p(s',r|s,\pi(s))(r+\gamma v_\pi(s'))$$
 

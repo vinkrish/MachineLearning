@@ -35,6 +35,9 @@ nav:
     - Intro: deep_learning.md
     - Reinforcement Learning: reinforcement_learning.md
     - Dynamic Programming: dynamic_programming.md
+    - Monte Carlo Methods: monte_carlo_methods.md
+    - Temporal Difference Methods: temporal_difference_methods.md
+    - Summary: rl_summary.md
     - Applications: applications.md
   - Data Science:
     - Intro: data_science.md

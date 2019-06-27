@@ -1,0 +1,883 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://vinkrish.github.io/MachineLearning/monte_carlo_methods/">
+      
+      
+        <meta name="author" content="Vinay Krishna">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>Monte Carlo Methods - Intro to Machine Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#mc-prediction-action-values" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://vinkrish.github.io/MachineLearning/" title="Intro to Machine Learning" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Intro to Machine Learning
+            </span>
+            <span class="md-header-nav__topic">
+              Monte Carlo Methods
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/vinkrish/MachineLearning/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    vinkrish/MachineLearning
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://vinkrish.github.io/MachineLearning/" title="Intro to Machine Learning" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Intro to Machine Learning
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/vinkrish/MachineLearning/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    vinkrish/MachineLearning
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../math/" title="Math" class="md-nav__link">
+      Math
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../libraries/" title="Libraries" class="md-nav__link">
+      Libraries
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ml_workflow/" title="Workflow" class="md-nav__link">
+      Workflow
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Algorithms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Algorithms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../logistic_regression/" title="Logistic Regression" class="md-nav__link">
+      Logistic Regression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../neural_network/" title="Neural Network" class="md-nav__link">
+      Neural Network
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../algorithms/" title="Definition" class="md-nav__link">
+      Definition
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Deep Learning
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Deep Learning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deep_learning/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../reinforcement_learning/" title="Reinforcement Learning" class="md-nav__link">
+      Reinforcement Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamic_programming/" title="Dynamic Programming" class="md-nav__link">
+      Dynamic Programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Monte Carlo Methods
+      </label>
+    
+    <a href="./" title="Monte Carlo Methods" class="md-nav__link md-nav__link--active">
+      Monte Carlo Methods
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mc-prediction-action-values" title="MC Prediction (Action Values)" class="md-nav__link">
+    MC Prediction (Action Values)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploration-exploitation-dilemma" title="Exploration-Exploitation Dilemma" class="md-nav__link">
+    Exploration-Exploitation Dilemma
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-value-of-epsilon-in-theory" title="Setting the Value of \epsilon, in Theory" class="md-nav__link">
+    Setting the Value of \epsilon, in Theory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glie" title="GLIE" class="md-nav__link">
+    GLIE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-value-of-epsilon-in-practice" title="Setting the Value of \epsilon, in Practice" class="md-nav__link">
+    Setting the Value of \epsilon, in Practice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mc-control-glie" title="MC Control: GLIE" class="md-nav__link">
+    MC Control: GLIE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mc-control-constant-alpha" title="MC Control: Constant-alpha" class="md-nav__link">
+    MC Control: Constant-alpha
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-the-value-of-alpha" title="Setting the Value of \alpha" class="md-nav__link">
+    Setting the Value of \alpha
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rl_summary/" title="Summary" class="md-nav__link">
+      Summary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../applications/" title="Applications" class="md-nav__link">
+      Applications
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Data Science
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_science/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dap/" title="Data Analysis Process" class="md-nav__link">
+      Data Analysis Process
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../big_data/" title="Big Data" class="md-nav__link">
+      Big Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensorflow/" title="TensorFlow" class="md-nav__link">
+      TensorFlow
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../terminology/" title="Terminology" class="md-nav__link">
+      Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="Source" class="md-nav__link">
+      Source
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mc-prediction-action-values" title="MC Prediction (Action Values)" class="md-nav__link">
+    MC Prediction (Action Values)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploration-exploitation-dilemma" title="Exploration-Exploitation Dilemma" class="md-nav__link">
+    Exploration-Exploitation Dilemma
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-value-of-epsilon-in-theory" title="Setting the Value of \epsilon, in Theory" class="md-nav__link">
+    Setting the Value of \epsilon, in Theory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glie" title="GLIE" class="md-nav__link">
+    GLIE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-value-of-epsilon-in-practice" title="Setting the Value of \epsilon, in Practice" class="md-nav__link">
+    Setting the Value of \epsilon, in Practice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mc-control-glie" title="MC Control: GLIE" class="md-nav__link">
+    MC Control: GLIE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mc-control-constant-alpha" title="MC Control: Constant-alpha" class="md-nav__link">
+    MC Control: Constant-alpha
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-the-value-of-alpha" title="Setting the Value of \alpha" class="md-nav__link">
+    Setting the Value of \alpha
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/vinkrish/MachineLearning/edit/master/docs/monte_carlo_methods.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Monte Carlo Methods</h1>
+                
+                <p>Monte Carlo methods require only experience - sample sequences of states, actions, and rewards from actual or simulated interaction with an environment but no complete knowledge of environment.</p>
+<p>Only on the completion of an episode are value estimates and policies changed. Monte Carlo methods can thus be incremental in an episode-by-episode sense, but not in a step-by-step (online) sense.</p>
+<p>The first-visit MC method estimates <script type="math/tex">v_\pi(s)</script> as the average of the returns following first visits to <script type="math/tex">s</script>, whereas the every-visit MC method averages the returns following all visits to <script type="math/tex">s</script>.</p>
+<p><img alt="mc-pred-state" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/mc-pred-state.jpg" /></p>
+<ul>
+<li>Every-visit MC is biased, whereas first-visit MC is unbiased.</li>
+<li>Initially, every-visit MC has lower mean squared error (MSE), but as more episodes are collected, first-visit MC attains better MSE.</li>
+</ul>
+<p>Both the first-visit and every-visit method are guaranteed to converge to the true value function, as the number of visits to each state approaches infinity.</p>
+<h3 id="mc-prediction-action-values">MC Prediction (Action Values)</h3>
+<p>If a model is not available, then it is particularly useful to estimate <em>action</em> values (the values of state–action pairs) rather than <em>state</em> values.</p>
+<p>With a model, state values alone are sufficient to determine a policy; one simply looks ahead one step and chooses whichever
+action leads to the best combination of reward and next state.</p>
+<p><img alt="mc-pred-action" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/mc-pred-action.jpg" /></p>
+<p>We won't use MC prediction to estimate the action-values corresponding to a deterministic policy; this is because many state-action pairs will never be visited (since a deterministic policy always chooses the same action from each state). Instead, so that convergence is guaranteed, we will only estimate action-value functions corresponding to policies where each action has a nonzero probability of being selected from each state.</p>
+<h3 id="exploration-exploitation-dilemma">Exploration-Exploitation Dilemma</h3>
+<p>At every time step, when the agent selects an action, it bases its decision on past experience with the environment. And, towards minimizing the number of episodes needed to solve environments in OpenAI Gym, our first instinct could be to devise a strategy where the agent always selects the action that it believes (based on its past experience) will maximize return. With this in mind, the agent could follow the policy that is greedy with respect to the action-value function estimate. We examined this approach in a previous video and saw that it can easily lead to convergence to a sub-optimal policy.</p>
+<p>To see why this is the case, note that in early episodes, the agent's knowledge is quite limited (and potentially flawed). So, it is highly likely that actions estimated to be non-greedy by the agent are in fact better than the estimated greedy action</p>
+<p>With this in mind, a successful RL agent cannot act greedily at every time step (that is, it cannot always <em>exploit</em> its knowledge); instead, in order to discover the optimal policy, it has to continue to refine the estimated return for all state-action pairs (in other words, it has to continue to <em>explore</em> the range of possibilities by visiting every state-action pair). That said, the agent should always act somewhat greedily, towards its goal of maximizing return as quickly as possible. This motivated the idea of an <script type="math/tex">\epsilon</script>-greedy policy.</p>
+<p>We refer to the need to balance these two competing requirements as the <strong>Exploration-Exploitation Dilemma</strong>. One potential solution to this dilemma is implemented by gradually modifying the value of <script type="math/tex">\epsilon</script> when constructing <script type="math/tex">\epsilon</script>-greedy policies.</p>
+<h3 id="setting-the-value-of-epsilon-in-theory">Setting the Value of <script type="math/tex">\epsilon</script>, in Theory</h3>
+<p>It makes sense for the agent to begin its interaction with the environment by favoring <em>exploration</em> over <em>exploitation</em>. After all, when the agent knows relatively little about the environment's dynamics, it should distrust its limited knowledge and explore, or try out various strategies for maximizing return. With this in mind, the best starting policy is the equiprobable random policy, as it is equally likely to explore all possible actions from each state. You discovered in the previous quiz that setting <script type="math/tex">\epsilon = 1</script> yields an <script type="math/tex">\epsilon</script>-greedy policy that is equivalent to the equiprobable random policy.</p>
+<p>At later time steps, it makes sense to favor exploitation over exploration, where the policy gradually becomes more greedy with respect to the action-value function estimate. After all, the more the agent interacts with the environment, the more it can trust its estimated action-value function. You discovered in the previous quiz that setting <script type="math/tex">\epsilon = 0</script> yields the greedy policy (or, the policy that most favors exploitation over exploration).</p>
+<p>Thankfully, this strategy (of initially favoring exploration over exploitation, and then gradually preferring exploitation over exploration) can be demonstrated to be optimal.</p>
+<h3 id="glie">GLIE</h3>
+<p>In order to guarantee that MC control converges to the optimal policy <script type="math/tex">\pi_*</script>, we need to ensure that two conditions are met. We refer to these conditions as <strong>Greedy in the Limit with Infinite Exploration (GLIE)</strong>. In particular, if:</p>
+<ul>
+<li>every state-action pair <script type="math/tex">s</script>, <script type="math/tex">a</script> (for all <script type="math/tex">s\in\mathcal{S} \text{ and } a\in\mathcal{A}(s)</script>) is visited infinitely many times, and</li>
+<li>the policy converges to a policy that is greedy with respect to the action-value function estimate <script type="math/tex">Q</script>,</li>
+</ul>
+<p>then MC control is guaranteed to converge to the optimal policy (in the limit as the algorithm is run for infinitely many episodes). These conditions ensure that:</p>
+<ul>
+<li>the agent continues to explore for all time steps, and</li>
+<li>the agent gradually exploits more (and explores less).</li>
+</ul>
+<p>One way to satisfy these conditions is to modify the value of <script type="math/tex">\epsilon</script> when specifying an <script type="math/tex">\epsilon</script>-greedy policy. In particular, let <script type="math/tex">\epsilon_i</script> correspond to the <script type="math/tex">i</script>-th time step. Then, both of these conditions are met if:</p>
+<ul>
+<li>
+<script type="math/tex">epsilon_i\gt0</script> for all time steps <script type="math/tex">i</script>, and</li>
+<li>
+<script type="math/tex">\epsilon_i</script> decays to zero in the limit as the time step <script type="math/tex">i</script> approaches infinity (that is, <script type="math/tex">\lim_{i\to\infty} \epsilon_i = 0</script>)</li>
+</ul>
+<p>For example, to ensure convergence to the optimal policy, we could set <script type="math/tex">\epsilon_i = \frac{1}{i}</script> (You are encouraged to verify that <script type="math/tex">\epsilon_i \gt 0</script> for all <script type="math/tex">i</script>, and <script type="math/tex">\lim_{i\to\infty} \epsilon_i = 0</script>
+</p>
+<h3 id="setting-the-value-of-epsilon-in-practice">Setting the Value of <script type="math/tex">\epsilon</script>, in Practice</h3>
+<p>As you read in the above section, in order to guarantee convergence, we must let <script type="math/tex">\epsilon_i</script> decay in accordance with the GLIE conditions. But sometimes "guaranteed convergence" isn't good enough in practice, since this really doesn't tell you how long you have to wait! It is possible that you could need trillions of episodes to recover the optimal policy, for instance, and the "guaranteed convergence" would still be accurate!</p>
+<blockquote>
+<p>Even though convergence is <strong>not</strong> guaranteed by the mathematics, you can often get better results by either:
+- using fixed <script type="math/tex">\epsilon</script>, or
+- letting <script type="math/tex">\epsilon_i</script> decay to a small positive number, like 0.1.</p>
+</blockquote>
+<p>This is because one has to be very careful with setting the decay rate for <script type="math/tex">\epsilon|); letting it get too small too fast can be disastrous. If you get late in training and \(\epsilon</script> is really small, you pretty much want the agent to have already converged to the optimal policy, as it will take way too long otherwise for it to test out new actions!</p>
+<h3 id="mc-control-glie">MC Control: GLIE</h3>
+<p><img alt="mc-control-glie" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/mc-control-glie.jpg" /></p>
+<h3 id="mc-control-constant-alpha">MC Control: Constant-alpha</h3>
+<p>When we adapted <code>running_mean</code> algorithm for Monte Carlo control in the following concept (MC Control: Policy Evaluation), the sequence <script type="math/tex">(x_1, x_2, \ldots, x_n)</script> corresponded to returns obtained after visiting the same state-action pair.</p>
+<p>That said, the sampled returns (for the same state-action pair) likely corresponds to many different policies. This is because the control algorithm proceeds as a sequence of alternating evaluation and improvement steps, where the policy is improved after every episode of interaction. In particular, we discussed that returns sampled at later time steps likely correspond to policies that are more optimal.</p>
+<p>With this in mind, it made sense to amend the policy evaluation step to instead use a constant step size, which we denoted by <script type="math/tex">\alpha</script>. This ensures that the agent primarily considers the most recently sampled returns when estimating the action-values and gradually forgets about returns in the distant past.</p>
+<h4 id="setting-the-value-of-alpha">Setting the Value of <script type="math/tex">\alpha</script>
+</h4>
+<p><code>forgetful_mean</code> function is closely related to the Evaluation step in constant-<script type="math/tex">\alpha</script> MC control.</p>
+<p>How to set the value of <script type="math/tex">\alpha</script> when implementing constant-<script type="math/tex">\alpha</script> MC control:</p>
+<ul>
+<li>You should always set the value for <script type="math/tex">\alpha</script> to a number greater than zero and less than (or equal to) one.<ul>
+<li>If <script type="math/tex">\alpha=0</script>, then the action-value function estimate is never updated by the agent.</li>
+<li>If <script type="math/tex">\alpha=1</script>, then the final value estimate for each state-action pair is always equal to the last return that was experienced by the agent (after visiting the pair).</li>
+</ul>
+</li>
+<li>Smaller values for <script type="math/tex">\alpha</script> encourage the agent to consider a longer history of returns when calculating the action-value function estimate. Increasing the value of <script type="math/tex">\alpha</script> ensures that the agent focuses more on the most recently sampled returns.</li>
+</ul>
+<p>Note that it is also possible to verify the above facts by slightly rewriting the update step as follows:</p>
+<p>
+<script type="math/tex">Q(S_t,A_t) \leftarrow (1-\alpha) Q(S_t,A_t)+\alpha G_t</script>
+</p>
+<p>where it is now more obvious that \alphaα controls how much the agent trusts the most recent return <script type="math/tex">G_t</script> over the estimate <script type="math/tex">Q(S_t,A_t)</script> constructed by considering all past returns.</p>
+<p><img alt="mc-control-constant-a" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/mc-control-constant-a.jpg" /></p>
+<p><strong>IMPORTANT NOTE</strong>: It is important to mention that when implementing constant-<script type="math/tex">\alpha</script> MC control, you must be careful to not set the value of <script type="math/tex">\alpha</script> too close to 1. This is because very large values can keep the algorithm from converging to the optimal policy <script type="math/tex">\pi_*</script>. However, you must also be careful to not set the value of <script type="math/tex">\alpha</script> too low, as this can result in an agent who learns too slowly. The best value of <script type="math/tex">\alpha</script> for your implementation will greatly depend on your environment and is best gauged through trial-and-error.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../dynamic_programming/" title="Dynamic Programming" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Dynamic Programming
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../rl_summary/" title="Summary" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Summary
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/vinkrish" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.d9aa80ab.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

@@ -24,7 +24,7 @@ TD(0) is guaranteed to converge to the true state-value function, as long as the
 
 - Whereas MC prediction must wait until the end of an episode to update the value function estimate, TD prediction methods update the value function after every time step. Similarly, TD prediction methods work for continuous and episodic tasks, while MC prediction can only be applied to episodic tasks.
 
-### sarsa
+### Sarsa
 
 ![sarsa](https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/sarsa.jpg)
 
@@ -52,11 +52,11 @@ Remember that theoretically, the as long as the step-size parameter \(\alpha\) i
 
 ### Analyzing Performance
 
-All of the TD control algorithms we have examined (Sarsa, Sarsamax, Expected Sarsa) converge to the optimal action-value function \(q_*\) (and so yield the optimal policy \(\pi_*\)) if (1) the value of \epsilonϵ decays in accordance with the GLIE conditions, and (2) the step-size parameter \(\alpha\) is sufficiently small.
+All of the TD control algorithms we have examined (Sarsa, Sarsamax, Expected Sarsa) converge to the optimal action-value function \(q_*\) (and so yield the optimal policy \(\pi_*\)) if (1) the value of \(\epsilon\) decays in accordance with the GLIE conditions, and (2) the step-size parameter \(\alpha\) is sufficiently small.
 
 The differences between these algorithms are summarized below:
 
-- Sarsa and Expected Sarsa are both on-policy TD control algorithms. In this case, the same (\epsilonϵ-greedy) policy that is evaluated and improved is also used to select actions.
-- Sarsamax is an off-policy method, where the (greedy) policy that is evaluated and improved is different from the (\epsilonϵ-greedy) policy that is used to select actions
+- Sarsa and Expected Sarsa are both on-policy TD control algorithms. In this case, the same (\(\epsilon\)-greedy) policy that is evaluated and improved is also used to select actions.
+- Sarsamax is an off-policy method, where the (greedy) policy that is evaluated and improved is different from the (\(\epsilon\)-greedy) policy that is used to select actions
 - On-policy TD control methods (like Expected Sarsa and Sarsa) have better online performance than off-policy TD control methods (like Sarsamax).
 - Expected Sarsa generally achieves better performance than Sarsa.

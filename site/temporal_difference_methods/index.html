@@ -440,8 +440,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sarsa" title="sarsa" class="md-nav__link">
-    sarsa
+  <a href="#sarsa" title="Sarsa" class="md-nav__link">
+    Sarsa
   </a>
   
 </li>
@@ -544,6 +544,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../data_engineering/" title="Data Engineering" class="md-nav__link">
+      Data Engineering
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../dap/" title="Data Analysis Process" class="md-nav__link">
       Data Analysis Process
     </a>
@@ -629,8 +641,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sarsa" title="sarsa" class="md-nav__link">
-    sarsa
+  <a href="#sarsa" title="Sarsa" class="md-nav__link">
+    Sarsa
   </a>
   
 </li>
@@ -697,7 +709,7 @@ target for <script type="math/tex">V(S_t)</script>. A simple every-visit Monte C
 <ul>
 <li>Whereas MC prediction must wait until the end of an episode to update the value function estimate, TD prediction methods update the value function after every time step. Similarly, TD prediction methods work for continuous and episodic tasks, while MC prediction can only be applied to episodic tasks.</li>
 </ul>
-<h3 id="sarsa">sarsa</h3>
+<h3 id="sarsa">Sarsa</h3>
 <p><img alt="sarsa" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/sarsa.jpg" /></p>
 <p>Sarsa(0) is guaranteed to converge to the optimal action-value function, as long as the step-size parameter <script type="math/tex">\alpha</script> is sufficiently small, and the Greedy in the Limit with Infinite Exploration (GLIE) conditions are met. Although there are many ways to satisfy the GLIE conditions, one method involves gradually decaying the value of <script type="math/tex">\epsilon</script> when constructing <script type="math/tex">\epsilon</script>-greedy policies.</p>
 <p>In particular, let <script type="math/tex">\epsilon_i</script> correspond to the <script type="math/tex">i</script>-th time step. Then, if we set <script type="math/tex">\epsilon_i</script> such that:
@@ -712,11 +724,11 @@ target for <script type="math/tex">V(S_t)</script>. A simple every-visit Monte C
 <p>Expected Sarsa is guaranteed to converge under the same conditions that guarantee convergence of Sarsa and Sarsamax.</p>
 <p>Remember that theoretically, the as long as the step-size parameter <script type="math/tex">\alpha</script> is sufficiently small, and the Greedy in the Limit with Infinite Exploration (GLIE) conditions are met, the agent is guaranteed to eventually discover the optimal action-value function (and an associated optimal policy). However, in practice, for all of the algorithms we have discussed, it is common to completely ignore these conditions and still discover an optimal policy. You can see an example of this in the solution notebook.</p>
 <h3 id="analyzing-performance">Analyzing Performance</h3>
-<p>All of the TD control algorithms we have examined (Sarsa, Sarsamax, Expected Sarsa) converge to the optimal action-value function <script type="math/tex">q_*</script> (and so yield the optimal policy <script type="math/tex">\pi_*</script>) if (1) the value of \epsilonϵ decays in accordance with the GLIE conditions, and (2) the step-size parameter <script type="math/tex">\alpha</script> is sufficiently small.</p>
+<p>All of the TD control algorithms we have examined (Sarsa, Sarsamax, Expected Sarsa) converge to the optimal action-value function <script type="math/tex">q_*</script> (and so yield the optimal policy <script type="math/tex">\pi_*</script>) if (1) the value of <script type="math/tex">\epsilon</script> decays in accordance with the GLIE conditions, and (2) the step-size parameter <script type="math/tex">\alpha</script> is sufficiently small.</p>
 <p>The differences between these algorithms are summarized below:</p>
 <ul>
-<li>Sarsa and Expected Sarsa are both on-policy TD control algorithms. In this case, the same (\epsilonϵ-greedy) policy that is evaluated and improved is also used to select actions.</li>
-<li>Sarsamax is an off-policy method, where the (greedy) policy that is evaluated and improved is different from the (\epsilonϵ-greedy) policy that is used to select actions</li>
+<li>Sarsa and Expected Sarsa are both on-policy TD control algorithms. In this case, the same (<script type="math/tex">\epsilon</script>-greedy) policy that is evaluated and improved is also used to select actions.</li>
+<li>Sarsamax is an off-policy method, where the (greedy) policy that is evaluated and improved is different from the (<script type="math/tex">\epsilon</script>-greedy) policy that is used to select actions</li>
 <li>On-policy TD control methods (like Expected Sarsa and Sarsa) have better online performance than off-policy TD control methods (like Sarsamax).</li>
 <li>Expected Sarsa generally achieves better performance than Sarsa.</li>
 </ul>

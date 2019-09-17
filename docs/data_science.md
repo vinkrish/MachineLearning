@@ -45,30 +45,3 @@ Descriptive statistics summarize a given data set, which can be either a represe
 ### Inferential Statistics
 
 It is the process of using data analysis to deduce properties of an underlying probability distribution. Inferential statistical analysis infers properties of a population, for example by testing hypotheses and driving estimates. It is assumed that the observed data set is sampled from a larger population.
-
-### Recommendation System
-
-#### Collaborative Filtering
-
-Collaborative filtering systems recommend items based on how well users prefer those items over others. It's based on crowdsourced user preference data.
-
-Two approaches:
-
-- User based: Systems that recommend items based on similarity between users. eg. customer who are similar to you like x,y,z products so you might like this as well.
-- Item based: Items recommended to you - people who like this product also like x,y,z product. Generate recommendation based on similarity between items with respect to user ratings or purchase history.
-
-#### Content Based Recommenders
-
-Content-based recommenders recommend items based on their features and how similar those are to features of other items in a dataset. eg: Pandora uses this for music recommendation.
-
-#### Popularity Based Recommenders
-
-Popularity-based recommenders offer a very primitive form of collaborative filtering, where items are recommended to users based on how popular those items are among other users.
-
-- Rely on purchase history data
-- Used by online news sites
-- Cannot produce personlized results
-
-#### Correlation Based Recommendations
-
-Use Pearson's _r_ correlation to recommend an item that is most similar to the item a user has already purchased. Recommend an item based on how well it correlates with other items with respect to use ratings.

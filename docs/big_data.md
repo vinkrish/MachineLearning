@@ -50,6 +50,8 @@ It also supports streaming data, run ML algorithms on clusters.
 
 HBase is a column-oriented database management system that runs on top of HDFS. HBase applications are written in Java, very much like the MapReduce application. It comprises a set of tables, where each table contains rows and columns like a traditional database. When the data falls into the big table, HBase will store the data, search it and automatically share the table across multiple nodes so that MapReduce jobs can run it locally. HBase offers a limited guarantee for some local changes. The changes that happen in a single row can succeed or fail at the same time.
 
+It has a dynamic data model and not a relational DBMS.
+
 ### Storm
 
 A system for processing streaming data in real time.

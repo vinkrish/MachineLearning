@@ -41,6 +41,7 @@ nav:
     - Applications: applications.md
   - Data Science:
     - Intro: data_science.md
+    - Data Engineering: data_engineering.md
     - Data Analysis Process: dap.md
   - Big Data: big_data.md
   - TensorFlow: tensorflow.md

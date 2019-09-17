@@ -84,6 +84,33 @@ With deep learning, we can map video as an input to a variety of types of output
 
 However, even more impressive is that we can now use deep learning to generate video as an output from a variety of inputs. For example, using a combination of convolutional encoder/decoder networks, we can now teach a computer to automatically colorize black and white videos. In addition, machines are also being taught to restore old or damaged films as well. And check this out. To help families refinance their homes. To invest in things like high-tech manufacturing, clean energy, and the infrastructure that creates good new jobs. You can see why it's so important that people understand the potential applications for deep learning before someone tries to use deep learning to deceive others for nefarious purposes.
 
+### Recommendation System
+
+#### Collaborative Filtering
+
+Collaborative filtering systems recommend items based on how well users prefer those items over others. It's based on crowdsourced user preference data.
+
+Two approaches:
+
+- User based: Systems that recommend items based on similarity between users. eg. customer who are similar to you like x,y,z products so you might like this as well.
+- Item based: Items recommended to you - people who like this product also like x,y,z product. Generate recommendation based on similarity between items with respect to user ratings or purchase history.
+
+#### Content Based Recommenders
+
+Content-based recommenders recommend items based on their features and how similar those are to features of other items in a dataset. eg: Pandora uses this for music recommendation.
+
+#### Popularity Based Recommenders
+
+Popularity-based recommenders offer a very primitive form of collaborative filtering, where items are recommended to users based on how popular those items are among other users.
+
+- Rely on purchase history data
+- Used by online news sites
+- Cannot produce personlized results
+
+#### Correlation Based Recommendations
+
+Use Pearson's _r_ correlation to recommend an item that is most similar to the item a user has already purchased. Recommend an item based on how well it correlates with other items with respect to use ratings.
+
 ### Future
 Finally, let's look at other future deep learning applications beyond the basic input to output mappings that we've already seen. It's important to note that what we've seen so far is just the beginning of deep learning technologies. Deep learning can be applied to a variety of other inputs, and produce a variety of other outputs. Plus, we can combine multiple types of inputs and produce multiple types of outputs as well. This leads to a whole new realm of possible applications for deep learning in the future.
 

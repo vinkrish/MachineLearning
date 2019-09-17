@@ -1,0 +1,1171 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://vinkrish.github.io/MachineLearning/data_engineering/">
+      
+      
+        <meta name="author" content="Vinay Krishna">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>Data Engineering - Intro to Machine Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#data-model" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://vinkrish.github.io/MachineLearning/" title="Intro to Machine Learning" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Intro to Machine Learning
+            </span>
+            <span class="md-header-nav__topic">
+              Data Engineering
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/vinkrish/MachineLearning/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    vinkrish/MachineLearning
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://vinkrish.github.io/MachineLearning/" title="Intro to Machine Learning" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Intro to Machine Learning
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/vinkrish/MachineLearning/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    vinkrish/MachineLearning
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../math/" title="Math" class="md-nav__link">
+      Math
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../libraries/" title="Libraries" class="md-nav__link">
+      Libraries
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ml_workflow/" title="Workflow" class="md-nav__link">
+      Workflow
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Algorithms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Algorithms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../logistic_regression/" title="Logistic Regression" class="md-nav__link">
+      Logistic Regression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../neural_network/" title="Neural Network" class="md-nav__link">
+      Neural Network
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../algorithms/" title="Definition" class="md-nav__link">
+      Definition
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Deep Learning
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Deep Learning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deep_learning/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../reinforcement_learning/" title="Reinforcement Learning" class="md-nav__link">
+      Reinforcement Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamic_programming/" title="Dynamic Programming" class="md-nav__link">
+      Dynamic Programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../monte_carlo_methods/" title="Monte Carlo Methods" class="md-nav__link">
+      Monte Carlo Methods
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../temporal_difference_methods/" title="Temporal Difference Methods" class="md-nav__link">
+      Temporal Difference Methods
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rl_summary/" title="Summary" class="md-nav__link">
+      Summary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../applications/" title="Applications" class="md-nav__link">
+      Applications
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Data Science
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_science/" title="Intro" class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Data Engineering
+      </label>
+    
+    <a href="./" title="Data Engineering" class="md-nav__link md-nav__link--active">
+      Data Engineering
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-model" title="Data Model" class="md-nav__link">
+    Data Model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" title="SQL" class="md-nav__link">
+    SQL
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ddl" title="DDL" class="md-nav__link">
+    DDL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dml" title="DML" class="md-nav__link">
+    DML
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dcl" title="DCL" class="md-nav__link">
+    DCL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcl" title="TCL" class="md-nav__link">
+    TCL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages-of-using-a-relational-database" title="Advantages of Using a Relational Database" class="md-nav__link">
+    Advantages of Using a Relational Database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acid-transactions" title="ACID Transactions" class="md-nav__link">
+    ACID Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-not-to-use-a-relational-database" title="When Not to Use a Relational Database" class="md-nav__link">
+    When Not to Use a Relational Database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nosql" title="NoSQL" class="md-nav__link">
+    NoSQL
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apache-cassandra" title="Apache Cassandra" class="md-nav__link">
+    Apache Cassandra
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-a-nosql-database" title="When to use a NoSQL Database" class="md-nav__link">
+    When to use a NoSQL Database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-not-to-use-a-nosql-database" title="When NOT to use a NoSQL Database?" class="md-nav__link">
+    When NOT to use a NoSQL Database?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relational-data-model" title="Relational Data Model" class="md-nav__link">
+    Relational Data Model
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-analytical-processing-olap" title="Online Analytical Processing (OLAP)" class="md-nav__link">
+    Online Analytical Processing (OLAP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#online-transactional-processing-oltp" title="Online Transactional Processing (OLTP)" class="md-nav__link">
+    Online Transactional Processing (OLTP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectives-of-normal-form" title="Objectives of Normal Form" class="md-nav__link">
+    Objectives of Normal Form
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#denormalization" title="Denormalization" class="md-nav__link">
+    Denormalization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact-and-dimension-table" title="Fact and Dimension Table" class="md-nav__link">
+    Fact and Dimension Table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dap/" title="Data Analysis Process" class="md-nav__link">
+      Data Analysis Process
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../big_data/" title="Big Data" class="md-nav__link">
+      Big Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensorflow/" title="TensorFlow" class="md-nav__link">
+      TensorFlow
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../terminology/" title="Terminology" class="md-nav__link">
+      Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="Source" class="md-nav__link">
+      Source
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-model" title="Data Model" class="md-nav__link">
+    Data Model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" title="SQL" class="md-nav__link">
+    SQL
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ddl" title="DDL" class="md-nav__link">
+    DDL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dml" title="DML" class="md-nav__link">
+    DML
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dcl" title="DCL" class="md-nav__link">
+    DCL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcl" title="TCL" class="md-nav__link">
+    TCL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages-of-using-a-relational-database" title="Advantages of Using a Relational Database" class="md-nav__link">
+    Advantages of Using a Relational Database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acid-transactions" title="ACID Transactions" class="md-nav__link">
+    ACID Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-not-to-use-a-relational-database" title="When Not to Use a Relational Database" class="md-nav__link">
+    When Not to Use a Relational Database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nosql" title="NoSQL" class="md-nav__link">
+    NoSQL
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apache-cassandra" title="Apache Cassandra" class="md-nav__link">
+    Apache Cassandra
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-a-nosql-database" title="When to use a NoSQL Database" class="md-nav__link">
+    When to use a NoSQL Database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-not-to-use-a-nosql-database" title="When NOT to use a NoSQL Database?" class="md-nav__link">
+    When NOT to use a NoSQL Database?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relational-data-model" title="Relational Data Model" class="md-nav__link">
+    Relational Data Model
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-analytical-processing-olap" title="Online Analytical Processing (OLAP)" class="md-nav__link">
+    Online Analytical Processing (OLAP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#online-transactional-processing-oltp" title="Online Transactional Processing (OLTP)" class="md-nav__link">
+    Online Transactional Processing (OLTP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectives-of-normal-form" title="Objectives of Normal Form" class="md-nav__link">
+    Objectives of Normal Form
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#denormalization" title="Denormalization" class="md-nav__link">
+    Denormalization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact-and-dimension-table" title="Fact and Dimension Table" class="md-nav__link">
+    Fact and Dimension Table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/vinkrish/MachineLearning/edit/master/docs/data_engineering.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Data Engineering</h1>
+                
+                <h2 id="data-model">Data Model</h2>
+<p>An abstraction that organizes elements of data and how they relate to each other. It can easily translate to database modeling, as this is the essential end state.</p>
+<p>It's also an iterative process. Data engineers continually reorganize, restructure, and optimize data models to fit the needs of the organization.</p>
+<p>Data Modeling process:</p>
+<ul>
+<li>Conceptual</li>
+<li>Logical</li>
+<li>Physical</li>
+</ul>
+<h2 id="sql">SQL</h2>
+<p>Structured Query Language is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS).</p>
+<h3 id="ddl">DDL</h3>
+<p>DDL is short name of Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database.</p>
+<ul>
+<li>CREATE : to create a database and its objects like (table, index, views, store procedure, function, and triggers)</li>
+<li>ALTER : alters the structure of the existing database</li>
+<li>DROP : delete objects from the database</li>
+<li>TRUNCATE : remove all records from a table, including all spaces allocated for the records are removed</li>
+<li>COMMENT : add comments to the data dictionary</li>
+<li>RENAME : rename an object</li>
+</ul>
+<h3 id="dml">DML</h3>
+<p>DML is short name of Data Manipulation Language which deals with data manipulation and includes most common SQL statements such SELECT, INSERT, UPDATE, DELETE, etc., and it is used to store, modify, retrieve, delete and update data in a database.</p>
+<ul>
+<li>SELECT : retrieve data from a database</li>
+<li>INSERT : insert data into a table</li>
+<li>UPDATE : updates existing data within a table</li>
+<li>DELETE : Delete all records from a database table</li>
+<li>MERGE : UPSERT operation (insert or update)</li>
+<li>CALL : call a PL/SQL or Java subprogram</li>
+<li>EXPLAIN PLAN : interpretation of the data access path</li>
+<li>LOCK TABLE : concurrency Control</li>
+</ul>
+<h3 id="dcl">DCL</h3>
+<p>DCL is short name of Data Control Language which includes commands such as GRANT and mostly concerned with rights, permissions and other controls of the database system.</p>
+<ul>
+<li>GRANT : allow users access privileges to the database</li>
+<li>REVOKE : withdraw users access privileges given by using the GRANT command</li>
+</ul>
+<h3 id="tcl">TCL</h3>
+<p>TCL is short name of Transaction Control Language which deals with a transaction within a database.</p>
+<ul>
+<li>COMMIT : commits a Transaction</li>
+<li>ROLLBACK : rollback a transaction in case of any error occurs</li>
+<li>SAVEPOINT : to rollback the transaction making points within groups</li>
+<li>SET TRANSACTION : specify characteristics of the transaction</li>
+</ul>
+<h3 id="advantages-of-using-a-relational-database">Advantages of Using a Relational Database</h3>
+<ul>
+<li>Flexibility for writing in SQL queries: With SQL being the most common database query language.</li>
+<li>Modeling the data not modeling queries</li>
+<li>Ability to do JOINS</li>
+<li>Ability to do aggregations and analytics</li>
+<li>Secondary Indexes available : You have the advantage of being able to add another index to help with quick searching.</li>
+<li>Smaller data volumes: If you have a smaller data volume (and not big data) you can use a relational database for its simplicity.</li>
+<li>ACID Transactions: Allows you to meet a set of properties of database transactions intended to guarantee validity even in the event of errors, power failures, and thus maintain data integrity.</li>
+<li>Easier to change to business requirements</li>
+</ul>
+<h3 id="acid-transactions">ACID Transactions</h3>
+<p>Properties of database transactions intended to guarantee validity even in the event of errors or power failures.</p>
+<ul>
+<li><strong>Atomicity</strong>: The whole transaction is processed or nothing is processed. A commonly cited example of an atomic transaction is money transactions between two bank accounts. The transaction of transferring money from one account to the other is made up of two operations. First, you have to withdraw money in one account, and second you have to save the withdrawn money to the second account. An atomic transaction, i.e., when either all operations occur or nothing occurs, keeps the database in a consistent state. This ensures that if either of those two operations (withdrawing money from the 1st account or saving the money to the 2nd account) fail, the money is neither lost nor created.</li>
+<li><strong>Consistency</strong>: Only transactions that abide by constraints and rules are written into the database, otherwise the database keeps the previous state. The data should be correct across all rows and tables.</li>
+<li><strong>Isolation</strong>: Transactions are processed independently and securely, order does not matter. A low level of isolation enables many users to access the data simultaneously, however this also increases the possibilities of concurrency effects (e.g., dirty reads or lost updates). On the other hand, a high level of isolation reduces these chances of concurrency effects, but also uses more system resources and transactions blocking each other.</li>
+<li><strong>Durability</strong>: Completed transactions are saved to database even in cases of system failure. A commonly cited example includes tracking flight seat bookings. So once the flight booking records a confirmed seat booking, the seat remains booked even if a system failure occurs</li>
+</ul>
+<h3 id="when-not-to-use-a-relational-database">When Not to Use a Relational Database</h3>
+<ul>
+<li><strong>Have large amounts of data</strong>: Relational Databases are not distributed databases and because of this they can only scale vertically by adding more storage in the machine itself. You are limited by how much you can scale and how much data you can store on one machine. You cannot add more machines like you can in NoSQL databases.</li>
+<li><strong>Need to be able to store different data type formats</strong>: Relational databases are not designed to handle unstructured data.</li>
+<li><strong>Need high throughput</strong> -- fast reads: While ACID transactions bring benefits, they also slow down the process of reading and writing data. If you need very fast reads and writes, using a relational database may not suit your needs.</li>
+<li><strong>Need a flexible schema</strong>: Flexible schema can allow for columns to be added that do not have to be used by every row, saving disk space.</li>
+<li><strong>Need high availability</strong>: The fact that relational databases are not distributed (and even when they are, they have a coordinator/worker architecture), they have a single point of failure. When that database goes down, a fail-over to a backup system occurs and takes time.</li>
+<li><strong>Need horizontal scalability</strong>: Horizontal scalability is the ability to add more machines or nodes to a system to increase performance and space for data.</li>
+</ul>
+<h2 id="nosql">NoSQL</h2>
+<p>NoSQL databases were created to do some of the issues faced with relational databases.</p>
+<ul>
+<li>Apache Cassandra (partition row store): The data is distributed by partitions across nodes or servers and the data is organized in the columns and rows format.</li>
+<li>MongoDB (document store): One of the defining characteristics of a document oriented database is that in addition to the key lookups performed by key-value store, the database also offers an API or query language that retrieves document based on its contents. It's basically easy to do search on documents.</li>
+<li>DynamoDB (key-value store): data is represented as a collection of key and value pairs.</li>
+<li>Apache HBase (wide column store): It also uses tables, rows and columns but unlike a relational database, the names and formats of the columns can vary from row to row in the same table.</li>
+<li>Neo4j (graph databas): it's all about relationships and the data is represented as nodes and edges.</li>
+</ul>
+<h3 id="apache-cassandra">Apache Cassandra</h3>
+<p>It provides scalability and high availability without compromising performace. Linear Scalability and proven fault-tolerance on commodity hardware or cloud infrastructure make it the perfect platform for mission-critical data.</p>
+<p><strong>What type of companies use Apache Cassandra?</strong></p>
+<p>Uber uses Apache Cassandra for their entire backend. Netflix uses Apache Cassandra to serve all their videos to customers. Good use cases for NoSQL (and more specifically Apache Cassandra) are :</p>
+<ul>
+<li>Transaction logging (retail, health care)</li>
+<li>Internet of Things (IoT)</li>
+<li>Time series data</li>
+<li>Any workload that is heavy on writes to the database (since Apache Cassandra is optimized for writes).</li>
+</ul>
+<h3 id="when-to-use-a-nosql-database">When to use a NoSQL Database</h3>
+<ul>
+<li><strong>Need to be able to store different data type formats</strong>: NoSQL was also created to handle different data configurations: structured, semi-structured, and unstructured data. JSON, XML documents can all be handled easily with NoSQL.</li>
+<li><strong>Large amounts of data</strong>: Relational Databases are not distributed databases and because of this they can only scale vertically by adding more storage in the machine itself. NoSQL databases were created to be able to be horizontally scalable. The more servers/systems you add to the database the more data that can be hosted with high availability and low latency (fast reads and writes).</li>
+<li><strong>Need horizontal scalability</strong>: Horizontal scalability is the ability to add more machines or nodes to a system to increase performance and space for data</li>
+<li><strong>Need high throughput</strong>: While ACID transactions bring benefits they also slow down the process of reading and writing data. If you need very fast reads and writes using a relational database may not suit your needs.</li>
+<li><strong>Need a flexible schema</strong>: Flexible schema can allow for columns to be added that do not have to be used by every row, saving disk space.</li>
+<li><strong>Need high availability</strong>: Relational databases have a single point of failure. When that database goes down, a failover to a backup system must happen and takes time.</li>
+</ul>
+<h3 id="when-not-to-use-a-nosql-database">When NOT to use a NoSQL Database?</h3>
+<ul>
+<li><strong>When you have a small dataset</strong>: NoSQL databases were made for big datasets not small datasets and while it works it wasn’t created for that.</li>
+<li><strong>When you need ACID Transactions</strong>: If you need a consistent database with ACID transactions, then most NoSQL databases will not be able to serve this need. NoSQL database are eventually consistent and do not provide ACID transactions. However, there are exceptions to it. Some non-relational databases like MongoDB can support ACID transactions.</li>
+<li><strong>When you need the ability to do JOINS across tables</strong>: NoSQL does not allow the ability to do JOINS. This is not allowed as this will result in full table scans.</li>
+<li>If you want to be able to do aggregations and analytics</li>
+<li><strong>If you have changing business requirements:</strong> Ad-hoc queries are possible but difficult as the data model was done to fix particular queries</li>
+<li><strong>If your queries are not available and you need the flexibility</strong>: You need your queries in advance. If those are not available or you will need to be able to have flexibility on how you query your data you might need to stick with a relational database.</li>
+</ul>
+<h2 id="relational-data-model">Relational Data Model</h2>
+<p>Importance of Relational Databases:</p>
+<ul>
+<li><strong>Standardization of data model</strong>: Once your data is transformed into the rows and columns format, your data is standardized and you can query it with SQL</li>
+<li><strong>Flexibility in adding and altering tables</strong>: Relational databases gives you flexibility to add tables, alter tables, add and remove data.</li>
+<li><strong>Data Integrity</strong>: Data Integrity is the backbone of using a relational database.</li>
+<li><strong>Standard Query Language (SQL)</strong>: A standard language can be used to access the data with a predefined language.</li>
+<li><strong>Simplicity</strong> : Data is systematically stored and modeled in tabular format.</li>
+<li><strong>Intuitive Organization</strong>: The spreadsheet format is intuitive but intuitive to data modeling in relational databases.</li>
+</ul>
+<h3 id="online-analytical-processing-olap">Online Analytical Processing (OLAP)</h3>
+<p>Databases optimized for these workloads allow for complex analytical and ad hoc queries, including aggregations. These type of databases are optimized for reads.</p>
+<h3 id="online-transactional-processing-oltp">Online Transactional Processing (OLTP)</h3>
+<p>Databases optimized for these workloads allow for less complex queries in large volume. The types of queries for these databases are read, insert, update, and delete.</p>
+<p>The key to remember the difference between OLAP and OLTP is analytics (A) vs transactions (T). If you want to get the price of a shoe then you are using OLTP (this has very little or no aggregations). If you want to know the total stock of shoes a particular store sold, then this requires using OLAP (since this will require aggregations).</p>
+<h3 id="objectives-of-normal-form">Objectives of Normal Form</h3>
+<ul>
+<li>To free the database from unwanted insertions, updates, &amp; deletion dependencies</li>
+<li>To reduce the need for refactoring the database as new types of data are introduced</li>
+<li>To make the relational model more informative to users</li>
+<li>To make the database neutral to the query statistics</li>
+</ul>
+<p>How to reach First Normal Form (1NF):</p>
+<ul>
+<li>Atomic values: each cell contains unique and single values</li>
+<li>Be able to add data without altering tables</li>
+<li>Separate different relations into different tables</li>
+<li>Keep relationships between tables together with foreign keys</li>
+</ul>
+<p>Second Normal Form (2NF):</p>
+<ul>
+<li>Have reached 1NF</li>
+<li>All columns in the table must rely on the Primary Key</li>
+</ul>
+<p>Third Normal Form (3NF):</p>
+<ul>
+<li>Must be in 2nd Normal Form</li>
+<li>No transitive dependencies</li>
+<li>Remember, transitive dependencies you are trying to maintain is that to get from A-&gt; C, you want to avoid going through B.</li>
+</ul>
+<h3 id="denormalization">Denormalization</h3>
+<p>JOINS on the database allow for outstanding flexibility but are extremely slow. If you are dealing with heavy reads on your database, you may want to think about denormalizing your tables. You get your data into normalized form, and then you proceed with denormalization. So, denormalization comes after normalization.</p>
+<h3 id="fact-and-dimension-table">Fact and Dimension Table</h3>
+<p><img alt="fact-dimension" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/dimension-fact-tables.png" /></p>
+<p>As you can see in the image, the unique primary key for each Dimension table is included in the Fact table.</p>
+<p>In this example, it helps to think about the Dimension tables providing the following information:</p>
+<p>Where the product was bought? (Dim_Store table)
+When the product was bought? (Dim_Date table)
+What product was bought? (Dim_Product table)
+The Fact table provides the metric of the business process (here Sales).</p>
+<p>How many units of products were bought? (Fact_Sales table)</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../data_science/" title="Intro" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Intro
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../dap/" title="Data Analysis Process" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Data Analysis Process
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/vinkrish" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.d9aa80ab.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

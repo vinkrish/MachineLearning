@@ -650,6 +650,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cap-theorem" title="CAP Theorem" class="md-nav__link">
+    CAP Theorem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-modeling-in-apache-cassandra" title="Data Modeling in Apache Cassandra:" class="md-nav__link">
+    Data Modeling in Apache Cassandra:
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -663,6 +677,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_warehouse/" title="Data Warehouse" class="md-nav__link">
+      Data Warehouse
+    </a>
   </li>
 
         
@@ -895,6 +921,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cap-theorem" title="CAP Theorem" class="md-nav__link">
+    CAP Theorem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-modeling-in-apache-cassandra" title="Data Modeling in Apache Cassandra:" class="md-nav__link">
+    Data Modeling in Apache Cassandra:
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1079,11 +1119,31 @@
 <p><img alt="fact-dimension" src="https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/dimension-fact-tables.png" /></p>
 <p>As you can see in the image, the unique primary key for each Dimension table is included in the Fact table.</p>
 <p>In this example, it helps to think about the Dimension tables providing the following information:</p>
-<p>Where the product was bought? (Dim_Store table)
-When the product was bought? (Dim_Date table)
-What product was bought? (Dim_Product table)
-The Fact table provides the metric of the business process (here Sales).</p>
-<p>How many units of products were bought? (Fact_Sales table)</p>
+<ul>
+<li>Where the product was bought? (Dim_Store table)</li>
+<li>When the product was bought? (Dim_Date table)</li>
+<li>What product was bought? (Dim_Product table)</li>
+</ul>
+<p>The Fact table provides the metric of the business process (here Sales).</p>
+<ul>
+<li>How many units of products were bought? (Fact_Sales table)</li>
+</ul>
+<h3 id="cap-theorem">CAP Theorem</h3>
+<p>A theorem in computer science that states it is impossible for a distributed data store to simulataneously provide more than two out of the following three guarantees of consisency, availability and partition tolerance.</p>
+<ul>
+<li><strong>Consistency</strong>: Every read from the database gets the latest (and correct) piece of data or an error</li>
+<li><strong>Availability</strong>: Every request is received and a response is given -- without a guarantee that the data is the latest update</li>
+<li><strong>Partition Tolerance</strong>: The system continues to work regardless of losing network connectivity between nodes</li>
+</ul>
+<h3 id="data-modeling-in-apache-cassandra">Data Modeling in Apache Cassandra:</h3>
+<ul>
+<li>Denormalization is not just okay -- it's a must</li>
+<li>Denormalization must be done for fast reads</li>
+<li>Apache Cassandra has been optimized for fast writes</li>
+<li>ALWAYS think Queries first</li>
+<li>One table per query is a great strategy</li>
+<li>Apache Cassandra does not allow for JOINs between tables</li>
+</ul>
                 
                   
                 
@@ -1119,13 +1179,13 @@ The Fact table provides the metric of the business process (here Sales).</p>
           </a>
         
         
-          <a href="../dap/" title="Data Analysis Process" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../data_warehouse/" title="Data Warehouse" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Data Analysis Process
+                Data Warehouse
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

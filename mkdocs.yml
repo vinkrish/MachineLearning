@@ -8,12 +8,6 @@ theme:
 repo_name: 'vinkrish/MachineLearning'
 repo_url: 'https://github.com/vinkrish/MachineLearning'
 
-# Customization
-extra:
-  social:
-    - type: 'github'
-      link: 'https://github.com/vinkrish'
-
 extra_javascript:
   # Add MathJax support
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
@@ -39,11 +33,7 @@ nav:
     - Temporal Difference Methods: temporal_difference_methods.md
     - Summary: rl_summary.md
     - Applications: applications.md
-  - Data Science:
-    - Intro: data_science.md
-    - Data Engineering: data_engineering.md
-    - Data Analysis Process: dap.md
-  - Big Data: big_data.md
+  - Data Analysis Process: dap.md
   - TensorFlow: tensorflow.md
   - Terminology: terminology.md
   - Source: source.md
